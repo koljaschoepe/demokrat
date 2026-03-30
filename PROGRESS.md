@@ -1,8 +1,8 @@
 # Demokrat -- Implementierungs-Fortschritt
 
 > **Letzte Aktualisierung:** 2026-03-30
-> **Aktuelle Phase:** 010
-> **Abgeschlossene Phasen:** 9 / 200
+> **Aktuelle Phase:** 011
+> **Abgeschlossene Phasen:** 10 / 200
 
 ## Status-Legende
 
@@ -23,7 +23,7 @@
 - [x] 007 -- ESLint + Prettier
 - [x] 008 -- Projektordner-Struktur
 - [x] 009 -- Base Layouts, Metadata & Fonts
-- [ ] 010 -- Dark Mode (next-themes)
+- [x] 010 -- Dark Mode (next-themes)
 - [ ] 011 -- PWA Manifest & Service Worker (Basis)
 - [ ] 012 -- i18n Setup (next-intl)
 - [ ] 013 -- Upstash Redis Client & Rate Limiting
