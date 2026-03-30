@@ -1,8 +1,8 @@
 # Demokrat -- Implementierungs-Fortschritt
 
 > **Letzte Aktualisierung:** 2026-03-30
-> **Aktuelle Phase:** 006
-> **Abgeschlossene Phasen:** 5 / 200
+> **Aktuelle Phase:** 007
+> **Abgeschlossene Phasen:** 6 / 200
 
 ## Status-Legende
 - [ ] Offen
@@ -17,7 +17,7 @@
 - [x] 003 -- Tailwind CSS + shadcn/ui + Design Tokens
 - [x] 004 -- Umgebungsvariablen & .env
 - [x] 005 -- Supabase Projekt-Setup (Lokal)
-- [ ] 006 -- tRPC Setup mit App Router
+- [x] 006 -- tRPC Setup mit App Router
 - [ ] 007 -- ESLint + Prettier
 - [ ] 008 -- Projektordner-Struktur
 - [ ] 009 -- Base Layouts, Metadata & Fonts
