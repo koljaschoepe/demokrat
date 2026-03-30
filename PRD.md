@@ -4,22 +4,22 @@
 
 ---
 
-| | |
-|---|---|
-| **Version** | 1.1.0 |
-| **Status** | Final |
-| **Autor** | [Name einfugen] |
-| **Datum** | 30. Marz 2026 |
+|                 |                         |
+| --------------- | ----------------------- |
+| **Version**     | 1.1.0                   |
+| **Status**      | Final                   |
+| **Autor**       | [Name einfugen]         |
+| **Datum**       | 30. Marz 2026           |
 | **Projektname** | Demokrat (Arbeitstitel) |
 
 ### Anderungshistorie
 
-| Version | Datum | Autor | Anderungen |
-|---------|-------|-------|------------|
-| 0.1.0 | 30.03.2026 | -- | Initiale Erstellung des PRD |
-| 0.2.0 | 30.03.2026 | -- | Design System, kooperative Gamification, Demokratie-Wrapped, Sitzungswoche-Live, Civic Quests, Teams |
-| 1.0.0 | 30.03.2026 | -- | Finalisierung: Onboarding-Flow, Politischer Charakter, Hybrid-News-Feed, Karten-Tab, kompaktes Wahlkreis-Dashboard, alle offenen Fragen geschlossen |
-| 1.1.0 | 30.03.2026 | -- | PRD-Review: 3 Design-Widerspruche behoben, KI-Content-Policy (ADR-004 rev.), 10 fehlende DB-Tabellen, Landing Page, Rechtliche Must-Haves (LEGAL-01-06), Benachrichtigungstypen, Email-Templates, Empty States, Tech-Entscheidungen (Mapbox, Stripe, Satori, Upstash Rate Limit), Premium-Preis (4,99 EUR/Mo), Free-Limit (5 Themen/Mo) |
+| Version | Datum      | Autor | Anderungen                                                                                                                                                                                                                                                                                                                              |
+| ------- | ---------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0.1.0   | 30.03.2026 | --    | Initiale Erstellung des PRD                                                                                                                                                                                                                                                                                                             |
+| 0.2.0   | 30.03.2026 | --    | Design System, kooperative Gamification, Demokratie-Wrapped, Sitzungswoche-Live, Civic Quests, Teams                                                                                                                                                                                                                                    |
+| 1.0.0   | 30.03.2026 | --    | Finalisierung: Onboarding-Flow, Politischer Charakter, Hybrid-News-Feed, Karten-Tab, kompaktes Wahlkreis-Dashboard, alle offenen Fragen geschlossen                                                                                                                                                                                     |
+| 1.1.0   | 30.03.2026 | --    | PRD-Review: 3 Design-Widerspruche behoben, KI-Content-Policy (ADR-004 rev.), 10 fehlende DB-Tabellen, Landing Page, Rechtliche Must-Haves (LEGAL-01-06), Benachrichtigungstypen, Email-Templates, Empty States, Tech-Entscheidungen (Mapbox, Stripe, Satori, Upstash Rate Limit), Premium-Preis (4,99 EUR/Mo), Free-Limit (5 Themen/Mo) |
 
 ---
 
@@ -51,6 +51,7 @@
 Demokrat folgt dem Prinzip **"Calm Technology"** -- Technologie soll informieren und beruhigen, nicht Unruhe erzeugen. Das Design ist inspiriert von **Notion** (warm, grosszugig, sanfte Rundungen) und **Linear** (straffe Typografie, Struktur wird gefuhlt, nicht gesehen).
 
 **Leitprinzipien:**
+
 1. **Weniger ist alles.** Jedes UI-Element muss seinen Platz rechtfertigen. Im Zweifel weglassen.
 2. **Struktur wird gefuhlt, nicht gesehen.** Weiche Trennlinien, grosszugiger Whitespace statt harter Borders.
 3. **Ungleiche visuelle Gewichtung.** Navigation und sekundare Elemente treten zuruck; der Inhalt dominiert.
@@ -63,50 +64,51 @@ Demokrat folgt dem Prinzip **"Calm Technology"** -- Technologie soll informieren
 Die App nutzt ausschliesslich **4 Farben**: Schwarz, Weiss, Grau und Indigo. Farbe tritt nur dort auf, wo sie wirklich wichtig ist (~10% der Oberflache).
 
 **60-30-10 Regel:**
+
 - **60%** Dominante Flache (Weiss im Light Mode, Dunkelgrau im Dark Mode)
 - **30%** Sekundare Neutrale (Grautone fur Karten, Borders, sekundarer Text)
 - **10%** Akzentfarbe Indigo -- ausschliesslich fur CTAs, aktive Zustande, wichtige Interaktionen
 
 #### Light Mode (Standard)
 
-| Element | Farbe | Hex |
-|---------|-------|-----|
-| Hintergrund | Warm-Weiss | `#FAFAFA` |
-| Karten/Flachen | Weiss | `#FFFFFF` |
-| Text (primar) | Dunkelgrau | `#1A1A1A` |
-| Text (sekundar) | Mittelgrau | `#6B7280` |
-| Borders/Trennlinien | Hellgrau | `#E5E7EB` |
-| Akzent (CTA, Links, aktiv) | Indigo | `#4F46E5` |
-| Akzent Hover | Indigo dunkel | `#4338CA` |
-| Erfolg (dezent) | Grun | `#10B981` |
-| Warnung (dezent) | Amber | `#F59E0B` |
-| Fehler (dezent) | Rot | `#EF4444` |
+| Element                    | Farbe         | Hex       |
+| -------------------------- | ------------- | --------- |
+| Hintergrund                | Warm-Weiss    | `#FAFAFA` |
+| Karten/Flachen             | Weiss         | `#FFFFFF` |
+| Text (primar)              | Dunkelgrau    | `#1A1A1A` |
+| Text (sekundar)            | Mittelgrau    | `#6B7280` |
+| Borders/Trennlinien        | Hellgrau      | `#E5E7EB` |
+| Akzent (CTA, Links, aktiv) | Indigo        | `#4F46E5` |
+| Akzent Hover               | Indigo dunkel | `#4338CA` |
+| Erfolg (dezent)            | Grun          | `#10B981` |
+| Warnung (dezent)           | Amber         | `#F59E0B` |
+| Fehler (dezent)            | Rot           | `#EF4444` |
 
 **Hinweis:** Grun, Amber und Rot werden ausschliesslich fur Systemfeedback verwendet (Erfolg, Warnung, Fehler) -- nie fur politische Inhalte oder Pro/Contra-Markierungen. Pro/Contra wird uber Typografie und Icons gelost, nicht uber Farbe (Barrierefreiheit).
 
 #### Dark Mode (Optional)
 
-| Element | Farbe | Hex |
-|---------|-------|-----|
-| Hintergrund | Fast-Schwarz | `#111111` |
-| Karten/Flachen | Dunkelgrau | `#1A1A1A` |
-| Text (primar) | Hellgrau | `#E5E7EB` |
-| Text (sekundar) | Mittelgrau | `#9CA3AF` |
-| Borders/Trennlinien | Dunkelgrau | `#2D2D2D` |
-| Akzent | Indigo (heller) | `#6366F1` |
+| Element             | Farbe           | Hex       |
+| ------------------- | --------------- | --------- |
+| Hintergrund         | Fast-Schwarz    | `#111111` |
+| Karten/Flachen      | Dunkelgrau      | `#1A1A1A` |
+| Text (primar)       | Hellgrau        | `#E5E7EB` |
+| Text (sekundar)     | Mittelgrau      | `#9CA3AF` |
+| Borders/Trennlinien | Dunkelgrau      | `#2D2D2D` |
+| Akzent              | Indigo (heller) | `#6366F1` |
 
 ### Typografie
 
-| Ebene | Schrift | Grosse | Gewicht | Verwendung |
-|-------|--------|--------|---------|-----------|
-| Display | Inter / Geist Sans | 32px | 700 | Seitentitel, Helden-Texte |
-| H1 | Inter | 24px | 600 | Sektionsuberschriften |
-| H2 | Inter | 20px | 600 | Kartenuberschriften |
-| H3 | Inter | 16px | 600 | Unteruberschriften |
-| Body | Inter | 16px | 400 | Fliesstext, Kommentare |
-| Body Small | Inter | 14px | 400 | Sekundarer Text, Metadaten |
-| Caption | Inter | 12px | 500 | Labels, Timestamps |
-| Mono | Geist Mono | 14px | 400 | Hashes, technische Daten, Zahlen |
+| Ebene      | Schrift            | Grosse | Gewicht | Verwendung                       |
+| ---------- | ------------------ | ------ | ------- | -------------------------------- |
+| Display    | Inter / Geist Sans | 32px   | 700     | Seitentitel, Helden-Texte        |
+| H1         | Inter              | 24px   | 600     | Sektionsuberschriften            |
+| H2         | Inter              | 20px   | 600     | Kartenuberschriften              |
+| H3         | Inter              | 16px   | 600     | Unteruberschriften               |
+| Body       | Inter              | 16px   | 400     | Fliesstext, Kommentare           |
+| Body Small | Inter              | 14px   | 400     | Sekundarer Text, Metadaten       |
+| Caption    | Inter              | 12px   | 500     | Labels, Timestamps               |
+| Mono       | Geist Mono         | 14px   | 400     | Hashes, technische Daten, Zahlen |
 
 ### Spacing & Grid
 
@@ -119,6 +121,7 @@ Die App nutzt ausschliesslich **4 Farben**: Schwarz, Weiss, Grau und Indigo. Far
 ### Interaktionsdesign
 
 **Mikro-Interaktionen (Dopamin ohne visuellen Larm):**
+
 - **Stimmabgabe:** Sanfter Bounce der gewahlten Option (200ms ease-out) + Haptic Feedback (Vibration API)
 - **Streak-Anzeige:** Dezente Flammen-Animation wenn Streak wachst
 - **Fortschrittsbalken:** Smooth fill-Animation (300ms) bei kollektiven Zielen
@@ -126,6 +129,7 @@ Die App nutzt ausschliesslich **4 Farben**: Schwarz, Weiss, Grau und Indigo. Far
 - **Kommentar geupvoted:** Kurzer "Thumbs-up"-Pulse (nicht ubertrieben)
 
 **Was es NICHT gibt:**
+
 - Kein Konfetti (zu verspielt fur eine Demokratie-Plattform)
 - Keine Glow-Effekte oder Neon-Farben
 - Keine animierten Emojis oder Sticker
@@ -133,6 +137,7 @@ Die App nutzt ausschliesslich **4 Farben**: Schwarz, Weiss, Grau und Indigo. Far
 - Kein Auto-Play Video
 
 **Transitionen:**
+
 - Seitenwechsel: Sanftes Fade + leichter Slide (200ms)
 - Bottom Sheet (Abstimmung): Slide-up mit Backdrop-Blur (300ms)
 - Modal: Fade-in mit Scale (0.95 -> 1.0, 200ms)
@@ -140,6 +145,7 @@ Die App nutzt ausschliesslich **4 Farben**: Schwarz, Weiss, Grau und Indigo. Far
 ### Komponentenbibliothek
 
 Basis: **shadcn/ui** (Zinc-Farbskala) mit folgenden Anpassungen:
+
 - Border-Radius: 12px (statt Standard 6px) fur warmeres Gefuhl
 - Alle Komponenten in beiden Modi (Light/Dark) getestet
 - Alle Komponenten WCAG 2.1 AA konform (Kontrast 4.5:1 Normaltext, 3:1 Grosstext)
@@ -185,48 +191,48 @@ Basis: **shadcn/ui** (Zinc-Farbskala) mit folgenden Anpassungen:
 
 ## 0b. Glossar
 
-| Begriff | Definition |
-|---------|-----------|
-| **Abstimmung** | Ein strukturierter Entscheidungsprozess, bei dem Nutzer ihre Meinung zu einem Thema abgeben |
-| **ADR** | Architecture Decision Record -- dokumentierte Architekturentscheidung mit Kontext und Begrundung |
-| **Approval Voting** | Abstimmungsformat, bei dem Nutzer alle akzeptablen Optionen ankreuzen konnen |
-| **BaaS** | Backend-as-a-Service -- verwaltete Backend-Infrastruktur (Datenbank, Auth, Storage) |
-| **BDSG** | Bundesdatenschutzgesetz -- deutsches Datenschutzgesetz, erganzt die DSGVO |
-| **BFSG** | Barrierefreiheitsstarkungsgesetz -- seit Juni 2025 geltende Anforderungen an digitale Barrierefreiheit |
-| **BITV 2.0** | Barrierefreie-Informationstechnik-Verordnung -- implementiert WCAG 2.1 AA fur deutsche offentliche Stellen |
-| **Bridging-Algorithmus** | Mathematisches Verfahren, das Inhalte bevorzugt, die uber politische Lagergrenzen hinweg als hilfreich bewertet werden (inspiriert von X/Twitter Community Notes) |
-| **Burgerinitiative** | Von Nutzern erstelltes Thema mit Abstimmung auf der Plattform |
-| **CQRS** | Command Query Responsibility Segregation -- Trennung von Schreib- und Lesepfaden in der Architektur |
-| **DIP API** | Dokumentations- und Informationssystem fur Parlamentsmaterialien -- offizielle Bundestag-Daten-API |
-| **Drucksache** | Offizielles Bundestagsdokument (Gesetzentwurf, Antrag, Beschlussempfehlung etc.) |
-| **DSFA** | Datenschutz-Folgenabschatzung -- Risikoanalyse fur Datenverarbeitungen mit hohem Risiko (Art. 35 DSGVO) |
-| **DSGVO** | Datenschutz-Grundverordnung -- EU-weites Datenschutzrecht (= GDPR) |
-| **eID** | Elektronische Identitat des deutschen Personalausweises (Online-Ausweisfunktion) |
-| **eIDAS** | EU-Verordnung uber elektronische Identifizierung und Vertrauensdienste |
-| **EUDI Wallet** | European Digital Identity Wallet -- geplante EU-weite digitale Identitat (ab 2027) |
-| **Event Sourcing** | Architekturmuster, bei dem Zustandsanderungen als unveranderliche Ereignisse gespeichert werden |
-| **Fraktion** | Zusammenschluss von Abgeordneten einer Partei im Bundestag; auf der Plattform auch: Nutzergruppe |
-| **Freemium** | Geschaftsmodell mit kostenlosem Basiszugang und kostenpflichtigen Premiumfunktionen |
-| **Hash Chain** | Kryptographische Verkettung von Datensatzen, bei der jeder Eintrag den Hash des vorherigen enthalt |
-| **Leichte Sprache** | Vereinfachtes Deutsch fur Menschen mit Lernschwierigkeiten oder geringen Deutschkenntnissen |
-| **Lighthouse** | Google-Tool zur Messung von Web-Performance, Accessibility und SEO |
-| **Liquid Democracy** | Demokratiemodell, bei dem Stimmen an Vertrauenspersonen delegiert werden konnen |
-| **MdB** | Mitglied des Bundestages |
-| **MoSCoW** | Priorisierungsmethode: Must / Should / Could / Won't |
-| **MVP** | Minimum Viable Product -- minimale funktionsfahige Version |
-| **Namentliche Abstimmung** | Bundestagsabstimmung, bei der die Stimme jedes MdB offentlich dokumentiert wird |
-| **North Star Metric** | Die eine Kennzahl, die den Gesamterfolg des Produkts am besten misst |
-| **PWA** | Progressive Web App -- Webanwendung mit nativen App-Fahigkeiten (Offline, Push, Installierbar) |
-| **Ranked Choice Voting** | Abstimmung durch Rangfolge der Optionen nach personlicher Praferenz |
-| **RLS** | Row Level Security -- PostgreSQL-Funktion zur zeilenbasierten Zugriffskontrolle |
-| **Service Worker** | Browser-Hintergrundprozess fur Offline-Caching und Push-Notifications |
-| **shadcn/ui** | Sammlung wiederverwendbarer, barrierefreier UI-Komponenten fur React |
-| **Supabase** | Open-Source Backend-as-a-Service Plattform auf PostgreSQL-Basis |
-| **Tailwind CSS** | Utility-first CSS-Framework fur schnelle UI-Entwicklung |
-| **tRPC** | TypeScript-basiertes RPC-Framework fur durchgangige Typsicherheit zwischen Client und Server |
-| **Vorgang** | Parlamentarischer Vorgang im Bundestag (z.B. ein Gesetzgebungsverfahren) |
-| **Wahlkreis** | Einer der 299 Bundestagswahlkreise, denen Nutzer zugeordnet werden |
-| **WCAG** | Web Content Accessibility Guidelines -- internationale Richtlinien fur Barrierefreiheit |
+| Begriff                    | Definition                                                                                                                                                        |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Abstimmung**             | Ein strukturierter Entscheidungsprozess, bei dem Nutzer ihre Meinung zu einem Thema abgeben                                                                       |
+| **ADR**                    | Architecture Decision Record -- dokumentierte Architekturentscheidung mit Kontext und Begrundung                                                                  |
+| **Approval Voting**        | Abstimmungsformat, bei dem Nutzer alle akzeptablen Optionen ankreuzen konnen                                                                                      |
+| **BaaS**                   | Backend-as-a-Service -- verwaltete Backend-Infrastruktur (Datenbank, Auth, Storage)                                                                               |
+| **BDSG**                   | Bundesdatenschutzgesetz -- deutsches Datenschutzgesetz, erganzt die DSGVO                                                                                         |
+| **BFSG**                   | Barrierefreiheitsstarkungsgesetz -- seit Juni 2025 geltende Anforderungen an digitale Barrierefreiheit                                                            |
+| **BITV 2.0**               | Barrierefreie-Informationstechnik-Verordnung -- implementiert WCAG 2.1 AA fur deutsche offentliche Stellen                                                        |
+| **Bridging-Algorithmus**   | Mathematisches Verfahren, das Inhalte bevorzugt, die uber politische Lagergrenzen hinweg als hilfreich bewertet werden (inspiriert von X/Twitter Community Notes) |
+| **Burgerinitiative**       | Von Nutzern erstelltes Thema mit Abstimmung auf der Plattform                                                                                                     |
+| **CQRS**                   | Command Query Responsibility Segregation -- Trennung von Schreib- und Lesepfaden in der Architektur                                                               |
+| **DIP API**                | Dokumentations- und Informationssystem fur Parlamentsmaterialien -- offizielle Bundestag-Daten-API                                                                |
+| **Drucksache**             | Offizielles Bundestagsdokument (Gesetzentwurf, Antrag, Beschlussempfehlung etc.)                                                                                  |
+| **DSFA**                   | Datenschutz-Folgenabschatzung -- Risikoanalyse fur Datenverarbeitungen mit hohem Risiko (Art. 35 DSGVO)                                                           |
+| **DSGVO**                  | Datenschutz-Grundverordnung -- EU-weites Datenschutzrecht (= GDPR)                                                                                                |
+| **eID**                    | Elektronische Identitat des deutschen Personalausweises (Online-Ausweisfunktion)                                                                                  |
+| **eIDAS**                  | EU-Verordnung uber elektronische Identifizierung und Vertrauensdienste                                                                                            |
+| **EUDI Wallet**            | European Digital Identity Wallet -- geplante EU-weite digitale Identitat (ab 2027)                                                                                |
+| **Event Sourcing**         | Architekturmuster, bei dem Zustandsanderungen als unveranderliche Ereignisse gespeichert werden                                                                   |
+| **Fraktion**               | Zusammenschluss von Abgeordneten einer Partei im Bundestag; auf der Plattform auch: Nutzergruppe                                                                  |
+| **Freemium**               | Geschaftsmodell mit kostenlosem Basiszugang und kostenpflichtigen Premiumfunktionen                                                                               |
+| **Hash Chain**             | Kryptographische Verkettung von Datensatzen, bei der jeder Eintrag den Hash des vorherigen enthalt                                                                |
+| **Leichte Sprache**        | Vereinfachtes Deutsch fur Menschen mit Lernschwierigkeiten oder geringen Deutschkenntnissen                                                                       |
+| **Lighthouse**             | Google-Tool zur Messung von Web-Performance, Accessibility und SEO                                                                                                |
+| **Liquid Democracy**       | Demokratiemodell, bei dem Stimmen an Vertrauenspersonen delegiert werden konnen                                                                                   |
+| **MdB**                    | Mitglied des Bundestages                                                                                                                                          |
+| **MoSCoW**                 | Priorisierungsmethode: Must / Should / Could / Won't                                                                                                              |
+| **MVP**                    | Minimum Viable Product -- minimale funktionsfahige Version                                                                                                        |
+| **Namentliche Abstimmung** | Bundestagsabstimmung, bei der die Stimme jedes MdB offentlich dokumentiert wird                                                                                   |
+| **North Star Metric**      | Die eine Kennzahl, die den Gesamterfolg des Produkts am besten misst                                                                                              |
+| **PWA**                    | Progressive Web App -- Webanwendung mit nativen App-Fahigkeiten (Offline, Push, Installierbar)                                                                    |
+| **Ranked Choice Voting**   | Abstimmung durch Rangfolge der Optionen nach personlicher Praferenz                                                                                               |
+| **RLS**                    | Row Level Security -- PostgreSQL-Funktion zur zeilenbasierten Zugriffskontrolle                                                                                   |
+| **Service Worker**         | Browser-Hintergrundprozess fur Offline-Caching und Push-Notifications                                                                                             |
+| **shadcn/ui**              | Sammlung wiederverwendbarer, barrierefreier UI-Komponenten fur React                                                                                              |
+| **Supabase**               | Open-Source Backend-as-a-Service Plattform auf PostgreSQL-Basis                                                                                                   |
+| **Tailwind CSS**           | Utility-first CSS-Framework fur schnelle UI-Entwicklung                                                                                                           |
+| **tRPC**                   | TypeScript-basiertes RPC-Framework fur durchgangige Typsicherheit zwischen Client und Server                                                                      |
+| **Vorgang**                | Parlamentarischer Vorgang im Bundestag (z.B. ein Gesetzgebungsverfahren)                                                                                          |
+| **Wahlkreis**              | Einer der 299 Bundestagswahlkreise, denen Nutzer zugeordnet werden                                                                                                |
+| **WCAG**                   | Web Content Accessibility Guidelines -- internationale Richtlinien fur Barrierefreiheit                                                                           |
 
 ---
 
@@ -251,12 +257,12 @@ Deutschland steht vor einer wachsenden demokratischen Vertrauenskrise:
 
 **Was existiert, aber nicht reicht:**
 
-| Plattform | Starke | Lucke |
-|-----------|--------|-------|
-| DEMOCRACY App | Spiegelt Bundestagsabstimmungen | Keine Community, kein Dialog, keine eigenen Themen |
-| Decidim | Umfassendes Beteiligungstool | Institutionell gebunden, nicht fur Einzelburger |
-| adhocracy+ | In ~280 Kommunen im Einsatz | An Kommunen gebunden, kein bundesweiter Ansatz |
-| abgeordnetenwatch | Transparenz uber Abgeordnete | Nur Frage-Antwort, keine Abstimmungen durch Burger |
+| Plattform         | Starke                          | Lucke                                              |
+| ----------------- | ------------------------------- | -------------------------------------------------- |
+| DEMOCRACY App     | Spiegelt Bundestagsabstimmungen | Keine Community, kein Dialog, keine eigenen Themen |
+| Decidim           | Umfassendes Beteiligungstool    | Institutionell gebunden, nicht fur Einzelburger    |
+| adhocracy+        | In ~280 Kommunen im Einsatz     | An Kommunen gebunden, kein bundesweiter Ansatz     |
+| abgeordnetenwatch | Transparenz uber Abgeordnete    | Nur Frage-Antwort, keine Abstimmungen durch Burger |
 
 **Es fehlt:** Eine bundesweite Plattform, die offizielle Bundestag-Daten mit Burger-Abstimmungen, strukturierter Deliberation und aktiver Ergebniskommunikation an die Politik verbindet.
 
@@ -279,20 +285,21 @@ Demokrat nutzt ein **Freemium-Modell**:
 
 **Preise:** 4,99 EUR/Monat oder 49,99 EUR/Jahr (~2 Monate gratis). Zahlungsabwicklung uber Stripe.
 
-| | Basis (kostenlos) | Premium (4,99 EUR/Monat) |
-|---|---|---|
-| Abstimmen | Alle Formate | Alle Formate |
-| Kommentieren | Ja | Ja |
-| Themen erstellen | 5 pro Monat | Unbegrenzt |
-| Ergebnisse sehen | Basis-Ansicht | Detaillierte Analysen, demografische Aufschlusselung, historische Vergleiche |
-| Benachrichtigungen | Standard | Erweitert (z.B. Wahlkreis-spezifisch, MdB-Tracking) |
-| Datenexport | Eigene Daten (JSON) | Erweiterte Exports (CSV, JSON), Embed-Widgets |
-| Gruppen | Beitreten | Erstellen und verwalten |
-| Character Sheet | Basis (nach 30 Abstimmungen) | Erweiterte Statistiken und historische Entwicklung |
+|                    | Basis (kostenlos)            | Premium (4,99 EUR/Monat)                                                     |
+| ------------------ | ---------------------------- | ---------------------------------------------------------------------------- |
+| Abstimmen          | Alle Formate                 | Alle Formate                                                                 |
+| Kommentieren       | Ja                           | Ja                                                                           |
+| Themen erstellen   | 5 pro Monat                  | Unbegrenzt                                                                   |
+| Ergebnisse sehen   | Basis-Ansicht                | Detaillierte Analysen, demografische Aufschlusselung, historische Vergleiche |
+| Benachrichtigungen | Standard                     | Erweitert (z.B. Wahlkreis-spezifisch, MdB-Tracking)                          |
+| Datenexport        | Eigene Daten (JSON)          | Erweiterte Exports (CSV, JSON), Embed-Widgets                                |
+| Gruppen            | Beitreten                    | Erstellen und verwalten                                                      |
+| Character Sheet    | Basis (nach 30 Abstimmungen) | Erweiterte Statistiken und historische Entwicklung                           |
 
 **Langfristiger Pfad:** B2G SaaS (Business-to-Government) -- Kommunen und Landerparlamente konnen die Plattform als White-Label-Losung fur offizielle Burgerbeteiligung lizenzieren.
 
 **Finanzierungsmoglichkeiten fur die Startphase:**
+
 - Sovereign Tech Fund (bis zu 1 Mio. EUR fur Open-Source-Infrastruktur)
 - EU Horizon Europe Cluster 2 (Demokratie & Governance)
 - Civitates (europaischer Demokratie-Fonds, bis zu 160.000 EUR)
@@ -314,11 +321,11 @@ Demokrat nutzt ein **Freemium-Modell**:
 
 ### 2.1 Marktgrosse
 
-| Ebene | Grosse | Definition |
-|-------|--------|-----------|
-| **TAM** (Total Addressable Market) | 61,2 Mio. | Alle Wahlberechtigten in Deutschland |
-| **SAM** (Serviceable Addressable Market) | ~30 Mio. | Internet-affine, politisch interessierte Burger (Basis: Allensbach/Forsa-Erhebungen zum politischen Interesse) |
-| **SOM** (Serviceable Obtainable Market) | 50.000 (Jahr 1), 500.000 (Jahr 3) | Realistische Nutzerziele basierend auf Vergleichsplattformen |
+| Ebene                                    | Grosse                            | Definition                                                                                                     |
+| ---------------------------------------- | --------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **TAM** (Total Addressable Market)       | 61,2 Mio.                         | Alle Wahlberechtigten in Deutschland                                                                           |
+| **SAM** (Serviceable Addressable Market) | ~30 Mio.                          | Internet-affine, politisch interessierte Burger (Basis: Allensbach/Forsa-Erhebungen zum politischen Interesse) |
+| **SOM** (Serviceable Obtainable Market)  | 50.000 (Jahr 1), 500.000 (Jahr 3) | Realistische Nutzerziele basierend auf Vergleichsplattformen                                                   |
 
 ### 2.2 Primare Personas
 
@@ -326,130 +333,131 @@ Demokrat nutzt ein **Freemium-Modell**:
 
 #### Persona 1: Anna die Aktive
 
-| | |
-|---|---|
-| **Alter** | 34 |
-| **Wohnort** | Berlin-Kreuzberg |
-| **Beruf** | Lehrerin (Gesellschaftskunde) |
-| **Tech-Affinitat** | 4/5 |
-| **Polit. Engagement** | 5/5 |
-| **Aktuelle Tools** | DEMOCRACY App, abgeordnetenwatch, Twitter/X |
-| **Frustrationen** | "Ich stimme in der DEMOCRACY App ab, aber es fuhlt sich sinnlos an -- es passiert ja nichts damit. Und auf Twitter wird jede Diskussion sofort toxisch." |
-| **Ziele** | Ihre Meinung qualifiziert einbringen und sehen, dass sie Wirkung hat. Sich mit Gleichgesinnten UND Andersdenkenden konstruktiv austauschen. |
-| **Szenario** | Anna sieht morgens die Push-Notification "Neuer Gesetzentwurf: Digitale Bildungsstrategie 2030". Sie liest die Zusammenfassung, stimmt ab, schreibt einen Kommentar mit Quellenangabe aus ihrer Berufserfahrung und sieht am Abend, wie der Bundestag anders abgestimmt hat als die Burger. |
+|                       |                                                                                                                                                                                                                                                                                             |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Alter**             | 34                                                                                                                                                                                                                                                                                          |
+| **Wohnort**           | Berlin-Kreuzberg                                                                                                                                                                                                                                                                            |
+| **Beruf**             | Lehrerin (Gesellschaftskunde)                                                                                                                                                                                                                                                               |
+| **Tech-Affinitat**    | 4/5                                                                                                                                                                                                                                                                                         |
+| **Polit. Engagement** | 5/5                                                                                                                                                                                                                                                                                         |
+| **Aktuelle Tools**    | DEMOCRACY App, abgeordnetenwatch, Twitter/X                                                                                                                                                                                                                                                 |
+| **Frustrationen**     | "Ich stimme in der DEMOCRACY App ab, aber es fuhlt sich sinnlos an -- es passiert ja nichts damit. Und auf Twitter wird jede Diskussion sofort toxisch."                                                                                                                                    |
+| **Ziele**             | Ihre Meinung qualifiziert einbringen und sehen, dass sie Wirkung hat. Sich mit Gleichgesinnten UND Andersdenkenden konstruktiv austauschen.                                                                                                                                                 |
+| **Szenario**          | Anna sieht morgens die Push-Notification "Neuer Gesetzentwurf: Digitale Bildungsstrategie 2030". Sie liest die Zusammenfassung, stimmt ab, schreibt einen Kommentar mit Quellenangabe aus ihrer Berufserfahrung und sieht am Abend, wie der Bundestag anders abgestimmt hat als die Burger. |
 
-> *"Ich will nicht nur alle vier Jahre ein Kreuz machen. Ich will, dass meine Stimme zwischen den Wahlen gehort wird."*
+> _"Ich will nicht nur alle vier Jahre ein Kreuz machen. Ich will, dass meine Stimme zwischen den Wahlen gehort wird."_
 
 ---
 
 #### Persona 2: Markus der Mitdenker
 
-| | |
-|---|---|
-| **Alter** | 52 |
-| **Wohnort** | Munchen-Schwabing |
-| **Beruf** | Maschinenbau-Ingenieur |
-| **Tech-Affinitat** | 3/5 |
-| **Polit. Engagement** | 3/5 |
-| **Aktuelle Tools** | Tagesschau-App, gelegentlich ZEIT Online |
-| **Frustrationen** | "Ich lese die Nachrichten und denke mir oft: Das ware doch ganz anders besser zu losen. Aber ich weiss nicht, wohin damit." |
-| **Ziele** | Einfach und schnell seine Meinung zu konkreten politischen Themen abgeben. Verstehen, was im Bundestag passiert, ohne Juristendeutsch. |
-| **Szenario** | Markus offnet in der Mittagspause die App, sieht drei aktuelle Abstimmungen im Feed, stimmt bei zwei ab (dauert 30 Sekunden) und liest bei der dritten die Pro/Contra-Argumente, weil er sich unsicher ist. |
+|                       |                                                                                                                                                                                                             |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Alter**             | 52                                                                                                                                                                                                          |
+| **Wohnort**           | Munchen-Schwabing                                                                                                                                                                                           |
+| **Beruf**             | Maschinenbau-Ingenieur                                                                                                                                                                                      |
+| **Tech-Affinitat**    | 3/5                                                                                                                                                                                                         |
+| **Polit. Engagement** | 3/5                                                                                                                                                                                                         |
+| **Aktuelle Tools**    | Tagesschau-App, gelegentlich ZEIT Online                                                                                                                                                                    |
+| **Frustrationen**     | "Ich lese die Nachrichten und denke mir oft: Das ware doch ganz anders besser zu losen. Aber ich weiss nicht, wohin damit."                                                                                 |
+| **Ziele**             | Einfach und schnell seine Meinung zu konkreten politischen Themen abgeben. Verstehen, was im Bundestag passiert, ohne Juristendeutsch.                                                                      |
+| **Szenario**          | Markus offnet in der Mittagspause die App, sieht drei aktuelle Abstimmungen im Feed, stimmt bei zwei ab (dauert 30 Sekunden) und liest bei der dritten die Pro/Contra-Argumente, weil er sich unsicher ist. |
 
-> *"Politik ist zu wichtig, um sie nur den Politikern zu uberlassen. Aber ich habe nicht den ganzen Tag Zeit dafur."*
+> _"Politik ist zu wichtig, um sie nur den Politikern zu uberlassen. Aber ich habe nicht den ganzen Tag Zeit dafur."_
 
 ---
 
 #### Persona 3: Lena die Lernende
 
-| | |
-|---|---|
-| **Alter** | 22 |
-| **Wohnort** | Hamburg-Altona |
-| **Beruf** | Studentin (Kommunikationsdesign) |
-| **Tech-Affinitat** | 5/5 |
-| **Polit. Engagement** | 2/5 |
-| **Aktuelle Tools** | Instagram, TikTok, Spotify |
-| **Frustrationen** | "Politik ist so trocken und kompliziert. Wenn ich Nachrichten lese, verstehe ich die Halfte nicht. Und ich habe das Gefuhl, dass sowieso niemand auf meine Generation hort." |
-| **Ziele** | Politik verstehen, ohne sich dumm zu fuhlen. Sehen, was andere in ihrem Alter denken. |
-| **Szenario** | Lena installiert die App als PWA, weil eine Freundin sie geteilt hat. Sie scrollt durch den Feed, findet ein Thema uber Mietpreise in Hamburg, stimmt ab und sieht uberrascht, dass 73% der Burger anders gestimmt haben als der Bundestag. Sie teilt das Ergebnis in ihrer Instagram-Story. |
+|                       |                                                                                                                                                                                                                                                                                              |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Alter**             | 22                                                                                                                                                                                                                                                                                           |
+| **Wohnort**           | Hamburg-Altona                                                                                                                                                                                                                                                                               |
+| **Beruf**             | Studentin (Kommunikationsdesign)                                                                                                                                                                                                                                                             |
+| **Tech-Affinitat**    | 5/5                                                                                                                                                                                                                                                                                          |
+| **Polit. Engagement** | 2/5                                                                                                                                                                                                                                                                                          |
+| **Aktuelle Tools**    | Instagram, TikTok, Spotify                                                                                                                                                                                                                                                                   |
+| **Frustrationen**     | "Politik ist so trocken und kompliziert. Wenn ich Nachrichten lese, verstehe ich die Halfte nicht. Und ich habe das Gefuhl, dass sowieso niemand auf meine Generation hort."                                                                                                                 |
+| **Ziele**             | Politik verstehen, ohne sich dumm zu fuhlen. Sehen, was andere in ihrem Alter denken.                                                                                                                                                                                                        |
+| **Szenario**          | Lena installiert die App als PWA, weil eine Freundin sie geteilt hat. Sie scrollt durch den Feed, findet ein Thema uber Mietpreise in Hamburg, stimmt ab und sieht uberrascht, dass 73% der Burger anders gestimmt haben als der Bundestag. Sie teilt das Ergebnis in ihrer Instagram-Story. |
 
-> *"Wenn mir jemand in 30 Sekunden erklaren kann, worum es geht, bin ich dabei."*
+> _"Wenn mir jemand in 30 Sekunden erklaren kann, worum es geht, bin ich dabei."_
 
 ---
 
 #### Persona 4: Jurgen der Journalistische
 
-| | |
-|---|---|
-| **Alter** | 45 |
-| **Wohnort** | Koln |
-| **Beruf** | Datenjournalist (Regionalzeitung) |
-| **Tech-Affinitat** | 4/5 |
-| **Polit. Engagement** | 4/5 (beruflich) |
-| **Aktuelle Tools** | abgeordnetenwatch, Bundestag Open Data, Statista |
-| **Frustrationen** | "Es gibt keine guten Datenquellen dafur, was die Bevolkerung wirklich zu einzelnen Gesetzen denkt. Infratest macht das nur fur die grossen Themen." |
-| **Ziele** | Belastbare Daten uber Burger-Meinungen zu konkreten Gesetzentwurfen. Eine offene API fur eigene Auswertungen. |
-| **Szenario** | Jurgen nutzt die Open Data API, um fur einen Artikel uber die Klimapolitik die Burger-Abstimmungsergebnisse aller klimabezogenen Gesetzentwurfe der aktuellen Legislaturperiode auszuwerten und mit den Bundestag-Ergebnissen zu vergleichen. |
+|                       |                                                                                                                                                                                                                                               |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Alter**             | 45                                                                                                                                                                                                                                            |
+| **Wohnort**           | Koln                                                                                                                                                                                                                                          |
+| **Beruf**             | Datenjournalist (Regionalzeitung)                                                                                                                                                                                                             |
+| **Tech-Affinitat**    | 4/5                                                                                                                                                                                                                                           |
+| **Polit. Engagement** | 4/5 (beruflich)                                                                                                                                                                                                                               |
+| **Aktuelle Tools**    | abgeordnetenwatch, Bundestag Open Data, Statista                                                                                                                                                                                              |
+| **Frustrationen**     | "Es gibt keine guten Datenquellen dafur, was die Bevolkerung wirklich zu einzelnen Gesetzen denkt. Infratest macht das nur fur die grossen Themen."                                                                                           |
+| **Ziele**             | Belastbare Daten uber Burger-Meinungen zu konkreten Gesetzentwurfen. Eine offene API fur eigene Auswertungen.                                                                                                                                 |
+| **Szenario**          | Jurgen nutzt die Open Data API, um fur einen Artikel uber die Klimapolitik die Burger-Abstimmungsergebnisse aller klimabezogenen Gesetzentwurfe der aktuellen Legislaturperiode auszuwerten und mit den Bundestag-Ergebnissen zu vergleichen. |
 
-> *"Gib mir eine API und ich mache daraus Geschichten, die die Leute verstehen."*
+> _"Gib mir eine API und ich mache daraus Geschichten, die die Leute verstehen."_
 
 ---
 
 #### Persona 5: Petra die Politikerin
 
-| | |
-|---|---|
-| **Alter** | 38 |
-| **Wohnort** | Berlin / Wahlkreis Freiburg |
-| **Beruf** | MdB (Bundestag) |
-| **Tech-Affinitat** | 3/5 |
-| **Polit. Engagement** | 5/5 (beruflich) |
-| **Aktuelle Tools** | Bundestag-App, abgeordnetenwatch (antwortet dort), Wahlkreis-Buros |
-| **Frustrationen** | "Ich bekomme 200 E-Mails am Tag, aber weiss trotzdem nicht, was mein Wahlkreis wirklich zu meinem Abstimmungsverhalten denkt." |
-| **Ziele** | Strukturiertes Feedback aus dem Wahlkreis zu konkreten Abstimmungen. Verstehen, wo sie anders liegt als ihre Wahler. |
-| **Szenario** | Petra erhalt nach einer namentlichen Abstimmung eine automatische Email von Demokrat: "82% der Nutzer aus Ihrem Wahlkreis Freiburg haben anders abgestimmt als Sie. Hier sind die Top-3-Argumente der Gegenseite." |
+|                       |                                                                                                                                                                                                                    |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Alter**             | 38                                                                                                                                                                                                                 |
+| **Wohnort**           | Berlin / Wahlkreis Freiburg                                                                                                                                                                                        |
+| **Beruf**             | MdB (Bundestag)                                                                                                                                                                                                    |
+| **Tech-Affinitat**    | 3/5                                                                                                                                                                                                                |
+| **Polit. Engagement** | 5/5 (beruflich)                                                                                                                                                                                                    |
+| **Aktuelle Tools**    | Bundestag-App, abgeordnetenwatch (antwortet dort), Wahlkreis-Buros                                                                                                                                                 |
+| **Frustrationen**     | "Ich bekomme 200 E-Mails am Tag, aber weiss trotzdem nicht, was mein Wahlkreis wirklich zu meinem Abstimmungsverhalten denkt."                                                                                     |
+| **Ziele**             | Strukturiertes Feedback aus dem Wahlkreis zu konkreten Abstimmungen. Verstehen, wo sie anders liegt als ihre Wahler.                                                                                               |
+| **Szenario**          | Petra erhalt nach einer namentlichen Abstimmung eine automatische Email von Demokrat: "82% der Nutzer aus Ihrem Wahlkreis Freiburg haben anders abgestimmt als Sie. Hier sind die Top-3-Argumente der Gegenseite." |
 
-> *"Ich will zuhorenbar sein -- nicht nur alle vier Jahre, sondern bei jedem Gesetz."*
+> _"Ich will zuhorenbar sein -- nicht nur alle vier Jahre, sondern bei jedem Gesetz."_
 
 ---
 
 ### 2.3 Anti-Personas (Fur wen Demokrat NICHT gebaut wird)
 
-| Anti-Persona | Beschreibung | Wie die Plattform sie adressiert |
-|---|---|---|
-| **Der Troll** | Will Diskussionen storen, provozieren und spalten | Bridging-Algorithmus deprioritisiert spalterische Inhalte; Reputation-System begrenzt Rechte; Community-Moderation |
-| **Der Social-Media-Suchtige** | Sucht Unterhaltung, Likes, Follower | Kein Like-System, kein Follower-Mechanismus, kein Engagement-maximierender Algorithmus |
-| **Der verdeckte Lobbyist** | Will unerkannt politische Stimmung manipulieren | Transparente Algorithmen; Verifikationsstufen; Bridging-Score verhindert einseitige Stimmungsmache |
+| Anti-Persona                  | Beschreibung                                      | Wie die Plattform sie adressiert                                                                                   |
+| ----------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Der Troll**                 | Will Diskussionen storen, provozieren und spalten | Bridging-Algorithmus deprioritisiert spalterische Inhalte; Reputation-System begrenzt Rechte; Community-Moderation |
+| **Der Social-Media-Suchtige** | Sucht Unterhaltung, Likes, Follower               | Kein Like-System, kein Follower-Mechanismus, kein Engagement-maximierender Algorithmus                             |
+| **Der verdeckte Lobbyist**    | Will unerkannt politische Stimmung manipulieren   | Transparente Algorithmen; Verifikationsstufen; Bridging-Score verhindert einseitige Stimmungsmache                 |
 
 ### 2.4 User Journey Maps
 
 #### Anna die Aktive -- Journey Map
 
-| Phase | Touchpoint | Aktion | Emotion | Drop-off-Risiko | Retention-Intervention |
-|-------|-----------|--------|---------|-----------------|----------------------|
-| **Awareness** | Empfehlung von Kollegin | Besucht Landing Page | Neugierig | Mittel -- "Noch eine App?" | Klare Differenzierung zu DEMOCRACY App auf Landing Page |
-| **Registration** | Landing Page -> Registrierung | Email-Registrierung, Wahlkreis wahlen | Motiviert | Niedrig | Registrierung in <30 Sekunden, kein Passwort-Zwang (Magic Link) |
-| **First Vote** | Home Feed | Erste Abstimmung zu aktuellem Bundestag-Thema | Befriedigung | Niedrig | Sofort Ergebnis-Vergleich mit Bundestag zeigen |
-| **First Comment** | Topic Detail | Schreibt Kommentar mit Quellenangabe | Engagiert | Mittel -- "Schreibe ich ins Leere?" | Benachrichtigung wenn Kommentar hohen Bridging-Score erhalt |
-| **Regular Use** | Push Notification | Tagliche 2-3 Abstimmungen | Gewohnheit | Hoch -- "Andert ja doch nichts" | Wochentliche Email: "Deine Stimme hat X bewirkt" + Streak-Anzeige |
-| **Premium** | Ergebnis-Dashboard | Detaillierte Wahlkreis-Analyse | Power-User | Mittel | Premium-Features als naturliche Erweiterung, nicht als Paywall |
-| **Advocacy** | Social Sharing | Teilt Ergebnis-Grafik | Stolz | Niedrig | Einfache Share-Cards mit Ergebnis-Visualisierung |
+| Phase             | Touchpoint                    | Aktion                                        | Emotion      | Drop-off-Risiko                     | Retention-Intervention                                            |
+| ----------------- | ----------------------------- | --------------------------------------------- | ------------ | ----------------------------------- | ----------------------------------------------------------------- |
+| **Awareness**     | Empfehlung von Kollegin       | Besucht Landing Page                          | Neugierig    | Mittel -- "Noch eine App?"          | Klare Differenzierung zu DEMOCRACY App auf Landing Page           |
+| **Registration**  | Landing Page -> Registrierung | Email-Registrierung, Wahlkreis wahlen         | Motiviert    | Niedrig                             | Registrierung in <30 Sekunden, kein Passwort-Zwang (Magic Link)   |
+| **First Vote**    | Home Feed                     | Erste Abstimmung zu aktuellem Bundestag-Thema | Befriedigung | Niedrig                             | Sofort Ergebnis-Vergleich mit Bundestag zeigen                    |
+| **First Comment** | Topic Detail                  | Schreibt Kommentar mit Quellenangabe          | Engagiert    | Mittel -- "Schreibe ich ins Leere?" | Benachrichtigung wenn Kommentar hohen Bridging-Score erhalt       |
+| **Regular Use**   | Push Notification             | Tagliche 2-3 Abstimmungen                     | Gewohnheit   | Hoch -- "Andert ja doch nichts"     | Wochentliche Email: "Deine Stimme hat X bewirkt" + Streak-Anzeige |
+| **Premium**       | Ergebnis-Dashboard            | Detaillierte Wahlkreis-Analyse                | Power-User   | Mittel                              | Premium-Features als naturliche Erweiterung, nicht als Paywall    |
+| **Advocacy**      | Social Sharing                | Teilt Ergebnis-Grafik                         | Stolz        | Niedrig                             | Einfache Share-Cards mit Ergebnis-Visualisierung                  |
 
 #### Markus der Mitdenker -- Journey Map
 
-| Phase | Touchpoint | Aktion | Emotion | Drop-off-Risiko | Retention-Intervention |
-|-------|-----------|--------|---------|-----------------|----------------------|
-| **Awareness** | Artikel in Tagesschau-App | Klickt auf eingebettetes Ergebnis-Widget | Uberrascht | Hoch -- "Was ist das?" | Widget enthalt klaren CTA: "Stimme auch ab" |
-| **Registration** | Widget -> Landing Page | Email-Registrierung | Skeptisch | Hoch | Keine Daten ausser Email erforderlich; sofort abstimmen nach Registrierung |
-| **First Vote** | Home Feed | Stimmt uber Mittagspause ab (30 Sek.) | "Das war einfach" | Mittel | Sofort-Feedback: "73% stimmen dir zu" |
-| **Regular Use** | Wochentliche Email-Digest | Offnet App fur 3-5 Min. | Routine | Hoch -- kurze Aufmerksamkeit | Digest: Nur 3 relevanteste Themen, ein Klick zum Abstimmen |
+| Phase            | Touchpoint                | Aktion                                   | Emotion           | Drop-off-Risiko              | Retention-Intervention                                                     |
+| ---------------- | ------------------------- | ---------------------------------------- | ----------------- | ---------------------------- | -------------------------------------------------------------------------- |
+| **Awareness**    | Artikel in Tagesschau-App | Klickt auf eingebettetes Ergebnis-Widget | Uberrascht        | Hoch -- "Was ist das?"       | Widget enthalt klaren CTA: "Stimme auch ab"                                |
+| **Registration** | Widget -> Landing Page    | Email-Registrierung                      | Skeptisch         | Hoch                         | Keine Daten ausser Email erforderlich; sofort abstimmen nach Registrierung |
+| **First Vote**   | Home Feed                 | Stimmt uber Mittagspause ab (30 Sek.)    | "Das war einfach" | Mittel                       | Sofort-Feedback: "73% stimmen dir zu"                                      |
+| **Regular Use**  | Wochentliche Email-Digest | Offnet App fur 3-5 Min.                  | Routine           | Hoch -- kurze Aufmerksamkeit | Digest: Nur 3 relevanteste Themen, ein Klick zum Abstimmen                 |
 
 ---
 
 ## 3. Funktionale Anforderungen
 
 Jede Anforderung wird beschrieben mit:
+
 - **Beschreibung** des Features
 - **User Stories** im Format "Als [Rolle] mochte ich [Aktion], damit [Nutzen]"
 - **Akzeptanzkriterien** (testbar)
@@ -463,18 +471,18 @@ Jede Anforderung wird beschrieben mit:
 
 #### Feature-Ubersicht
 
-| ID | Feature | Phase | Prioritat |
-|----|---------|-------|-----------|
-| AUTH-01 | Email + Passwort Registrierung | 1 | Must |
-| AUTH-02 | Email-Verifizierung (Double Opt-in) | 1 | Must |
-| AUTH-03 | Passwort-Reset | 1 | Must |
-| AUTH-04 | Magic Link Login | 1 | Should |
-| AUTH-05 | OAuth (Google, Apple) | 2 | Should |
-| AUTH-06 | eID/Personalausweis Verifizierung | 3 | Could |
-| AUTH-07 | Zwei-Faktor-Authentifizierung (TOTP) | 2 | Should |
-| AUTH-08 | Account-Loschung (DSGVO Art. 17) | 1 | Must |
-| AUTH-09 | Session-Management (Multi-Device) | 1 | Must |
-| AUTH-10 | Anonymes Browsen (Read-only) | 1 | Must |
+| ID      | Feature                              | Phase | Prioritat |
+| ------- | ------------------------------------ | ----- | --------- |
+| AUTH-01 | Email + Passwort Registrierung       | 1     | Must      |
+| AUTH-02 | Email-Verifizierung (Double Opt-in)  | 1     | Must      |
+| AUTH-03 | Passwort-Reset                       | 1     | Must      |
+| AUTH-04 | Magic Link Login                     | 1     | Should    |
+| AUTH-05 | OAuth (Google, Apple)                | 2     | Should    |
+| AUTH-06 | eID/Personalausweis Verifizierung    | 3     | Could     |
+| AUTH-07 | Zwei-Faktor-Authentifizierung (TOTP) | 2     | Should    |
+| AUTH-08 | Account-Loschung (DSGVO Art. 17)     | 1     | Must      |
+| AUTH-09 | Session-Management (Multi-Device)    | 1     | Must      |
+| AUTH-10 | Anonymes Browsen (Read-only)         | 1     | Must      |
 
 #### User Stories
 
@@ -483,6 +491,7 @@ Jede Anforderung wird beschrieben mit:
 > Als Burger mochte ich mich mit meiner E-Mail-Adresse und einem Passwort registrieren konnen, damit ich schnell und ohne Hurden Zugang zur Plattform bekomme.
 
 Akzeptanzkriterien:
+
 - Registrierungsformular: E-Mail (Pflicht), Passwort (min. 8 Zeichen, Pflicht), Anzeigename (Pflicht), Wahlkreis (Optional)
 - Passwort-Starke wird visuell angezeigt
 - DSGVO-Einwilligung (Checkbox, Pflicht) mit Link zur Datenschutzerklarung
@@ -495,6 +504,7 @@ Akzeptanzkriterien:
 > Als registrierter Nutzer mochte ich mich per Magic Link einloggen konnen, damit ich mir kein Passwort merken muss.
 
 Akzeptanzkriterien:
+
 - Nutzer gibt E-Mail ein und erhalt einen Login-Link per Mail
 - Link ist 15 Minuten gultig, danach ablaufend
 - Nach Klick auf den Link: automatischer Login und Weiterleitung zum Feed
@@ -505,6 +515,7 @@ Akzeptanzkriterien:
 > Als verifizierter Nutzer (eID) mochte ich ein Verifikationsabzeichen erhalten, damit meine Stimme in deliberativen Prozessen als vertrauenswurdiger erkennbar ist.
 
 Akzeptanzkriterien:
+
 - Integration uber AusweisApp SDK (kostenlos, Open Source, v2.4.1)
 - Nutzer wird zur AusweisApp weitergeleitet, scannt Personalausweis per NFC
 - Nur die Service-spezifische pseudonyme ID wird gespeichert (keine personlichen Daten)
@@ -517,6 +528,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich meinen Account jederzeit vollstandig loschen konnen, damit meine Daten gemaass DSGVO Art. 17 entfernt werden.
 
 Akzeptanzkriterien:
+
 - Losch-Funktion in den Einstellungen erreichbar
 - Bestatigungsdialog mit Passwort/Magic-Link-Verifizierung
 - Personenbezogene Daten werden innerhalb von 30 Tagen geloscht
@@ -532,6 +544,7 @@ Akzeptanzkriterien:
 
 **Screen 1: Wahlkreis**
 "Wo bist du zuhause?"
+
 - GPS-basierte Vorschlag-Erkennung ODER manuelle Suche/Auswahl
 - Mini-Karte zeigt den erkannten Wahlkreis an
 - "Dein Wahlkreis: Freiburg (Wahlkreis 281)"
@@ -539,27 +552,32 @@ Akzeptanzkriterien:
 
 **Screen 2: Themen-Interessen (3-5 auswahlen)**
 "Was interessiert dich?"
+
 - 10 Themen-Chips als Grid: Umwelt & Klima | Wirtschaft | Bildung | Gesundheit | Digitales | Soziales | Sicherheit | Finanzen | Wohnen | Europa
 - Mindestens 3 auswahlen, maximal 5
 - Chips: Hellgrauer Hintergrund, bei Auswahl Indigo-Umrandung
 
 **Screen 3: Tagesziel**
 "Wie viel Zeit hast du fur Demokratie?"
+
 - 4 Optionen: Zuschauer (2 Min/Tag) | Teilnehmer (5 Min) | Engagiert (10 Min) | Aktivist (20 Min)
 - Vorauswahl: "Teilnehmer" (empfohlen)
 
 **Screen 4: Dein Start**
 "Fertig! Hier ist dein erster Blick auf die Demokratie."
+
 - Kleine Vorschau: Wahlkreis auf der Karte (leuchtet auf), 2 vorgeschlagene Themen
 - Button: "Los geht's" -> weiter zum Home Feed
 
 **Danach organisch wachsend:**
+
 - Der politische Charakter (Civic Character Sheet mit 6 Attributen) entwickelt sich durch Nutzung weiter
 - Nach 10 Abstimmungen: Erste Character-Sheet-Visualisierung freigeschaltet
 - Nach 30 Abstimmungen: Vollstandiges Hexagon-Chart verfugbar
 - Themen-Interessen konnen jederzeit in den Einstellungen angepasst werden
 
 Akzeptanzkriterien:
+
 - Onboarding wird nur beim ersten Login gezeigt (danach uberspringbar)
 - GPS-Wahlkreis-Erkennung funktioniert uber Reverse Geocoding gegen die 299 Wahlkreis-Geometrien
 - Ausgewahlte Interessen fliessen sofort in den Feed-Algorithmus ein (+50% Boost fur ausgewahlte Kategorien)
@@ -582,21 +600,21 @@ Akzeptanzkriterien:
 
 #### Feature-Ubersicht
 
-| ID | Feature | Phase | Prioritat |
-|----|---------|-------|-----------|
-| BTS-01 | Auto-Import Gesetzentwurfe aus DIP API | 1 | Must |
-| BTS-02 | Auto-Import namentliche Abstimmungen aus abgeordnetenwatch | 1 | Must |
-| BTS-03 | Vorgang-Timeline (Gesetzgebungsprozess) | 1 | Must |
-| BTS-04 | MdB-Abstimmungsverhalten pro Vorgang | 1 | Must |
-| BTS-05 | Burgerverstandliche Zusammenfassung pro Gesetzentwurf | 1 | Must |
-| BTS-06 | Link zum Original-Drucksache-PDF | 1 | Must |
-| BTS-07 | Filter nach Ausschuss, Fraktion, Themengebiet | 1 | Must |
-| BTS-08 | Volltextsuche uber alle Bundestag-Daten | 1 | Should |
-| BTS-09 | Push-Benachrichtigungen fur neue Abstimmungen | 2 | Should |
-| BTS-10 | Lobbyregister-Kontext pro Vorgang | 2 | Could |
-| BTS-11 | Plenarprotokoll-Auszuge pro Vorgang | 2 | Should |
-| BTS-12 | Historisches Abstimmungsarchiv | 2 | Should |
-| BTS-13 | Wahlkreis-spezifische Ansicht | 2 | Should |
+| ID     | Feature                                                    | Phase | Prioritat |
+| ------ | ---------------------------------------------------------- | ----- | --------- |
+| BTS-01 | Auto-Import Gesetzentwurfe aus DIP API                     | 1     | Must      |
+| BTS-02 | Auto-Import namentliche Abstimmungen aus abgeordnetenwatch | 1     | Must      |
+| BTS-03 | Vorgang-Timeline (Gesetzgebungsprozess)                    | 1     | Must      |
+| BTS-04 | MdB-Abstimmungsverhalten pro Vorgang                       | 1     | Must      |
+| BTS-05 | Burgerverstandliche Zusammenfassung pro Gesetzentwurf      | 1     | Must      |
+| BTS-06 | Link zum Original-Drucksache-PDF                           | 1     | Must      |
+| BTS-07 | Filter nach Ausschuss, Fraktion, Themengebiet              | 1     | Must      |
+| BTS-08 | Volltextsuche uber alle Bundestag-Daten                    | 1     | Should    |
+| BTS-09 | Push-Benachrichtigungen fur neue Abstimmungen              | 2     | Should    |
+| BTS-10 | Lobbyregister-Kontext pro Vorgang                          | 2     | Could     |
+| BTS-11 | Plenarprotokoll-Auszuge pro Vorgang                        | 2     | Should    |
+| BTS-12 | Historisches Abstimmungsarchiv                             | 2     | Should    |
+| BTS-13 | Wahlkreis-spezifische Ansicht                              | 2     | Should    |
 
 #### User Stories
 
@@ -605,6 +623,7 @@ Akzeptanzkriterien:
 > Als Burger mochte ich sehen, welche Gesetzentwurfe aktuell im Bundestag behandelt werden, dargestellt in verstandlicher Sprache, damit ich informiert abstimmen kann.
 
 Akzeptanzkriterien:
+
 - Alle Vorgange vom Typ "Gesetzgebung" der aktuellen Wahlperiode (21) werden automatisch importiert
 - Sync-Intervall: Alle 15 Minuten wahrend Sitzungswochen, alle 6 Stunden sonst
 - Pro importiertem Vorgang wird ein internes `Topic` (source='bundestag') erstellt
@@ -616,6 +635,7 @@ Akzeptanzkriterien:
 > Als Burgerin mochte ich sehen, wie der Bundestag bei namentlichen Abstimmungen gestimmt hat, damit ich das Ergebnis mit meiner eigenen Stimme vergleichen kann.
 
 Akzeptanzkriterien:
+
 - Alle Polls der aktuellen Legislaturperiode (ID 161) werden aus der abgeordnetenwatch API importiert
 - Pro Abstimmung: Titel, Datum, Ergebnis (Ja/Nein/Enthaltung/Nicht abgegeben), redaktionelle Zusammenfassung (`field_intro`)
 - Einzelstimmen der MdBs werden importiert und verknupft
@@ -626,6 +646,7 @@ Akzeptanzkriterien:
 > Als Burgerin mochte ich sehen, wie mein Wahlkreis-Abgeordneter bei namentlichen Abstimmungen gestimmt hat, damit ich seine Arbeit bewerten kann.
 
 Akzeptanzkriterien:
+
 - Auf der Topic-Detail-Seite: Aufschlusselung nach Fraktionen (Balkendiagramm)
 - Suchbar nach einzelnem MdB
 - Verknupfung mit dem Wahlkreis des Nutzers: "Ihr Abgeordneter [Name] hat [Ja/Nein] gestimmt"
@@ -635,6 +656,7 @@ Akzeptanzkriterien:
 > Als Burger ohne juristischen Hintergrund mochte ich eine verstandliche Zusammenfassung jedes Gesetzentwurfs lesen konnen, damit ich informiert abstimmen kann.
 
 Akzeptanzkriterien:
+
 - Jedes Bundestag-Topic hat ein Zusammenfassungs-Feld
 - Zusammenfassungen werden KI-generiert auf Basis der Drucksachen-Texte und abgeordnetenwatch `field_intro`
 - Zielformat: Einfache Sprache (Leseniveau B1), max. 200 Worter, strukturiert in "Worum geht es?" + "Was wurde sich andern?"
@@ -644,6 +666,7 @@ Akzeptanzkriterien:
 #### Technische Notizen
 
 **DIP API (Bundestag):**
+
 - Base URL: `https://search.dip.bundestag.de/api/v1`
 - Auth: `Authorization: ApiKey {key}` Header
 - Endpunkte: `/vorgang`, `/drucksache`, `/drucksache-text/{id}`, `/plenarprotokoll`, `/person`, `/aktivitaet`
@@ -652,6 +675,7 @@ Akzeptanzkriterien:
 - Pagination: Cursor-basiert (`cursor=*` fur erste Seite)
 
 **abgeordnetenwatch API:**
+
 - Base URL: `https://www.abgeordnetenwatch.de/api/v2/`
 - Auth: Keine (offen)
 - Lizenz: CC0 1.0 (Public Domain)
@@ -661,6 +685,7 @@ Akzeptanzkriterien:
 - Pagination: `range_start`, `range_end` (max 1000)
 
 **Sync-Strategie:**
+
 - Cron-Job alle 15 Minuten: `GET /vorgang?f.wahlperiode=21&f.aktualisiert.start={last_sync}`
 - Idempotent uber `dip_id` (UNIQUE constraint)
 - DIP-/abgeordnetenwatch-Daten sind autoritativ; interne Anreicherungen (Zusammenfassungen, Kategorien) werden als separate Felder gespeichert
@@ -672,20 +697,20 @@ Akzeptanzkriterien:
 
 #### Feature-Ubersicht
 
-| ID | Feature | Phase | Prioritat |
-|----|---------|-------|-----------|
-| VOTE-01 | Ja/Nein/Enthaltung Abstimmung (Bundestag-Spiegel) | 1 | Must |
-| VOTE-02 | Multiple Choice Abstimmung | 1 | Must |
-| VOTE-03 | Ranked Choice Voting | 2 | Must |
-| VOTE-04 | Approval Voting | 2 | Should |
-| VOTE-05 | Liquid Democracy Delegation | 3 | Could |
-| VOTE-06 | Partizipatives Budget | 3 | Could |
-| VOTE-07 | Zeitfenster fur Abstimmungen | 1 | Must |
-| VOTE-08 | Stimmabgabe andern (innerhalb Zeitfenster) | 1 | Should |
-| VOTE-09 | Abstimmungsbeleg / Verifikations-Hash | 1 | Must |
-| VOTE-10 | Ergebnis-Anzeige (Diagramme) | 1 | Must |
-| VOTE-11 | Demografische Aufschlusselung | 2 | Should |
-| VOTE-12 | Vergleich: Burger vs. Bundestag | 1 | Must |
+| ID      | Feature                                           | Phase | Prioritat |
+| ------- | ------------------------------------------------- | ----- | --------- |
+| VOTE-01 | Ja/Nein/Enthaltung Abstimmung (Bundestag-Spiegel) | 1     | Must      |
+| VOTE-02 | Multiple Choice Abstimmung                        | 1     | Must      |
+| VOTE-03 | Ranked Choice Voting                              | 2     | Must      |
+| VOTE-04 | Approval Voting                                   | 2     | Should    |
+| VOTE-05 | Liquid Democracy Delegation                       | 3     | Could     |
+| VOTE-06 | Partizipatives Budget                             | 3     | Could     |
+| VOTE-07 | Zeitfenster fur Abstimmungen                      | 1     | Must      |
+| VOTE-08 | Stimmabgabe andern (innerhalb Zeitfenster)        | 1     | Should    |
+| VOTE-09 | Abstimmungsbeleg / Verifikations-Hash             | 1     | Must      |
+| VOTE-10 | Ergebnis-Anzeige (Diagramme)                      | 1     | Must      |
+| VOTE-11 | Demografische Aufschlusselung                     | 2     | Should    |
+| VOTE-12 | Vergleich: Burger vs. Bundestag                   | 1     | Must      |
 
 #### User Stories
 
@@ -694,6 +719,7 @@ Akzeptanzkriterien:
 > Als Burger mochte ich uber denselben Gesetzentwurf abstimmen wie der Bundestag, damit ich meine Meinung direkt vergleichen kann.
 
 Akzeptanzkriterien:
+
 - Drei grosse, tippbare Buttons: Ja (Indigo-Hintergrund, weisser Text), Nein (Hellgrauer Hintergrund, dunkler Text), Enthaltung (Hellgrauer Hintergrund, Mittelgrau-Text)
 - Bestatigungsschritt: "Deine Stimme: [Ja]. Abstimmen?" mit Hinweis, dass die Stimme bis zum Ende des Zeitfensters geandert werden kann
 - Nach Abstimmung: Sanfter Bounce der gewahlten Option (200ms ease-out) + Haptic Feedback, Verifikations-Hash angezeigt, Share-Option
@@ -704,6 +730,7 @@ Akzeptanzkriterien:
 > Als Nutzerin mochte ich Optionen nach meiner Praferenz ordnen konnen, damit auch bei komplexen Themen ein differenziertes Meinungsbild entsteht.
 
 Akzeptanzkriterien:
+
 - Drag-and-Drop Liste (mobil-optimiert mit Touch-Support)
 - Mindestens 3, maximal 10 Optionen
 - Nutzer muss nicht alle Optionen ordnen (partielle Rangfolge erlaubt)
@@ -715,6 +742,7 @@ Akzeptanzkriterien:
 > Als Nutzerin mochte ich meine Stimme an einen Delegierten ubertragen konnen, falls ich mich bei einem Thema nicht kompetent genug fuhle.
 
 Akzeptanzkriterien:
+
 - Delegation pro Thema oder pro Kategorie moglich
 - Delegation ist jederzeit widerrufbar
 - Delegierter sieht, wie viele Stimmen er tragt (nicht von wem)
@@ -727,6 +755,7 @@ Akzeptanzkriterien:
 > Als Burger mochte ich einen kryptographischen Beleg fur meine Stimmabgabe erhalten, damit ich nachprufen kann, dass meine Stimme gezahlt wurde.
 
 Akzeptanzkriterien:
+
 - Nach Stimmabgabe: SHA-256 Hash wird angezeigt (z.B. `a3f2b8...`)
 - Hash wird aus Event-ID, Topic-ID, User-ID und Payload berechnet
 - Nutzer kann den Hash spater auf einer Verifikationsseite eingeben und bestatigt bekommen, dass die Stimme im Event Store existiert
@@ -737,6 +766,7 @@ Akzeptanzkriterien:
 > Als Burger mochte ich auf einen Blick sehen, wie mein Abstimmungsergebnis vom Bundestag-Ergebnis abweicht, damit die Diskrepanz sichtbar wird.
 
 Akzeptanzkriterien:
+
 - Nebeneinander-Darstellung: Burger-Ergebnis (links) vs. Bundestag-Ergebnis (rechts)
 - Prozentuale Abweichung hervorgehoben
 - Abweichung visuell hervorgehoben: Indigo-Intensitat zeigt Ubereinstimmungsgrad (gesattigt = hohe Ubereinstimmung, blass = starke Abweichung). Keine Grun/Rot-Kodierung (Barrierefreiheit + Design System)
@@ -747,6 +777,7 @@ Akzeptanzkriterien:
 Das Abstimmungssystem basiert auf **Event Sourcing** -- einem Architekturmuster, bei dem jede Stimmabgabe als unveranderliches Ereignis gespeichert wird. Dies ist keine optionale Designentscheidung, sondern eine Grundvoraussetzung fur demokratische Legitimitat.
 
 **Warum Event Sourcing:**
+
 - **Unveranderlichkeit:** Einmal abgegebene Stimmen konnen nicht still und leise geandert oder geloscht werden
 - **Auditierbarkeit:** Jede Aktion ist nachvollziehbar, der gesamte Verlauf rekonstruierbar
 - **Hash Chain:** Jedes Event referenziert den Hash des vorherigen Events -- Manipulation wird erkannt
@@ -754,6 +785,7 @@ Das Abstimmungssystem basiert auf **Event Sourcing** -- einem Architekturmuster,
 - **CQRS:** Schreibpfad (Event append) und Lesepfad (Projektion) sind getrennt skalierbar
 
 **Event Store Schema:**
+
 ```sql
 vote_events (
   event_id      UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -770,6 +802,7 @@ vote_events (
 ```
 
 **Projektion (Read Model):**
+
 - Materialized View oder separate Tabelle `vote_results`
 - Wird bei jedem neuen Event uber einen PostgreSQL-Trigger aktualisiert
 - Snapshot-Strategie: Ab >10.000 Stimmen pro Topic wird ein laufendes Aggregat vorgehalten
@@ -781,18 +814,18 @@ vote_events (
 
 #### Feature-Ubersicht
 
-| ID | Feature | Phase | Prioritat |
-|----|---------|-------|-----------|
-| UGC-01 | Thema erstellen (Titel, Beschreibung, Kategorie) | 1 | Must |
-| UGC-02 | Abstimmungsformat an Thema anhangen | 1 | Must |
-| UGC-03 | Themenkategorien (Bildung, Gesundheit, Umwelt etc.) | 1 | Must |
-| UGC-04 | Themen-Lifecycle (Entwurf > Wartend > Aktiv > Abgeschlossen > Archiviert) | 1 | Must |
-| UGC-05 | Moderations-Queue fur neue Themen | 1 | Must |
-| UGC-06 | Minimum Unterstutzerschwelle fur Aktivierung | 1 | Should |
-| UGC-07 | Themen-Templates | 2 | Should |
-| UGC-08 | Kollaborative Themenbearbeitung (Wiki-Stil) | 3 | Could |
-| UGC-09 | Petitions-artige Unterschriftensammlung | 2 | Should |
-| UGC-10 | Themen verknupfen / zusammenfuhren | 2 | Could |
+| ID     | Feature                                                                   | Phase | Prioritat |
+| ------ | ------------------------------------------------------------------------- | ----- | --------- |
+| UGC-01 | Thema erstellen (Titel, Beschreibung, Kategorie)                          | 1     | Must      |
+| UGC-02 | Abstimmungsformat an Thema anhangen                                       | 1     | Must      |
+| UGC-03 | Themenkategorien (Bildung, Gesundheit, Umwelt etc.)                       | 1     | Must      |
+| UGC-04 | Themen-Lifecycle (Entwurf > Wartend > Aktiv > Abgeschlossen > Archiviert) | 1     | Must      |
+| UGC-05 | Moderations-Queue fur neue Themen                                         | 1     | Must      |
+| UGC-06 | Minimum Unterstutzerschwelle fur Aktivierung                              | 1     | Should    |
+| UGC-07 | Themen-Templates                                                          | 2     | Should    |
+| UGC-08 | Kollaborative Themenbearbeitung (Wiki-Stil)                               | 3     | Could     |
+| UGC-09 | Petitions-artige Unterschriftensammlung                                   | 2     | Should    |
+| UGC-10 | Themen verknupfen / zusammenfuhren                                        | 2     | Could     |
 
 #### User Stories
 
@@ -801,6 +834,7 @@ vote_events (
 > Als Burgerin mochte ich ein eigenes Thema erstellen und zur Abstimmung stellen konnen, damit auch Themen behandelt werden, die nicht im Bundestag diskutiert werden.
 
 Akzeptanzkriterien:
+
 - Formular: Titel (Pflicht, max 200 Zeichen), Beschreibung (Pflicht, Markdown erlaubt, max 5000 Zeichen), Kategorie (Pflicht, aus vordefinierter Liste), Tags (Optional, max 5)
 - Vorschau vor Veroffentlichung
 - Thema startet im Status "Entwurf" (nur fur Ersteller sichtbar)
@@ -811,6 +845,7 @@ Akzeptanzkriterien:
 > Als Themenersteller mochte ich ein Abstimmungsformat wahlen konnen (Ja/Nein, Multiple Choice, Ranked Choice), damit das Format zur Fragestellung passt.
 
 Akzeptanzkriterien:
+
 - Bei Themen-Erstellung: Auswahl des Formats
 - Ja/Nein: Keine weitere Konfiguration
 - Multiple Choice: 2-10 Optionen definieren, optionale Mehrfachauswahl (max. Anzahl konfigurierbar)
@@ -822,6 +857,7 @@ Akzeptanzkriterien:
 > Als Community-Mitglied mochte ich, dass neue Themen erst ab einer gewissen Unterstutzerzahl zur Abstimmung freigeschaltet werden, damit nur relevante Themen die Feed-Qualitat gewahrleisten.
 
 Akzeptanzkriterien:
+
 - Themen im Status "Wartend" zeigen einen "Unterstutzen"-Button
 - Ab [X] Unterstutzern (konfigurierbar, Vorschlag: 10 in der Startphase) wird das Thema "Aktiv" und die Abstimmung beginnt
 - Unterstutzung ist nicht gleich Abstimmung -- man kann unterstutzen und spater anders abstimmen
@@ -832,18 +868,18 @@ Akzeptanzkriterien:
 
 #### Feature-Ubersicht
 
-| ID | Feature | Phase | Prioritat |
-|----|---------|-------|-----------|
-| DIS-01 | Kommentare auf Themen (Thread, max. 2 Ebenen) | 1 | Must |
-| DIS-02 | Pro/Contra/Neutral-Tagging auf Kommentaren | 1 | Must |
-| DIS-03 | Upvote/Downvote mit Bridging-Score-Gewichtung | 1 | Must |
-| DIS-04 | Argument-Map-Ansicht (Kialo-inspiriert) | 2 | Should |
-| DIS-05 | Pol.is-Style Meinungsclustering | 3 | Could |
-| DIS-06 | No-Reply-Modus (Topic-Ersteller kann aktivieren) | 2 | Should |
-| DIS-07 | Quellen/Belege in Kommentaren verlinken | 1 | Should |
-| DIS-08 | Kommentar-Qualitats-Score | 2 | Should |
-| DIS-09 | Melden/Flaggen-System | 1 | Must |
-| DIS-10 | Community-Moderation (stufenweise Privilegien) | 2 | Should |
+| ID     | Feature                                          | Phase | Prioritat |
+| ------ | ------------------------------------------------ | ----- | --------- |
+| DIS-01 | Kommentare auf Themen (Thread, max. 2 Ebenen)    | 1     | Must      |
+| DIS-02 | Pro/Contra/Neutral-Tagging auf Kommentaren       | 1     | Must      |
+| DIS-03 | Upvote/Downvote mit Bridging-Score-Gewichtung    | 1     | Must      |
+| DIS-04 | Argument-Map-Ansicht (Kialo-inspiriert)          | 2     | Should    |
+| DIS-05 | Pol.is-Style Meinungsclustering                  | 3     | Could     |
+| DIS-06 | No-Reply-Modus (Topic-Ersteller kann aktivieren) | 2     | Should    |
+| DIS-07 | Quellen/Belege in Kommentaren verlinken          | 1     | Should    |
+| DIS-08 | Kommentar-Qualitats-Score                        | 2     | Should    |
+| DIS-09 | Melden/Flaggen-System                            | 1     | Must      |
+| DIS-10 | Community-Moderation (stufenweise Privilegien)   | 2     | Should    |
 
 #### User Stories
 
@@ -852,6 +888,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich Kommentare zu Themen schreiben konnen, damit ich meine Argumente teilen und die Debatte bereichern kann.
 
 Akzeptanzkriterien:
+
 - Kommentare max. 2000 Zeichen
 - Maximal 2 Ebenen Verschachtelung (Antwort auf Antwort, keine tiefere Verschachtelung)
 - Bearbeitung innerhalb von 15 Minuten moglich
@@ -862,6 +899,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich meinen Kommentar als Pro, Contra oder Neutral markieren konnen, damit die Argumentstruktur auf einen Blick erkennbar ist.
 
 Akzeptanzkriterien:
+
 - Bei Kommentar-Erstellung: Auswahl Pro / Contra / Neutral (visuell unterschieden durch Icons: Daumen-hoch / Daumen-runter / Minus, nicht durch Farbe)
 - Filter-Tabs uber Kommentar-Bereich: Alle | Pro | Contra | Neutral
 - Visueller Indikator (Icon + typografische Gewichtung links am Kommentar, keine Farbkodierung -- Barrierefreiheit)
@@ -871,6 +909,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich, dass die hilfreichsten und verbindendsten Kommentare oben stehen, damit die Diskussion konstruktiv bleibt und nicht von Extrempositionen dominiert wird.
 
 Akzeptanzkriterien:
+
 - Standard-Sortierung: Nach Bridging-Score (hochster zuerst)
 - Alternative Sortierung verfugbar: Chronologisch, Meiste Upvotes
 - Ein Kommentar hat einen hohen Bridging-Score, wenn er von Nutzern beider Seiten (Pro UND Contra) als hilfreich bewertet wird
@@ -881,6 +920,7 @@ Akzeptanzkriterien:
 Der Bridging-Algorithmus ist inspiriert von X/Twitter Community Notes, aber vereinfacht fur Phase 1:
 
 **Phase-1-Implementierung (vereinfacht):**
+
 - Jeder Nutzer, der auf ein Topic abgestimmt hat, hat eine "Position" (Ja/Nein/Enthaltung)
 - Wenn ein Nutzer einen Kommentar upvoted, wird sowohl sein Vote als auch seine Position gespeichert
 - Bridging-Score = Anteil der Upvotes, die von Nutzern mit GEGENTEILIGER Abstimmungsposition kommen
@@ -888,6 +928,7 @@ Der Bridging-Algorithmus ist inspiriert von X/Twitter Community Notes, aber vere
 - Score von 1.0 = perfekte Balance; Score von 0.0 = nur eine Seite findet es hilfreich
 
 **Phase-2-Implementierung (Matrix-Faktorisierung):**
+
 - Vollstandige Implementation nach dem Community-Notes-Paper
 - `predicted_rating = user_polarity * comment_polarity + user_intercept + comment_intercept`
 - `comment_intercept` = Hilfreichkeit unabhangig von politischer Ausrichtung
@@ -905,42 +946,42 @@ Dies ist das Herzstuck von Demokrat und der Grund, warum die Plattform sich fund
 
 #### Feature-Ubersicht
 
-| ID | Feature | Phase | Prioritat |
-|----|---------|-------|-----------|
-| GAM-01 | Demokratie-Punkte (XP-System) | 1 | Must |
-| GAM-02 | Demokratie-Streak (tagliche Gewohnheit) | 1 | Must |
-| GAM-03 | Gestufte Privilegien (Stack-Overflow-Modell) | 1 | Must |
-| GAM-04 | Wahlkreis-Fortschritt (kooperative Stadtsimulation) | 1 | Must |
-| GAM-05 | Themen-Teams (bundesweite Kooperation) | 2 | Should |
-| GAM-06 | Tagliche Demokratie-Session (5 Min.) | 1 | Must |
-| GAM-07 | Sitzungswoche-Live-Modus | 1 | Must |
-| GAM-08 | Civic Quests (wochentliche Missionen) | 2 | Should |
-| GAM-09 | Demokratie-Saisons (90-Tage-Zyklen) | 2 | Should |
-| GAM-10 | Demokratie-Wrapped (Jahresreport) | 2 | Must |
-| GAM-11 | Badges fur qualitative Aktionen | 2 | Should |
-| GAM-12 | Civic Character Sheet (6 Attribute) | 2 | Should |
-| GAM-13 | Personliche Demokratie-Geschichte (Narrative) | 3 | Could |
-| GAM-14 | Demokratie-Puls (Plattform-Gesundheits-Score) | 1 | Should |
+| ID     | Feature                                             | Phase | Prioritat |
+| ------ | --------------------------------------------------- | ----- | --------- |
+| GAM-01 | Demokratie-Punkte (XP-System)                       | 1     | Must      |
+| GAM-02 | Demokratie-Streak (tagliche Gewohnheit)             | 1     | Must      |
+| GAM-03 | Gestufte Privilegien (Stack-Overflow-Modell)        | 1     | Must      |
+| GAM-04 | Wahlkreis-Fortschritt (kooperative Stadtsimulation) | 1     | Must      |
+| GAM-05 | Themen-Teams (bundesweite Kooperation)              | 2     | Should    |
+| GAM-06 | Tagliche Demokratie-Session (5 Min.)                | 1     | Must      |
+| GAM-07 | Sitzungswoche-Live-Modus                            | 1     | Must      |
+| GAM-08 | Civic Quests (wochentliche Missionen)               | 2     | Should    |
+| GAM-09 | Demokratie-Saisons (90-Tage-Zyklen)                 | 2     | Should    |
+| GAM-10 | Demokratie-Wrapped (Jahresreport)                   | 2     | Must      |
+| GAM-11 | Badges fur qualitative Aktionen                     | 2     | Should    |
+| GAM-12 | Civic Character Sheet (6 Attribute)                 | 2     | Should    |
+| GAM-13 | Personliche Demokratie-Geschichte (Narrative)       | 3     | Could     |
+| GAM-14 | Demokratie-Puls (Plattform-Gesundheits-Score)       | 1     | Should    |
 
 ---
 
 #### GAM-01: Demokratie-Punkte (XP)
 
-| Aktion | Punkte | Begrundung |
-|--------|--------|-----------|
-| Tageszusammenfassung lesen | +5 | Baut Bewusstsein auf |
-| Verstandnisquiz bestanden | +10 | Aktives Lernen |
-| Stimme abgeben | +15 | Kernpartizipation |
-| Kommentar schreiben | +20 | Tragt zum Diskurs bei |
-| Kommentar mit Quellenangabe | +25 | Evidenzbasiert |
+| Aktion                                       | Punkte        | Begrundung                                             |
+| -------------------------------------------- | ------------- | ------------------------------------------------------ |
+| Tageszusammenfassung lesen                   | +5            | Baut Bewusstsein auf                                   |
+| Verstandnisquiz bestanden                    | +10           | Aktives Lernen                                         |
+| Stimme abgeben                               | +15           | Kernpartizipation                                      |
+| Kommentar schreiben                          | +20           | Tragt zum Diskurs bei                                  |
+| Kommentar mit Quellenangabe                  | +25           | Evidenzbasiert                                         |
 | Kommentar erhalt hohen Bridging-Score (>0.7) | **+50 Bonus** | Bruckenbau uber Lagergrenzen -- die wertvollste Aktion |
-| Thema erstellen (wird "Aktiv") | +30 | Initiative |
-| Report wird von Moderator bestatigt | +5 | Moderationshilfe |
-| Taglicher Streak (7 Tage) | +10 | Gewohnheitsbildung |
-| Taglicher Streak (30 Tage) | +50 | Langfristiges Engagement |
-| Sitzungswoche-Abstimmung (2x Multiplikator) | x2 | Alignment mit echtem Parlamentsrhythmus |
+| Thema erstellen (wird "Aktiv")               | +30           | Initiative                                             |
+| Report wird von Moderator bestatigt          | +5            | Moderationshilfe                                       |
+| Taglicher Streak (7 Tage)                    | +10           | Gewohnheitsbildung                                     |
+| Taglicher Streak (30 Tage)                   | +50           | Langfristiges Engagement                               |
+| Sitzungswoche-Abstimmung (2x Multiplikator)  | x2            | Alignment mit echtem Parlamentsrhythmus                |
 
-**Design-Prinzip:** Punkte belohnen ausschliesslich *Qualitat und Breite* des Engagements, NIE die politische Richtung. Bridging-Kommentare bringen am meisten Punkte, weil Bruckenbau die wertvollste demokratische Handlung ist.
+**Design-Prinzip:** Punkte belohnen ausschliesslich _Qualitat und Breite_ des Engagements, NIE die politische Richtung. Bridging-Kommentare bringen am meisten Punkte, weil Bruckenbau die wertvollste demokratische Handlung ist.
 
 ---
 
@@ -949,12 +990,14 @@ Dies ist das Herzstuck von Demokrat und der Grund, warum die Plattform sich fund
 > Als Nutzer mochte ich sehen, wie viele Tage in Folge ich an der Demokratie teilgenommen habe, damit ich motiviert bleibe, eine tagliche Gewohnheit aufzubauen.
 
 **Was als "Tag" zahlt** (mindestens eine Aktion):
+
 - Abstimmen (Spiegel oder Stimme)
 - Tageszusammenfassung lesen + Quiz beantworten
 - Konstruktiven Kommentar schreiben
 - Kommentar einer anderen Person bewerten
 
 Akzeptanzkriterien:
+
 - Streak-Zahler im Profil und auf dem Home Screen sichtbar
 - Dezente Flammen-Animation bei wachsendem Streak (minimalistisch, Indigo-Ton)
 - **Streak-Schutz:** 1x pro Woche darf ein Tag verpasst werden ohne Streak-Verlust (verdient durch hohe Aktivitat in der Vorwoche)
@@ -966,13 +1009,13 @@ Akzeptanzkriterien:
 
 #### GAM-03: Gestufte Privilegien
 
-| Stufe | Name | Punkte | Narrative | Freigeschaltete Fahigkeiten |
-|-------|------|--------|-----------|----------------------------|
-| 0 | Beobachter | 0 | "Du bist angekommen." | Abstimmen, Kommentieren |
-| 1 | Teilnehmer | 50 | "Du hast deine Stimme gefunden." | Themen erstellen, Inhalte melden |
-| 2 | Mitwirkender | 200 | "Du baust mit." | Zusammenfassungen bearbeiten, Moderationsqueue einsehen |
-| 3 | Moderator | 1.000 | "Die Community vertraut dir." | Themen schliessen/offnen, Kommentare ausblenden |
-| 4 | Vertrauensperson | 5.000 | "Du gestaltest die Regeln." | Admin-Nominierung, Algorithmus-Transparenzrat |
+| Stufe | Name             | Punkte | Narrative                        | Freigeschaltete Fahigkeiten                             |
+| ----- | ---------------- | ------ | -------------------------------- | ------------------------------------------------------- |
+| 0     | Beobachter       | 0      | "Du bist angekommen."            | Abstimmen, Kommentieren                                 |
+| 1     | Teilnehmer       | 50     | "Du hast deine Stimme gefunden." | Themen erstellen, Inhalte melden                        |
+| 2     | Mitwirkender     | 200    | "Du baust mit."                  | Zusammenfassungen bearbeiten, Moderationsqueue einsehen |
+| 3     | Moderator        | 1.000  | "Die Community vertraut dir."    | Themen schliessen/offnen, Kommentare ausblenden         |
+| 4     | Vertrauensperson | 5.000  | "Du gestaltest die Regeln."      | Admin-Nominierung, Algorithmus-Transparenzrat           |
 
 ---
 
@@ -985,6 +1028,7 @@ Dies ist das **einzigartige Kernfeature** von Demokrat.
 **Konzept:** Jeder der 299 Wahlkreise hat ein **kollektives Fortschritts-Dashboard**, das durch die Aktivitaten aller Nutzer im Wahlkreis wachst -- wie eine Stadtsimulation, in der die "Gebaude" reale demokratische Errungenschaften darstellen.
 
 **Wahlkreis-Metriken:**
+
 - **Beteiligungsrate:** % der registrierten Wahlkreis-Nutzer, die diese Woche abgestimmt haben
 - **Bridging-Qualitat:** Durchschnittlicher Bridging-Score der Wahlkreis-Diskussionen
 - **Themen-Vielfalt:** Wie viele verschiedene Kategorien der Wahlkreis abdeckt
@@ -992,21 +1036,23 @@ Dies ist das **einzigartige Kernfeature** von Demokrat.
 
 **Fortschritts-Stufen:**
 
-| Stufe | Name | Bedingung | Visuelles Element |
-|-------|------|-----------|------------------|
-| 1 | Grundstein | 50 registrierte Nutzer | Einfaches Wahlkreis-Icon auf der Karte |
-| 2 | Fundament | 200 Nutzer, 100 Abstimmungen/Woche | Wahlkreis leuchtet auf der Karte schwach |
-| 3 | Wachstum | 500 Nutzer, Bridging-Score >0.5 | Wahlkreis leuchtet starker |
-| 4 | Blute | 1.000 Nutzer, regelmassige MdB-Kommunikation | Wahlkreis hervorgehoben auf der Karte |
-| 5 | Vorbild | Top 10% aller Wahlkreise | Wahlkreis-Badge fur alle Mitglieder |
+| Stufe | Name       | Bedingung                                    | Visuelles Element                        |
+| ----- | ---------- | -------------------------------------------- | ---------------------------------------- |
+| 1     | Grundstein | 50 registrierte Nutzer                       | Einfaches Wahlkreis-Icon auf der Karte   |
+| 2     | Fundament  | 200 Nutzer, 100 Abstimmungen/Woche           | Wahlkreis leuchtet auf der Karte schwach |
+| 3     | Wachstum   | 500 Nutzer, Bridging-Score >0.5              | Wahlkreis leuchtet starker               |
+| 4     | Blute      | 1.000 Nutzer, regelmassige MdB-Kommunikation | Wahlkreis hervorgehoben auf der Karte    |
+| 5     | Vorbild    | Top 10% aller Wahlkreise                     | Wahlkreis-Badge fur alle Mitglieder      |
 
 **Deutschland-Karte:**
+
 - Interaktive Choropleth-Karte von Deutschland, geteilt in 299 Wahlkreise
 - Wahlkreise leuchten in Indigo-Abstufungen basierend auf Aktivitat (heller = aktiver)
 - Live-Animation: Wenn Nutzer abstimmen, pulst der Wahlkreis kurz auf
 - Erreichbar uber den Home Screen als prominentes visuelles Element
 
 Akzeptanzkriterien:
+
 - Jeder Nutzer sieht seinen Wahlkreis-Fortschritt im Profil und auf der Karte
 - Fortschritt ist kooperativ: Alle Nutzer im Wahlkreis tragen bei
 - Kein Ranking einzelner Nutzer innerhalb des Wahlkreises
@@ -1019,6 +1065,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich einem Themen-Team beitreten konnen (z.B. Klima, Bildung, Gesundheit), um gemeinsam mit anderen an Losungen zu arbeiten.
 
 Akzeptanzkriterien:
+
 - Vordefinierte Themen-Teams basierend auf Bundestag-Sachgebieten (Umwelt, Bildung, Gesundheit, Wirtschaft, Digitales, Soziales, Sicherheit, Finanzen)
 - Beitritt mit einem Klick, Austritt jederzeit
 - Team hat ein kollektives Dashboard: Anzahl Mitglieder, abgegebene Stimmen, durchschnittlicher Bridging-Score
@@ -1059,6 +1106,7 @@ Ein Bridging-Kommentar von der "anderen Seite" wird gezeigt.
 **Gesamt:** ~5 Minuten, 45-65 Punkte.
 
 Akzeptanzkriterien:
+
 - Session ist optional -- Nutzer konnen auch frei navigieren
 - Session passt sich dem gesetzten Tagesziel an (siehe unten)
 - Quiz-Fragen werden KI-generiert auf Basis der Tages-Zusammenfassung (Multiple Choice, 4 Optionen, 1 korrekt)
@@ -1066,12 +1114,12 @@ Akzeptanzkriterien:
 
 **Tagesziele (vom Nutzer wahlbar):**
 
-| Stufe | Name | Dauer | Umfang |
-|-------|------|-------|--------|
-| Leicht | Zuschauer | 2-3 Min. | 1 Zusammenfassung + 1 Quiz |
-| Mittel | Teilnehmer | 5 Min. | Zusammenfassung + Quiz + 1 Abstimmung + Perspektivenwechsel |
-| Intensiv | Engagiert | 10 Min. | 2 Zusammenfassungen + 2 Abstimmungen + 1 Kommentar |
-| Maximal | Aktivist | 15-20 Min. | Volle Beteiligung uber alle Saulen |
+| Stufe    | Name       | Dauer      | Umfang                                                      |
+| -------- | ---------- | ---------- | ----------------------------------------------------------- |
+| Leicht   | Zuschauer  | 2-3 Min.   | 1 Zusammenfassung + 1 Quiz                                  |
+| Mittel   | Teilnehmer | 5 Min.     | Zusammenfassung + Quiz + 1 Abstimmung + Perspektivenwechsel |
+| Intensiv | Engagiert  | 10 Min.    | 2 Zusammenfassungen + 2 Abstimmungen + 1 Kommentar          |
+| Maximal  | Aktivist   | 15-20 Min. | Volle Beteiligung uber alle Saulen                          |
 
 ---
 
@@ -1080,6 +1128,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich wahrend Bundestags-Sitzungswochen ein besonderes Live-Erlebnis haben, damit ich den Puls der Demokratie in Echtzeit spure.
 
 Akzeptanzkriterien:
+
 - Banner auf dem Home Screen: "Sitzungswoche -- Der Bundestag tagt"
 - Bundestag-Themen werden mit "LIVE"-Indikator markiert
 - Push-Notification vor Schlusselabstimmungen: "In 2 Stunden stimmt der Bundestag uber [X] ab"
@@ -1095,21 +1144,21 @@ Akzeptanzkriterien:
 
 **Wochentliche Quests (Beispiele):**
 
-| Quest | Beschreibung | Belohnung |
-|-------|-------------|-----------|
-| Informierter Wahler | 3 Zusammenfassungen lesen und abstimmen | +30 Punkte |
-| Bruckenbauer | Einen Kommentar schreiben, der Bridging-Score >0.7 erreicht | +50 Punkte + Badge |
-| Weiter Horizont | In 3 verschiedenen Kategorien abstimmen | +25 Punkte |
-| Wahlkreis-Helfer | 5 Abstimmungen im Wahlkreis-Kontext | +30 Punkte |
-| Quellenforscher | 2 Kommentare mit verifizierten Quellen schreiben | +40 Punkte |
+| Quest               | Beschreibung                                                | Belohnung          |
+| ------------------- | ----------------------------------------------------------- | ------------------ |
+| Informierter Wahler | 3 Zusammenfassungen lesen und abstimmen                     | +30 Punkte         |
+| Bruckenbauer        | Einen Kommentar schreiben, der Bridging-Score >0.7 erreicht | +50 Punkte + Badge |
+| Weiter Horizont     | In 3 verschiedenen Kategorien abstimmen                     | +25 Punkte         |
+| Wahlkreis-Helfer    | 5 Abstimmungen im Wahlkreis-Kontext                         | +30 Punkte         |
+| Quellenforscher     | 2 Kommentare mit verifizierten Quellen schreiben            | +40 Punkte         |
 
 **Story-Quests (einmalige Progressions-Meilensteine):**
 
-| Quest-Reihe | Schritte | Narrative |
-|-------------|----------|----------|
-| Erste Schritte | Profil vervollstandigen, 5x abstimmen, 1 Kommentar | "Du hast deine ersten Schritte in der digitalen Demokratie gemacht." |
-| Mein Wahlkreis | Wahlkreis wahlen, MdB-Profil ansehen, 3 lokale Abstimmungen | "Du kennst jetzt deinen demokratischen Heimatort." |
-| Die andere Seite | 3 Bridging-Kommentare, 5x Perspektivenwechsel gemacht | "Du hast gelernt, Brucken zu bauen." |
+| Quest-Reihe      | Schritte                                                    | Narrative                                                            |
+| ---------------- | ----------------------------------------------------------- | -------------------------------------------------------------------- |
+| Erste Schritte   | Profil vervollstandigen, 5x abstimmen, 1 Kommentar          | "Du hast deine ersten Schritte in der digitalen Demokratie gemacht." |
+| Mein Wahlkreis   | Wahlkreis wahlen, MdB-Profil ansehen, 3 lokale Abstimmungen | "Du kennst jetzt deinen demokratischen Heimatort."                   |
+| Die andere Seite | 3 Bridging-Kommentare, 5x Perspektivenwechsel gemacht       | "Du hast gelernt, Brucken zu bauen."                                 |
 
 ---
 
@@ -1118,6 +1167,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich in thematischen 90-Tage-Saisons teilnehmen, die der Plattform einen Rhythmus geben.
 
 **Saison-Struktur:**
+
 - Jede Saison hat ein Schwerpunktthema (z.B. "Klimasaison", "Bildungssaison")
 - Freier Fortschritts-Track mit 30 Stufen
 - Stufen werden durch Beteiligung freigeschaltet
@@ -1126,15 +1176,15 @@ Akzeptanzkriterien:
 
 **Beispiel-Track (Stufen-Auszug):**
 
-| Stufe | Meilenstein | Belohnung |
-|-------|-----------|-----------|
-| 1 | Erste Abstimmung der Saison | Saison-Badge (Bronze) |
-| 5 | 10 Abstimmungen | Profil-Rahmen der Saison |
-| 10 | Erster Kommentar mit Quellenangabe | "Quellenforscher"-Badge |
-| 15 | Bridging-Score >0.7 | "Bruckenbauer der Saison"-Badge |
-| 20 | An einem Burgergipfel teilgenommen | Saison-Badge (Silber) |
-| 25 | Thema erstellt mit 100+ Stimmen | "Initiator"-Badge |
-| 30 | 30-Tage-Streak | Saison-Badge (Gold) |
+| Stufe | Meilenstein                        | Belohnung                       |
+| ----- | ---------------------------------- | ------------------------------- |
+| 1     | Erste Abstimmung der Saison        | Saison-Badge (Bronze)           |
+| 5     | 10 Abstimmungen                    | Profil-Rahmen der Saison        |
+| 10    | Erster Kommentar mit Quellenangabe | "Quellenforscher"-Badge         |
+| 15    | Bridging-Score >0.7                | "Bruckenbauer der Saison"-Badge |
+| 20    | An einem Burgergipfel teilgenommen | Saison-Badge (Silber)           |
+| 25    | Thema erstellt mit 100+ Stimmen    | "Initiator"-Badge               |
+| 30    | 30-Tage-Streak                     | Saison-Badge (Gold)             |
 
 **Wichtig:** Kein bezahlter Premium-Track. Alle Saison-Belohnungen sind fur jeden erreichbar.
 
@@ -1146,20 +1196,21 @@ Akzeptanzkriterien:
 
 **Inhalt des Jahresreports:**
 
-| Slide | Inhalt | Beispiel |
-|-------|--------|---------|
-| 1 | Gesamte Abstimmungen | "Du hast 2026 zu 147 Themen abgestimmt" |
-| 2 | Aktivster Monat | "Dein aktivster Monat war Marz" (Balkendiagramm) |
-| 3 | Bundestag-Ubereinstimmung | "Du stimmst zu 68% mit dem Bundestag uberein" |
-| 4 | Wahlkreis-Ranking | "Dein Wahlkreis Freiburg: Platz 23 von 299 mit 12.340 Stimmen" |
-| 5 | Bruckenbau-Score | "Dein Bridging-Score: 7.2/10 -- besser als 82% der Nutzer" |
-| 6 | Top-Kategorie | "Dein Thema #1: Umwelt & Klima" |
-| 7 | Streak-Rekord | "Dein langster Streak: 45 Tage" |
-| 8 | Demokratie-Typ | "Du bist ein Bruckenbauer" (basierend auf Civic Character Sheet) |
-| 9 | Kollektive Wirkung | "Gemeinsam haben wir 89 Ergebnisse an MdBs gesendet" |
-| 10 | Share-Card | Optimiert fur Instagram Stories / WhatsApp |
+| Slide | Inhalt                    | Beispiel                                                         |
+| ----- | ------------------------- | ---------------------------------------------------------------- |
+| 1     | Gesamte Abstimmungen      | "Du hast 2026 zu 147 Themen abgestimmt"                          |
+| 2     | Aktivster Monat           | "Dein aktivster Monat war Marz" (Balkendiagramm)                 |
+| 3     | Bundestag-Ubereinstimmung | "Du stimmst zu 68% mit dem Bundestag uberein"                    |
+| 4     | Wahlkreis-Ranking         | "Dein Wahlkreis Freiburg: Platz 23 von 299 mit 12.340 Stimmen"   |
+| 5     | Bruckenbau-Score          | "Dein Bridging-Score: 7.2/10 -- besser als 82% der Nutzer"       |
+| 6     | Top-Kategorie             | "Dein Thema #1: Umwelt & Klima"                                  |
+| 7     | Streak-Rekord             | "Dein langster Streak: 45 Tage"                                  |
+| 8     | Demokratie-Typ            | "Du bist ein Bruckenbauer" (basierend auf Civic Character Sheet) |
+| 9     | Kollektive Wirkung        | "Gemeinsam haben wir 89 Ergebnisse an MdBs gesendet"             |
+| 10    | Share-Card                | Optimiert fur Instagram Stories / WhatsApp                       |
 
 Akzeptanzkriterien:
+
 - Verfugbar ab Dezember fur alle Nutzer mit >10 Abstimmungen im Jahr
 - Jede Slide ist einzeln als Bild teilbar (OG-Image-Generierung serverseitig)
 - Plattform-weiter "Demokratie-Jahresbericht" wird ebenfalls veroffentlicht (aggregierte Statistiken)
@@ -1167,6 +1218,7 @@ Akzeptanzkriterien:
 - Strikt Opt-in fur das Teilen -- kein automatisches Posting
 
 **Plattform-Jahresbericht (offentlich):**
+
 - Meistdiskutierte Themen des Jahres
 - Grosste Abweichungen zwischen Burgern und Bundestag
 - Aktivste Wahlkreise
@@ -1181,14 +1233,14 @@ Akzeptanzkriterien:
 
 **Die 6 Civic-Attribute:**
 
-| Attribut | Wie es wachst | Was es darstellt |
-|----------|--------------|-----------------|
-| **Wissen** | Zusammenfassungen lesen, Quizfragen beantworten, verschiedene Kategorien erkunden | Verstandnis politischer Themen |
-| **Stimme** | Abstimmungen, Bundestag-Parallelabstimmungen, Streaks | Konstante demokratische Teilnahme |
-| **Diskurs** | Kommentare mit Quellen, hohe Bridging-Scores | Qualitat der argumentativen Beitrage |
-| **Initiative** | Themen erstellen, Burgerinitiativen starten | Agenda-Setting und Mobilisierung |
-| **Empathie** | Bridging-Achievements, Perspektivenwechsel, Engagement mit Gegenpositionen | Fahigkeit zum parteiubergreifenden Verstandnis |
-| **Vertrauen** | Moderationsgenauigkeit, Report-Qualitat, Community-Anerkennung | Verdientes Vertrauen der Gemeinschaft |
+| Attribut       | Wie es wachst                                                                     | Was es darstellt                               |
+| -------------- | --------------------------------------------------------------------------------- | ---------------------------------------------- |
+| **Wissen**     | Zusammenfassungen lesen, Quizfragen beantworten, verschiedene Kategorien erkunden | Verstandnis politischer Themen                 |
+| **Stimme**     | Abstimmungen, Bundestag-Parallelabstimmungen, Streaks                             | Konstante demokratische Teilnahme              |
+| **Diskurs**    | Kommentare mit Quellen, hohe Bridging-Scores                                      | Qualitat der argumentativen Beitrage           |
+| **Initiative** | Themen erstellen, Burgerinitiativen starten                                       | Agenda-Setting und Mobilisierung               |
+| **Empathie**   | Bridging-Achievements, Perspektivenwechsel, Engagement mit Gegenpositionen        | Fahigkeit zum parteiubergreifenden Verstandnis |
+| **Vertrauen**  | Moderationsgenauigkeit, Report-Qualitat, Community-Anerkennung                    | Verdientes Vertrauen der Gemeinschaft          |
 
 - Darstellung: Hexagon/Radar-Chart im Profil
 - Jedes Attribut: Skala 1-20
@@ -1202,6 +1254,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich auf einen Blick sehen, wie es um die demokratische Beteiligung auf der Plattform steht.
 
 **Zusammengesetzter Score aus:**
+
 - Beteiligungsrate (% aktive Nutzer diese Woche)
 - Bridging-Qualitat (Durchschnitt uber Diskussionen)
 - Geografische Abdeckung (aktive Wahlkreise)
@@ -1216,7 +1269,7 @@ Darstellung: Ein pulsierender Indigo-Kreis auf dem Home Screen, grosser bei hohe
 
 Diese Prinzipien gelten fur alle Gamification-Features:
 
-1. **Gewohnheit gamifizieren, nie die politische Wahl.** Punkte gibt es fur *dass* man teilnimmt, nie fur *wie* man abstimmt.
+1. **Gewohnheit gamifizieren, nie die politische Wahl.** Punkte gibt es fur _dass_ man teilnimmt, nie fur _wie_ man abstimmt.
 2. **Kooperation vor Wettbewerb.** Wahlkreis-Fortschritt und Themen-Teams sind kooperativ. Ranglisten nur als sekundare, opt-in Layer.
 3. **Qualitat vor Quantitat.** Bridging-Kommentare bringen 50 Punkte, ein Like nur 0. Die Gewichtung ist bewusst extrem.
 4. **Keine Dark Patterns.** Streaks werden empathisch kommuniziert. Kein "Letzte Chance!"-FOMO. Keine Sunk-Cost-Ausnutzung.
@@ -1230,18 +1283,18 @@ Diese Prinzipien gelten fur alle Gamification-Features:
 
 #### Feature-Ubersicht
 
-| ID | Feature | Phase | Prioritat |
-|----|---------|-------|-----------|
-| FEED-01 | Home Feed (Bundestag + Nutzer-Themen gemischt) | 1 | Must |
-| FEED-02 | Kategorie-Filter | 1 | Must |
-| FEED-03 | Trending-Themen | 1 | Should |
-| FEED-04 | Volltextsuche uber Themen und Kommentare | 1 | Must |
-| FEED-05 | Wahlkreis-personalisierter Feed | 2 | Should |
-| FEED-06 | Push-Benachrichtigungen "Neue Abstimmung" | 1 | Must |
-| FEED-07 | Gespeicherte/Gemerkte Themen | 1 | Should |
-| FEED-08 | Feed-Algorithmus-Transparenzseite | 1 | Must |
-| FEED-09 | Nachrichtenkontext pro Bundestag-Thema | 1 | Must |
-| FEED-10 | Personalisierung nach Onboarding-Interessen | 1 | Must |
+| ID      | Feature                                        | Phase | Prioritat |
+| ------- | ---------------------------------------------- | ----- | --------- |
+| FEED-01 | Home Feed (Bundestag + Nutzer-Themen gemischt) | 1     | Must      |
+| FEED-02 | Kategorie-Filter                               | 1     | Must      |
+| FEED-03 | Trending-Themen                                | 1     | Should    |
+| FEED-04 | Volltextsuche uber Themen und Kommentare       | 1     | Must      |
+| FEED-05 | Wahlkreis-personalisierter Feed                | 2     | Should    |
+| FEED-06 | Push-Benachrichtigungen "Neue Abstimmung"      | 1     | Must      |
+| FEED-07 | Gespeicherte/Gemerkte Themen                   | 1     | Should    |
+| FEED-08 | Feed-Algorithmus-Transparenzseite              | 1     | Must      |
+| FEED-09 | Nachrichtenkontext pro Bundestag-Thema         | 1     | Must      |
+| FEED-10 | Personalisierung nach Onboarding-Interessen    | 1     | Must      |
 
 #### User Stories
 
@@ -1250,6 +1303,7 @@ Diese Prinzipien gelten fur alle Gamification-Features:
 > Als Nutzer mochte ich auf dem Startbildschirm die relevantesten aktuellen Themen sehen, damit ich schnell abstimmen und mich informieren kann.
 
 Akzeptanzkriterien:
+
 - Feed zeigt Mix aus Bundestag-Themen (80%) und Nutzer-Themen (20%)
 - Feed-Karten zeigen: Titel, Quell-Badge (Bundestag/Burger), Kategorie, Abstimmungszahler, Kommentarzahler, verbleibende Abstimmungszeit, "Abstimmen"-Button
 - Infinite Scroll mit Skeleton-Loading
@@ -1260,6 +1314,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich verstehen, nach welchen Regeln der Feed sortiert wird, damit ich der Plattform vertrauen kann.
 
 Akzeptanzkriterien:
+
 - Offentlich zugangliche Seite unter `/transparenz/algorithmus`
 - Beschreibt den Feed-Algorithmus in verstandlicher Sprache
 - Listet alle Boost-Faktoren mit Gewichtung auf
@@ -1271,6 +1326,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich bei jedem Bundestag-Thema 2-3 relevante Nachrichtenlinks als Hintergrund sehen, damit ich mich vor der Abstimmung informieren kann.
 
 Akzeptanzkriterien:
+
 - Pro Bundestag-Thema: 2-3 kuratierte Links zu Nachrichtenartikeln (Tagesschau, ZEIT, FAZ, Spiegel etc.)
 - Links werden KI-unterstutzt kuratiert: Automatische Vorschlage aus konfigurierten Quellen (Tagesschau, ZEIT, FAZ, Spiegel), manuell erganzbar
 - Darstellung: Unterhalb der Zusammenfassung als "Hintergrund lesen"-Sektion
@@ -1283,6 +1339,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich Inhalte sehen, die zu meinen im Onboarding gewahlten Interessen passen, damit der Feed sofort relevant ist.
 
 Akzeptanzkriterien:
+
 - Onboarding-Interessen erhohen den Feed-Score fur passende Kategorien um +50%
 - Nutzer kann Interessen jederzeit in Einstellungen andern
 - Feed zeigt trotzdem auch andere Kategorien (Diversitat), nur mit niedrigerem Score
@@ -1291,6 +1348,7 @@ Akzeptanzkriterien:
 #### Feed-Algorithmus (regelbasiert, keine KI)
 
 Chronologische Basis mit Boosting-Faktoren:
+
 - **Aktualitat:** Exponentielle Abnahme, Halbwertszeit 48 Stunden
 - **Aktives Abstimmungsfenster:** +100% Boost
 - **Kategorien-Match** (aus Onboarding + organisches Verhalten): +50% Boost
@@ -1306,17 +1364,17 @@ Chronologische Basis mit Boosting-Faktoren:
 
 #### Feature-Ubersicht
 
-| ID | Feature | Phase | Prioritat |
-|----|---------|-------|-----------|
-| PROF-01 | Nutzerprofil (Name, Wahlkreis, Bio) | 1 | Must |
-| PROF-02 | Abstimmungshistorie (nur eigene, Standard: privat) | 1 | Must |
-| PROF-03 | Offentliches Profil (opt-in) | 1 | Should |
-| PROF-04 | Benachrichtigungs-Einstellungen | 1 | Must |
-| PROF-05 | Kategorie-Interessen auswahlen | 1 | Should |
-| PROF-06 | Datenexport (DSGVO Art. 20) | 1 | Must |
-| PROF-07 | Account-Loschung mit Daten-Purge | 1 | Must |
-| PROF-08 | Barrierefreiheits-Einstellungen (Schriftgrosse, Kontrast, Reduzierte Bewegung) | 1 | Must |
-| PROF-09 | Sprache (Deutsch Phase 1, Leichte Sprache Phase 2) | 1/2 | Must/Should |
+| ID      | Feature                                                                        | Phase | Prioritat   |
+| ------- | ------------------------------------------------------------------------------ | ----- | ----------- |
+| PROF-01 | Nutzerprofil (Name, Wahlkreis, Bio)                                            | 1     | Must        |
+| PROF-02 | Abstimmungshistorie (nur eigene, Standard: privat)                             | 1     | Must        |
+| PROF-03 | Offentliches Profil (opt-in)                                                   | 1     | Should      |
+| PROF-04 | Benachrichtigungs-Einstellungen                                                | 1     | Must        |
+| PROF-05 | Kategorie-Interessen auswahlen                                                 | 1     | Should      |
+| PROF-06 | Datenexport (DSGVO Art. 20)                                                    | 1     | Must        |
+| PROF-07 | Account-Loschung mit Daten-Purge                                               | 1     | Must        |
+| PROF-08 | Barrierefreiheits-Einstellungen (Schriftgrosse, Kontrast, Reduzierte Bewegung) | 1     | Must        |
+| PROF-09 | Sprache (Deutsch Phase 1, Leichte Sprache Phase 2)                             | 1/2   | Must/Should |
 
 #### User Stories
 
@@ -1325,6 +1383,7 @@ Chronologische Basis mit Boosting-Faktoren:
 > Als Nutzer mochte ich alle meine personenbezogenen Daten als JSON-Datei herunterladen konnen, damit ich mein Recht auf Datenubertragbarkeit (DSGVO Art. 20) ausuben kann.
 
 Akzeptanzkriterien:
+
 - Button in den Einstellungen: "Meine Daten exportieren"
 - Export enthalt: Profil-Daten, Abstimmungshistorie, Kommentare, Reputation, Einstellungen
 - Format: JSON
@@ -1335,54 +1394,55 @@ Akzeptanzkriterien:
 
 **In-App (Badge + Dropdown vom Home-Tab):**
 
-| Typ | Trigger | Text-Muster | Phase |
-|-----|---------|-------------|-------|
-| `new_vote` | Neue Bundestag-Abstimmung in eigener Kategorie | "Neues Thema: [Titel] -- Stimme jetzt ab" | 1 |
-| `vote_result` | Abstimmung endet | "Ergebnis: [Titel] -- 68% sagten Ja" | 1 |
-| `bundestag_result` | Bundestag stimmt uber gespiegeltes Thema ab | "Der Bundestag hat uber [Titel] abgestimmt -- vergleiche!" | 1 |
-| `comment_reply` | Antwort auf eigenen Kommentar | "[Name] hat auf deinen Kommentar geantwortet" | 1 |
-| `bridging_achievement` | Eigener Kommentar erreicht Bridging >0.7 | "Dein Kommentar baut Brucken! Bridging-Score: 0.82" | 1 |
-| `streak_milestone` | 7, 30, 100, 365 Tage Streak | "Streak-Meilenstein: 30 Tage! Weiter so." | 1 |
-| `quest_complete` | Quest abgeschlossen | "Quest erledigt: Bruckenbauer -- +50 Punkte" | 2 |
-| `wahlkreis_update` | Wahlkreis erreicht neue Stufe | "Dein Wahlkreis [Name] ist auf Stufe 3!" | 1 |
-| `mdb_voted` | Wahlkreis-MdB hat abgestimmt | "[MdB-Name] hat bei [Thema] [Ja] gestimmt" | 2 |
-| `topic_activated` | Eigenes Thema erreicht Unterstutzerschwelle | "Dein Thema [Titel] ist jetzt aktiv!" | 1 |
-| `system` | Plattform-Updates, Wartung | Frei formuliert | 1 |
+| Typ                    | Trigger                                        | Text-Muster                                                | Phase |
+| ---------------------- | ---------------------------------------------- | ---------------------------------------------------------- | ----- |
+| `new_vote`             | Neue Bundestag-Abstimmung in eigener Kategorie | "Neues Thema: [Titel] -- Stimme jetzt ab"                  | 1     |
+| `vote_result`          | Abstimmung endet                               | "Ergebnis: [Titel] -- 68% sagten Ja"                       | 1     |
+| `bundestag_result`     | Bundestag stimmt uber gespiegeltes Thema ab    | "Der Bundestag hat uber [Titel] abgestimmt -- vergleiche!" | 1     |
+| `comment_reply`        | Antwort auf eigenen Kommentar                  | "[Name] hat auf deinen Kommentar geantwortet"              | 1     |
+| `bridging_achievement` | Eigener Kommentar erreicht Bridging >0.7       | "Dein Kommentar baut Brucken! Bridging-Score: 0.82"        | 1     |
+| `streak_milestone`     | 7, 30, 100, 365 Tage Streak                    | "Streak-Meilenstein: 30 Tage! Weiter so."                  | 1     |
+| `quest_complete`       | Quest abgeschlossen                            | "Quest erledigt: Bruckenbauer -- +50 Punkte"               | 2     |
+| `wahlkreis_update`     | Wahlkreis erreicht neue Stufe                  | "Dein Wahlkreis [Name] ist auf Stufe 3!"                   | 1     |
+| `mdb_voted`            | Wahlkreis-MdB hat abgestimmt                   | "[MdB-Name] hat bei [Thema] [Ja] gestimmt"                 | 2     |
+| `topic_activated`      | Eigenes Thema erreicht Unterstutzerschwelle    | "Dein Thema [Titel] ist jetzt aktiv!"                      | 1     |
+| `system`               | Plattform-Updates, Wartung                     | Frei formuliert                                            | 1     |
 
 **Push-Notifications (Web Push API):**
+
 - Opt-in bei Installation/Onboarding
 - Nur fur: `new_vote`, `bundestag_result`, `streak_milestone` (reduziert, kein Spam)
 - Max. 3 Push-Notifications pro Tag
 
 #### Transaktionale Emails
 
-| Email | Trigger | Inhalt | Phase |
-|-------|---------|--------|-------|
-| Willkommen | Registrierung | Bestatigung + Quick-Start-Guide | 1 |
-| Email-Verifizierung | Registrierung | Double-Opt-in Link (24h gultig) | 1 |
-| Magic Link | Login-Anfrage | Login-Link (15 Min. gultig) | 1 |
-| Passwort-Reset | Reset-Anfrage | Reset-Link (1h gultig) | 1 |
-| Wochentlicher Digest | Montag 8:00 CET | Top 3 Themen der Woche, abgeschlossene Ergebnisse, Streak-Status | 1 |
-| Abstimmungs-Ergebnis | Abstimmung endet | "Du hast bei [Thema] abgestimmt -- hier ist das Ergebnis" | 1 |
-| Bundestag-Vergleich | BT stimmt ab | "Der Bundestag hat anders gestimmt als du bei [Thema]" | 1 |
-| Re-Engagement | 7 Tage inaktiv | "Du hast seit einer Woche nicht abgestimmt -- hier sind 3 aktuelle Themen" | 2 |
-| Account-Loschung | Loschungs-Bestatigung | Bestatigung + 30-Tage-Frist-Info | 1 |
-| Datenexport | Export fertig | Download-Link (24h gultig) | 1 |
-| MdB-Ergebnis-Email | Abstimmung endet (>50 WK-Stimmen) | An MdB: Wahlkreis-Ergebnis + Top-3-Argumente | 2 |
+| Email                | Trigger                           | Inhalt                                                                     | Phase |
+| -------------------- | --------------------------------- | -------------------------------------------------------------------------- | ----- |
+| Willkommen           | Registrierung                     | Bestatigung + Quick-Start-Guide                                            | 1     |
+| Email-Verifizierung  | Registrierung                     | Double-Opt-in Link (24h gultig)                                            | 1     |
+| Magic Link           | Login-Anfrage                     | Login-Link (15 Min. gultig)                                                | 1     |
+| Passwort-Reset       | Reset-Anfrage                     | Reset-Link (1h gultig)                                                     | 1     |
+| Wochentlicher Digest | Montag 8:00 CET                   | Top 3 Themen der Woche, abgeschlossene Ergebnisse, Streak-Status           | 1     |
+| Abstimmungs-Ergebnis | Abstimmung endet                  | "Du hast bei [Thema] abgestimmt -- hier ist das Ergebnis"                  | 1     |
+| Bundestag-Vergleich  | BT stimmt ab                      | "Der Bundestag hat anders gestimmt als du bei [Thema]"                     | 1     |
+| Re-Engagement        | 7 Tage inaktiv                    | "Du hast seit einer Woche nicht abgestimmt -- hier sind 3 aktuelle Themen" | 2     |
+| Account-Loschung     | Loschungs-Bestatigung             | Bestatigung + 30-Tage-Frist-Info                                           | 1     |
+| Datenexport          | Export fertig                     | Download-Link (24h gultig)                                                 | 1     |
+| MdB-Ergebnis-Email   | Abstimmung endet (>50 WK-Stimmen) | An MdB: Wahlkreis-Ergebnis + Top-3-Argumente                               | 2     |
 
 **Email-Design:** Minimalistisch, Schwarz/Weiss + Indigo CTA-Button, responsive, Resend als Provider.
 
 #### Empty States
 
-| Screen | Empty State | Aktion |
-|--------|------------|--------|
-| Home Feed (keine Themen) | "Gerade ist es ruhig. Neue Bundestag-Themen werden automatisch importiert." | Button: "Eigenes Thema erstellen" |
-| Kommentare (0) | "Noch keine Kommentare. Sei der Erste!" | Kommentar-Eingabefeld direkt sichtbar |
-| Suchergebnisse (0) | "Keine Ergebnisse fur '[Suche]'. Versuche andere Begriffe." | Vorschlage: Trending-Themen |
-| Wahlkreis (0 Nutzer) | "Dein Wahlkreis wartet auf dich! Du bist der Erste hier." | CTA: "Lade Nachbarn ein" |
-| Profil (0 Abstimmungen) | "Du hast noch nicht abgestimmt. Starte mit deiner ersten Stimme." | Button: "Zum Feed" |
-| Benachrichtigungen (0) | "Keine neuen Benachrichtigungen." | Keine Aktion |
-| Streak (0) | "Starte deinen ersten Demokratie-Streak heute!" | Button: "Tagliche Session starten" |
+| Screen                   | Empty State                                                                 | Aktion                                |
+| ------------------------ | --------------------------------------------------------------------------- | ------------------------------------- |
+| Home Feed (keine Themen) | "Gerade ist es ruhig. Neue Bundestag-Themen werden automatisch importiert." | Button: "Eigenes Thema erstellen"     |
+| Kommentare (0)           | "Noch keine Kommentare. Sei der Erste!"                                     | Kommentar-Eingabefeld direkt sichtbar |
+| Suchergebnisse (0)       | "Keine Ergebnisse fur '[Suche]'. Versuche andere Begriffe."                 | Vorschlage: Trending-Themen           |
+| Wahlkreis (0 Nutzer)     | "Dein Wahlkreis wartet auf dich! Du bist der Erste hier."                   | CTA: "Lade Nachbarn ein"              |
+| Profil (0 Abstimmungen)  | "Du hast noch nicht abgestimmt. Starte mit deiner ersten Stimme."           | Button: "Zum Feed"                    |
+| Benachrichtigungen (0)   | "Keine neuen Benachrichtigungen."                                           | Keine Aktion                          |
+| Streak (0)               | "Starte deinen ersten Demokratie-Streak heute!"                             | Button: "Tagliche Session starten"    |
 
 ---
 
@@ -1390,13 +1450,13 @@ Akzeptanzkriterien:
 
 #### Feature-Ubersicht
 
-| ID | Feature | Phase | Prioritat |
-|----|---------|-------|-----------|
-| GRP-01 | Gruppe erstellen (Partei/Fraktion/Interessengruppe/Custom) | 2 | Should |
-| GRP-02 | Gruppen-interne Themen und Abstimmungen | 2 | Should |
-| GRP-03 | Mitgliederverwaltung (Rollen: Mitglied/Moderator/Admin) | 2 | Should |
-| GRP-04 | Sichtbarkeit (offentlich/privat) | 2 | Should |
-| GRP-05 | Gruppenstatistiken (Mitglieder, Abstimmungsverhalten) | 3 | Could |
+| ID     | Feature                                                    | Phase | Prioritat |
+| ------ | ---------------------------------------------------------- | ----- | --------- |
+| GRP-01 | Gruppe erstellen (Partei/Fraktion/Interessengruppe/Custom) | 2     | Should    |
+| GRP-02 | Gruppen-interne Themen und Abstimmungen                    | 2     | Should    |
+| GRP-03 | Mitgliederverwaltung (Rollen: Mitglied/Moderator/Admin)    | 2     | Should    |
+| GRP-04 | Sichtbarkeit (offentlich/privat)                           | 2     | Should    |
+| GRP-05 | Gruppenstatistiken (Mitglieder, Abstimmungsverhalten)      | 3     | Could     |
 
 #### User Stories
 
@@ -1405,6 +1465,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich eine Gruppe grunden konnen, um mich mit Gleichgesinnten zu organisieren und gemeinsam Positionen zu erarbeiten.
 
 Akzeptanzkriterien:
+
 - Gruppentypen: Partei, Fraktion, Interessengruppe, Custom
 - Pflichtfelder: Name, Beschreibung, Typ
 - Optionale Felder: Logo, Satzung/Regeln, Website
@@ -1418,18 +1479,18 @@ Akzeptanzkriterien:
 
 #### Feature-Ubersicht
 
-| ID | Feature | Phase | Prioritat |
-|----|---------|-------|-----------|
-| ERG-01 | Offentliches Ergebnis-Dashboard pro Thema | 1 | Must |
-| ERG-02 | Einbettbare Ergebnis-Widgets | 2 | Should |
-| ERG-03 | Auto-generierte Pressemitteilungen | 3 | Could |
-| ERG-04 | Direkte Email an Wahlkreis-MdB mit Ergebnis | 2 | Should |
-| ERG-05 | Social-Media-Sharing der Ergebnisse | 2 | Should |
-| ERG-06 | Open Data API fur Ergebnisse | 2 | Should |
-| ERG-07 | Quartalsweiser Demokratiereport | 3 | Could |
-| ERG-08 | Feedback-Loop-Visualisierung ("Vom Gedanken zum Gesetz") | 1 | Must |
-| ERG-09 | "Ich habe abgestimmt"-Share-Card | 1 | Must |
-| ERG-10 | Echtzeit-Teilnahme-Zahler | 1 | Should |
+| ID     | Feature                                                  | Phase | Prioritat |
+| ------ | -------------------------------------------------------- | ----- | --------- |
+| ERG-01 | Offentliches Ergebnis-Dashboard pro Thema                | 1     | Must      |
+| ERG-02 | Einbettbare Ergebnis-Widgets                             | 2     | Should    |
+| ERG-03 | Auto-generierte Pressemitteilungen                       | 3     | Could     |
+| ERG-04 | Direkte Email an Wahlkreis-MdB mit Ergebnis              | 2     | Should    |
+| ERG-05 | Social-Media-Sharing der Ergebnisse                      | 2     | Should    |
+| ERG-06 | Open Data API fur Ergebnisse                             | 2     | Should    |
+| ERG-07 | Quartalsweiser Demokratiereport                          | 3     | Could     |
+| ERG-08 | Feedback-Loop-Visualisierung ("Vom Gedanken zum Gesetz") | 1     | Must      |
+| ERG-09 | "Ich habe abgestimmt"-Share-Card                         | 1     | Must      |
+| ERG-10 | Echtzeit-Teilnahme-Zahler                                | 1     | Should    |
 
 #### User Stories
 
@@ -1438,6 +1499,7 @@ Akzeptanzkriterien:
 > Als Besucher (auch ohne Account) mochte ich die Ergebnisse abgeschlossener Abstimmungen einsehen konnen, damit die Transparenz der Plattform gewahrleistet ist.
 
 Akzeptanzkriterien:
+
 - Ergebnis-Seite ist offentlich zuganglich (kein Login erforderlich)
 - Darstellung: Kreisdiagramm + Balkendiagramm
 - Angezeigt: Gesamtstimmen, prozentuale Verteilung, Vergleich mit Bundestag (wenn zutreffend)
@@ -1448,6 +1510,7 @@ Akzeptanzkriterien:
 > Als Burger mochte ich sehen, was mit meiner Stimme passiert ist -- vom Gedanken bis zum Gesetz -- damit ich weiss, dass meine Beteiligung Wirkung hat.
 
 Akzeptanzkriterien:
+
 - Pro Topic: Schritt-fur-Schritt-Visualisierung:
   1. Du hast abgestimmt (Haken, Datum)
   2. Wahlkreis-Ergebnis erstellt (Haken, Anzahl)
@@ -1462,6 +1525,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich nach einer Abstimmung eine ansprechende Grafik teilen konnen, damit ich andere zur Teilnahme motiviere.
 
 Akzeptanzkriterien:
+
 - Nach Stimmabgabe: "Teilen"-Button generiert eine Bild-Karte
 - Karte zeigt: Thema-Titel, "Ich habe abgestimmt", Anzahl Teilnehmer, Demokrat-Branding
 - Design: Minimalistisch, Schwarz/Weiss/Indigo, grosse Typografie
@@ -1475,6 +1539,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich sehen, wie viele Menschen gerade gleichzeitig an der Demokratie teilnehmen, damit ich mich als Teil einer Bewegung fuhle.
 
 Akzeptanzkriterien:
+
 - Home Screen: "X Burger stimmen gerade ab" (Live-Zahler via Supabase Realtime)
 - Topic Detail: "X Menschen diskutieren dieses Gesetz"
 - Zahlen-Transition: Odometer-Stil (rollende Ziffern)
@@ -1485,6 +1550,7 @@ Akzeptanzkriterien:
 > Als Burger mochte ich, dass mein Abgeordneter automatisch uber Abstimmungsergebnisse aus seinem Wahlkreis informiert wird, damit die Ergebnisse politische Wirkung entfalten.
 
 Akzeptanzkriterien:
+
 - Nach Abschluss einer Bundestag-Spiegel-Abstimmung: Automatische Email an den MdB des Wahlkreises
 - Inhalt: Abstimmungsergebnis der Wahlkreis-Nutzer, Top-3-Argumente (nach Bridging-Score), Link zum Dashboard
 - MdB kann sich von Emails abmelden (Opt-out)
@@ -1496,16 +1562,16 @@ Akzeptanzkriterien:
 
 #### Feature-Ubersicht
 
-| ID | Feature | Phase | Prioritat |
-|----|---------|-------|-----------|
-| ADM-01 | Admin-Dashboard | 1 | Must |
-| ADM-02 | Content-Moderations-Queue | 1 | Must |
-| ADM-03 | Nutzerverwaltung | 1 | Must |
-| ADM-04 | Bundestag-Sync-Monitoring | 1 | Must |
-| ADM-05 | Analytics-Dashboard | 1 | Should |
-| ADM-06 | System-Health-Monitoring | 1 | Must |
-| ADM-07 | Audit-Log | 1 | Must |
-| ADM-08 | Feature Flags | 1 | Should |
+| ID     | Feature                   | Phase | Prioritat |
+| ------ | ------------------------- | ----- | --------- |
+| ADM-01 | Admin-Dashboard           | 1     | Must      |
+| ADM-02 | Content-Moderations-Queue | 1     | Must      |
+| ADM-03 | Nutzerverwaltung          | 1     | Must      |
+| ADM-04 | Bundestag-Sync-Monitoring | 1     | Must      |
+| ADM-05 | Analytics-Dashboard       | 1     | Should    |
+| ADM-06 | System-Health-Monitoring  | 1     | Must      |
+| ADM-07 | Audit-Log                 | 1     | Must      |
+| ADM-08 | Feature Flags             | 1     | Should    |
 
 #### User Stories
 
@@ -1514,6 +1580,7 @@ Akzeptanzkriterien:
 > Als Moderator mochte ich gemeldete Inhalte in einer Queue sehen und bearbeiten konnen, damit die Diskussionsqualitat gewahrt bleibt.
 
 Akzeptanzkriterien:
+
 - Queue zeigt: Gemeldeter Inhalt, Meldungsgrund, Melder, Zeitstempel
 - Aktionen: Bestatigen (Inhalt ausblenden), Abweisen (Meldung verwerfen), Eskalieren (an Admin)
 - Filter: Nach Typ (Kommentar/Thema/Nutzer), nach Status (Offen/Bearbeitet)
@@ -1525,17 +1592,17 @@ Akzeptanzkriterien:
 
 #### Feature-Ubersicht
 
-| ID | Feature | Phase | Prioritat |
-|----|---------|-------|-----------|
-| PWA-01 | Service Worker fur Offline-Caching | 1 | Must |
-| PWA-02 | Web App Manifest | 1 | Must |
-| PWA-03 | Push-Benachrichtigungen (Web Push API) | 1 | Must |
-| PWA-04 | Install-Prompt / Add to Homescreen | 1 | Must |
-| PWA-05 | Offline-Vote-Queueing (Sync bei Reconnect) | 2 | Should |
-| PWA-06 | Native-feel Animationen und Transitionen | 1 | Must |
-| PWA-07 | Bottom Navigation Bar (mobil) | 1 | Must |
-| PWA-08 | Pull-to-Refresh | 1 | Must |
-| PWA-09 | Splash Screen | 1 | Must |
+| ID     | Feature                                    | Phase | Prioritat |
+| ------ | ------------------------------------------ | ----- | --------- |
+| PWA-01 | Service Worker fur Offline-Caching         | 1     | Must      |
+| PWA-02 | Web App Manifest                           | 1     | Must      |
+| PWA-03 | Push-Benachrichtigungen (Web Push API)     | 1     | Must      |
+| PWA-04 | Install-Prompt / Add to Homescreen         | 1     | Must      |
+| PWA-05 | Offline-Vote-Queueing (Sync bei Reconnect) | 2     | Should    |
+| PWA-06 | Native-feel Animationen und Transitionen   | 1     | Must      |
+| PWA-07 | Bottom Navigation Bar (mobil)              | 1     | Must      |
+| PWA-08 | Pull-to-Refresh                            | 1     | Must      |
+| PWA-09 | Splash Screen                              | 1     | Must      |
 
 #### User Stories
 
@@ -1544,6 +1611,7 @@ Akzeptanzkriterien:
 > Als Nutzer auf dem Smartphone mochte ich, dass sich die App wie eine native App anfuhlt, damit die Bedienung intuitiv und angenehm ist.
 
 Akzeptanzkriterien:
+
 - Smooth Page Transitions (kein harter Seitenwechsel)
 - Haptic Feedback bei Stimmabgabe (vibrate API)
 - Swipe-Gesten fur Navigation
@@ -1556,6 +1624,7 @@ Akzeptanzkriterien:
 > Als mobiler Nutzer mochte ich eine Bottom Navigation Bar haben, damit ich mit dem Daumen alle Hauptbereiche erreichen kann.
 
 Akzeptanzkriterien:
+
 - **5 Tabs: Home (Feed) | Suche | Erstellen (+) | Karte | Profil**
 - Aktiver Tab ist farblich hervorgehoben (Indigo)
 - Inaktive Tabs: Mittelgrau
@@ -1571,14 +1640,14 @@ Akzeptanzkriterien:
 
 #### Feature-Ubersicht
 
-| ID | Feature | Phase | Prioritat |
-|----|---------|-------|-----------|
-| LEGAL-01 | Allgemeine Geschaftsbedingungen (AGB / Nutzungsbedingungen) | 1 | Must |
-| LEGAL-02 | Datenschutzerklarung (mehrschichtig) | 1 | Must |
-| LEGAL-03 | Impressum | 1 | Must |
-| LEGAL-04 | Community Guidelines / Plattformregeln | 1 | Must |
-| LEGAL-05 | Cookie-Banner (nur essenzielle Cookies, Opt-in fur Analytics) | 1 | Must |
-| LEGAL-06 | Einwilligung Art. 9 DSGVO (separate Einwilligung vor erster Stimmabgabe) | 1 | Must |
+| ID       | Feature                                                                  | Phase | Prioritat |
+| -------- | ------------------------------------------------------------------------ | ----- | --------- |
+| LEGAL-01 | Allgemeine Geschaftsbedingungen (AGB / Nutzungsbedingungen)              | 1     | Must      |
+| LEGAL-02 | Datenschutzerklarung (mehrschichtig)                                     | 1     | Must      |
+| LEGAL-03 | Impressum                                                                | 1     | Must      |
+| LEGAL-04 | Community Guidelines / Plattformregeln                                   | 1     | Must      |
+| LEGAL-05 | Cookie-Banner (nur essenzielle Cookies, Opt-in fur Analytics)            | 1     | Must      |
+| LEGAL-06 | Einwilligung Art. 9 DSGVO (separate Einwilligung vor erster Stimmabgabe) | 1     | Must      |
 
 #### User Stories
 
@@ -1587,6 +1656,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich vor der Registrierung die Nutzungsbedingungen lesen konnen, damit ich weiss, welche Regeln auf der Plattform gelten.
 
 Akzeptanzkriterien:
+
 - Zuganglich uber Footer-Link und Registrierungsseite
 - Abdeckt: Nutzungsrechte, Account-Regeln, Haftungsausschluss, Kundigung
 - Checkbox bei Registrierung: "Ich akzeptiere die Nutzungsbedingungen" (Pflicht)
@@ -1597,6 +1667,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich klare Regeln fur das Miteinander auf der Plattform kennen, damit ich weiss, was erlaubt ist und was nicht.
 
 Akzeptanzkriterien:
+
 - Zuganglich uber Footer-Link, Profil-Einstellungen und Moderations-Hinweise
 - Abdeckt: Konstruktiver Diskurs, verbotene Inhalte (Hassrede, Spam, Desinformation), Konsequenzen (Verwarnungen, Sperre)
 - Verlinkt im Melde-Dialog ("Verstoesst gegen unsere Community Guidelines")
@@ -1608,6 +1679,7 @@ Akzeptanzkriterien:
 > Als Besucher mochte ich uber den Einsatz von Cookies informiert werden und selbst entscheiden, welche ich akzeptiere.
 
 Akzeptanzkriterien:
+
 - Wird beim ersten Besuch angezeigt (nicht bei jedem Seitenaufruf)
 - Zwei Optionen: "Nur notwendige" (Standard) und "Alle akzeptieren"
 - Essenzielle Cookies (Auth-Session, CSRF) brauchen keine Einwilligung
@@ -1620,6 +1692,7 @@ Akzeptanzkriterien:
 > Als Nutzer mochte ich vor meiner ersten Abstimmung explizit einwilligen, dass meine politischen Meinungsdaten verarbeitet werden.
 
 Akzeptanzkriterien:
+
 - Einmalig vor der ersten Stimmabgabe: Bottom Sheet mit verstandlicher Erklarung
 - Text: "Deine Abstimmungen sind politische Meinungen (Art. 9 DSGVO). Wir speichern sie pseudonym und sicher. Du kannst sie jederzeit loschen."
 - Checkbox: "Ich willige ein" (Pflicht)
@@ -1638,24 +1711,24 @@ Akzeptanzkriterien:
 
 ### 4.1 Performance
 
-| Metrik | Zielwert | Messmethode |
-|--------|----------|-------------|
-| Largest Contentful Paint (LCP) | <2s auf 3G, <1s auf 4G | Lighthouse CI |
-| Time to Interactive (TTI) | <3s | Lighthouse CI |
-| First Input Delay (FID) | <100ms | Web Vitals |
-| Cumulative Layout Shift (CLS) | <0.1 | Web Vitals |
-| API Response Time (p95) | <200ms (Reads), <500ms (Writes) | Application Metrics |
-| Stimmabgabe End-to-End | <1s | Application Metrics |
-| Real-time Updates Latenz | <500ms | Supabase Realtime Monitoring |
-| Datenbank-Query (p95) | <50ms | PostgreSQL Monitoring |
-| Lighthouse Score | >90 (alle Kategorien) | Lighthouse CI |
+| Metrik                         | Zielwert                        | Messmethode                  |
+| ------------------------------ | ------------------------------- | ---------------------------- |
+| Largest Contentful Paint (LCP) | <2s auf 3G, <1s auf 4G          | Lighthouse CI                |
+| Time to Interactive (TTI)      | <3s                             | Lighthouse CI                |
+| First Input Delay (FID)        | <100ms                          | Web Vitals                   |
+| Cumulative Layout Shift (CLS)  | <0.1                            | Web Vitals                   |
+| API Response Time (p95)        | <200ms (Reads), <500ms (Writes) | Application Metrics          |
+| Stimmabgabe End-to-End         | <1s                             | Application Metrics          |
+| Real-time Updates Latenz       | <500ms                          | Supabase Realtime Monitoring |
+| Datenbank-Query (p95)          | <50ms                           | PostgreSQL Monitoring        |
+| Lighthouse Score               | >90 (alle Kategorien)           | Lighthouse CI                |
 
 ### 4.2 Skalierbarkeit
 
-| Phase | Ziel | Strategie |
-|-------|------|-----------|
-| Phase 1 | 10.000 gleichzeitige Nutzer | Supabase Managed, Vercel Edge, Redis Caching |
-| Phase 2 | 100.000 gleichzeitige Nutzer | Read Replicas, CDN fur Statik, horizontale App-Skalierung |
+| Phase   | Ziel                           | Strategie                                                  |
+| ------- | ------------------------------ | ---------------------------------------------------------- |
+| Phase 1 | 10.000 gleichzeitige Nutzer    | Supabase Managed, Vercel Edge, Redis Caching               |
+| Phase 2 | 100.000 gleichzeitige Nutzer   | Read Replicas, CDN fur Statik, horizontale App-Skalierung  |
 | Phase 3 | 1.000.000 gleichzeitige Nutzer | Sharding, dedizierte Voting-Microservices, Event Streaming |
 
 - CDN fur statische Assets (Vercel Edge Network, EU PoPs)
@@ -1681,23 +1754,24 @@ Akzeptanzkriterien:
 
 **Besondere Herausforderung:** Abstimmungsdaten sind **politische Meinungen** und fallen unter Art. 9 DSGVO (besondere Kategorien personenbezogener Daten). Dies erfordert erhohte Schutzmaßnahmen.
 
-| Artikel | Anforderung | Umsetzung |
-|---------|-------------|-----------|
-| Art. 6(1)(a) | Rechtsgrundlage Einwilligung | Explizite Einwilligung bei Registrierung |
+| Artikel      | Anforderung                           | Umsetzung                                                                                                                              |
+| ------------ | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Art. 6(1)(a) | Rechtsgrundlage Einwilligung          | Explizite Einwilligung bei Registrierung                                                                                               |
 | Art. 9(2)(a) | Einwilligung fur besondere Kategorien | Explizite, separate Einwilligung vor erster Stimmabgabe: "Ich bin damit einverstanden, dass meine Abstimmungsdaten verarbeitet werden" |
-| Art. 9(2)(e) | Offenkundig offentlich gemacht | Gilt fur Nutzer mit offentlichem Profil |
-| Art. 13/14 | Informationspflichten | Mehrschichtige Datenschutzerklarung bei Registrierung |
-| Art. 15 | Auskunftsrecht | Self-Service via Profil-Einstellungen |
-| Art. 17 | Recht auf Loschung | Account-Loschung anonymisiert Votes, loscht PII innerhalb 30 Tagen |
-| Art. 20 | Datenubertragbarkeit | JSON-Export aller personlichen Daten |
-| Art. 25 | Privacy by Design | Datenminimierung, Pseudonymisierung der Vote-Analysen |
-| Art. 30 | Verarbeitungsverzeichnis | Dokumentiert in Anhang C |
-| Art. 35 | DSFA | Pflicht bei Art.-9-Daten -- Outline in Anhang D, muss vor Launch abgeschlossen sein |
-| BDSG §22 | Zusatzliche Schutzmaßnahmen | Verschlusselung, Zugriffskontrolle, Protokollierung |
+| Art. 9(2)(e) | Offenkundig offentlich gemacht        | Gilt fur Nutzer mit offentlichem Profil                                                                                                |
+| Art. 13/14   | Informationspflichten                 | Mehrschichtige Datenschutzerklarung bei Registrierung                                                                                  |
+| Art. 15      | Auskunftsrecht                        | Self-Service via Profil-Einstellungen                                                                                                  |
+| Art. 17      | Recht auf Loschung                    | Account-Loschung anonymisiert Votes, loscht PII innerhalb 30 Tagen                                                                     |
+| Art. 20      | Datenubertragbarkeit                  | JSON-Export aller personlichen Daten                                                                                                   |
+| Art. 25      | Privacy by Design                     | Datenminimierung, Pseudonymisierung der Vote-Analysen                                                                                  |
+| Art. 30      | Verarbeitungsverzeichnis              | Dokumentiert in Anhang C                                                                                                               |
+| Art. 35      | DSFA                                  | Pflicht bei Art.-9-Daten -- Outline in Anhang D, muss vor Launch abgeschlossen sein                                                    |
+| BDSG §22     | Zusatzliche Schutzmaßnahmen           | Verschlusselung, Zugriffskontrolle, Protokollierung                                                                                    |
 
 **Cookie-Policy:** Nur essenzielle Cookies im MVP. Analytics nur mit Opt-in-Einwilligung.
 
 **Daten-Aufbewahrung:**
+
 - Aktive Accounts: Daten bleiben erhalten
 - Geloschte Accounts: PII innerhalb 30 Tagen geloscht; anonymisierte Aggregate bleiben dauerhaft
 - Server-Logs: 90 Tage
@@ -1708,6 +1782,7 @@ Akzeptanzkriterien:
 Seit Juni 2025 gilt das BFSG auch fur private digitale Produkte und Dienstleistungen.
 
 **Verpflichtende Anforderungen:**
+
 - Farbkontrast mindestens 4.5:1 (Normaltext), 3:1 (Grosstext)
 - Vollstandige Tastaturnavigation fur alle interaktiven Elemente
 - Screenreader-Kompatibilitat (ARIA Landmarks, Roles, Labels)
@@ -1724,6 +1799,7 @@ Seit Juni 2025 gilt das BFSG auch fur private digitale Produkte und Dienstleistu
 - Leichte Sprache fur Hauptseiten (Phase 2)
 
 **Testing:**
+
 - axe-core automatisiert in CI/CD-Pipeline
 - Manuelle Tests mit Screenreadern (NVDA, VoiceOver)
 - Accessibility Audit vor Launch
@@ -1739,13 +1815,13 @@ Seit Juni 2025 gilt das BFSG auch fur private digitale Produkte und Dienstleistu
 
 ### 4.7 Zuverlassigkeit & Verfugbarkeit
 
-| Metrik | Phase 1 | Phase 3 |
-|--------|---------|---------|
-| Uptime | 99,5% | 99,9% |
-| Wartungsfenster | Sonntag 02:00-06:00 CET | Gleich |
-| Backup | Taglich + PITR, 7 Tage Retention | Taglich + PITR, 30 Tage |
-| RTO (Recovery Time Objective) | 4 Stunden | 1 Stunde |
-| RPO (Recovery Point Objective) | 1 Stunde | 15 Minuten |
+| Metrik                         | Phase 1                          | Phase 3                 |
+| ------------------------------ | -------------------------------- | ----------------------- |
+| Uptime                         | 99,5%                            | 99,9%                   |
+| Wartungsfenster                | Sonntag 02:00-06:00 CET          | Gleich                  |
+| Backup                         | Taglich + PITR, 7 Tage Retention | Taglich + PITR, 30 Tage |
+| RTO (Recovery Time Objective)  | 4 Stunden                        | 1 Stunde                |
+| RPO (Recovery Point Objective) | 1 Stunde                         | 15 Minuten              |
 
 - Health-Check-Endpoints fur Monitoring
 - Graceful Degradation: Wenn Bundestag-API offline, werden gecachte Daten mit Hinweis angezeigt
@@ -1765,28 +1841,28 @@ Seit Juni 2025 gilt das BFSG auch fur private digitale Produkte und Dienstleistu
 
 ### 5.1 Stack-Entscheidungen
 
-| Layer | Wahl | Alternativen erwogen | Begrundung |
-|-------|------|---------------------|------------|
-| **Frontend** | Next.js 15+ (App Router), React 19, TypeScript | Nuxt/Vue, SvelteKit, Rails+Hotwire | SSR fur SEO, React Server Components fur Performance, grosstes Okosystem, ein Framework fur Frontend+API |
-| **UI-Bibliothek** | Tailwind CSS + shadcn/ui | Material UI, Chakra UI, Ant Design | Utility-first fur Geschwindigkeit; shadcn gibt barrierefreie, anpassbare Komponenten die keine Abhangigkeit sind sondern in den Code kopiert werden |
-| **Type System** | TypeScript (strict mode) | JavaScript, Flow | Fangt Bugs zur Compile-Zeit, selbstdokumentierend, essentiell fur Solo-Entwicklung |
-| **API Layer** | tRPC | REST, GraphQL | End-to-End Typsicherheit mit TypeScript, keine Code-Generierung, schlanker als GraphQL fur Solo-Dev |
-| **Datenbank** | PostgreSQL 16+ (via Supabase) | MySQL, MongoDB, CockroachDB | JSONB fur Event-Payloads, RLS fur Sicherheit, ACID-konform, exzellent fur Event Sourcing, Standard in Civic Tech |
-| **BaaS** | Supabase (Managed) | Firebase, Custom Backend | Auth, Realtime, Storage, Edge Functions in einer Plattform; PostgreSQL darunter; EU-Hosting verfugbar; Open Source |
-| **Real-time** | Supabase Realtime | Socket.IO, Pusher, Ably | Broadcast + Presence + Postgres Changes; kein separater WebSocket-Server notig |
-| **Cache** | Redis (Upstash) | Memcached, Supabase Edge | Serverless Redis mit EU-Region, Pay-per-Request, ideal fur Solo-Budget |
-| **Suche** | Meilisearch Cloud | Elasticsearch, Typesense, Algolia | Tippfehler-tolerant, schnell, deutsche Sprachunterstutzung, EU-Hosting |
-| **Hosting** | Vercel (Frontend) + Supabase (Backend) | Fly.io, Railway, Hetzner, AWS | Vercel hat erstklassigen Next.js-Support; beide bieten EU-Regionen; berechenbares Pricing |
-| **CI/CD** | GitHub Actions | GitLab CI, CircleCI | Kostenlos fur Public Repos, exzellentes Next.js-Okosystem |
-| **Monitoring** | Sentry + Grafana Cloud | Datadog, New Relic | Sentry Free Tier reicht fur Solo; Grafana Cloud Free Tier fur Metriken |
-| **Email** | Resend | SendGrid, Postmark, Mailgun | Moderne transaktionale Email-API, DSGVO-konform, gute DX |
-| **Datei-Storage** | Supabase Storage | AWS S3, Cloudflare R2 | Integriert mit Auth, RLS auf Buckets, S3-kompatibel |
-| **Karten** | react-map-gl + Mapbox GL JS | Leaflet, D3, MapLibre | Best-in-class Touch-Gesten, Choropleth out-of-the-box, Free Tier 50k Map Loads/Monat |
-| **GeoJSON** | Bundeswahlleiter Open Data + Mapbox Tileset | Nur statisch, nur Tileset | Statisches TopoJSON als Fallback + Mapbox Tileset fur performante Kartenansicht |
-| **OG-Image** | @vercel/og (Satori) | Puppeteer, Sharp | Serverseitige Bildgenerierung fur Share-Cards und Wrapped, Edge-kompatibel, kein Browser notig |
-| **Payment** | Stripe | LemonSqueezy, Paddle | Standard fur SaaS in DE, niedrige Fees (1,5% + 0,25EUR), exzellente API, Stripe Tax fur EU-USt |
-| **Rate Limiting** | @upstash/ratelimit | Custom Redis, express-rate-limit | Serverless-kompatibel, Sliding Window, integriert mit Upstash Redis |
-| **KI Content** | OpenAI API (GPT-4o) | Anthropic Claude, Gemini | Fur Content-Pipeline: Zusammenfassungen, Quiz, Nachrichtenlinks. Kein Endnutzer-Facing KI-Feature |
+| Layer             | Wahl                                           | Alternativen erwogen               | Begrundung                                                                                                                                          |
+| ----------------- | ---------------------------------------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Frontend**      | Next.js 15+ (App Router), React 19, TypeScript | Nuxt/Vue, SvelteKit, Rails+Hotwire | SSR fur SEO, React Server Components fur Performance, grosstes Okosystem, ein Framework fur Frontend+API                                            |
+| **UI-Bibliothek** | Tailwind CSS + shadcn/ui                       | Material UI, Chakra UI, Ant Design | Utility-first fur Geschwindigkeit; shadcn gibt barrierefreie, anpassbare Komponenten die keine Abhangigkeit sind sondern in den Code kopiert werden |
+| **Type System**   | TypeScript (strict mode)                       | JavaScript, Flow                   | Fangt Bugs zur Compile-Zeit, selbstdokumentierend, essentiell fur Solo-Entwicklung                                                                  |
+| **API Layer**     | tRPC                                           | REST, GraphQL                      | End-to-End Typsicherheit mit TypeScript, keine Code-Generierung, schlanker als GraphQL fur Solo-Dev                                                 |
+| **Datenbank**     | PostgreSQL 16+ (via Supabase)                  | MySQL, MongoDB, CockroachDB        | JSONB fur Event-Payloads, RLS fur Sicherheit, ACID-konform, exzellent fur Event Sourcing, Standard in Civic Tech                                    |
+| **BaaS**          | Supabase (Managed)                             | Firebase, Custom Backend           | Auth, Realtime, Storage, Edge Functions in einer Plattform; PostgreSQL darunter; EU-Hosting verfugbar; Open Source                                  |
+| **Real-time**     | Supabase Realtime                              | Socket.IO, Pusher, Ably            | Broadcast + Presence + Postgres Changes; kein separater WebSocket-Server notig                                                                      |
+| **Cache**         | Redis (Upstash)                                | Memcached, Supabase Edge           | Serverless Redis mit EU-Region, Pay-per-Request, ideal fur Solo-Budget                                                                              |
+| **Suche**         | Meilisearch Cloud                              | Elasticsearch, Typesense, Algolia  | Tippfehler-tolerant, schnell, deutsche Sprachunterstutzung, EU-Hosting                                                                              |
+| **Hosting**       | Vercel (Frontend) + Supabase (Backend)         | Fly.io, Railway, Hetzner, AWS      | Vercel hat erstklassigen Next.js-Support; beide bieten EU-Regionen; berechenbares Pricing                                                           |
+| **CI/CD**         | GitHub Actions                                 | GitLab CI, CircleCI                | Kostenlos fur Public Repos, exzellentes Next.js-Okosystem                                                                                           |
+| **Monitoring**    | Sentry + Grafana Cloud                         | Datadog, New Relic                 | Sentry Free Tier reicht fur Solo; Grafana Cloud Free Tier fur Metriken                                                                              |
+| **Email**         | Resend                                         | SendGrid, Postmark, Mailgun        | Moderne transaktionale Email-API, DSGVO-konform, gute DX                                                                                            |
+| **Datei-Storage** | Supabase Storage                               | AWS S3, Cloudflare R2              | Integriert mit Auth, RLS auf Buckets, S3-kompatibel                                                                                                 |
+| **Karten**        | react-map-gl + Mapbox GL JS                    | Leaflet, D3, MapLibre              | Best-in-class Touch-Gesten, Choropleth out-of-the-box, Free Tier 50k Map Loads/Monat                                                                |
+| **GeoJSON**       | Bundeswahlleiter Open Data + Mapbox Tileset    | Nur statisch, nur Tileset          | Statisches TopoJSON als Fallback + Mapbox Tileset fur performante Kartenansicht                                                                     |
+| **OG-Image**      | @vercel/og (Satori)                            | Puppeteer, Sharp                   | Serverseitige Bildgenerierung fur Share-Cards und Wrapped, Edge-kompatibel, kein Browser notig                                                      |
+| **Payment**       | Stripe                                         | LemonSqueezy, Paddle               | Standard fur SaaS in DE, niedrige Fees (1,5% + 0,25EUR), exzellente API, Stripe Tax fur EU-USt                                                      |
+| **Rate Limiting** | @upstash/ratelimit                             | Custom Redis, express-rate-limit   | Serverless-kompatibel, Sliding Window, integriert mit Upstash Redis                                                                                 |
+| **KI Content**    | OpenAI API (GPT-4o)                            | Anthropic Claude, Gemini           | Fur Content-Pipeline: Zusammenfassungen, Quiz, Nachrichtenlinks. Kein Endnutzer-Facing KI-Feature                                                   |
 
 ### 5.2 Architektur-Ubersicht
 
@@ -1826,6 +1902,7 @@ Seit Juni 2025 gilt das BFSG auch fur private digitale Produkte und Dienstleistu
 ### 5.3 Event Sourcing Architektur (Detail)
 
 **Warum Event Sourcing fur Abstimmungen:**
+
 - Unveranderlichkeit: Stimmen konnen nicht manipuliert werden
 - Audit Trail: Jede Aktion ist nachvollziehbar
 - Hash Chain: Manipulationserkennung durch kryptographische Verkettung
@@ -1833,6 +1910,7 @@ Seit Juni 2025 gilt das BFSG auch fur private digitale Produkte und Dienstleistu
 - CQRS: Schreib- und Lesepfad unabhangig skalierbar
 
 **Schreibpfad:**
+
 1. Nutzer gibt Stimme ab -> tRPC Mutation `votes.cast`
 2. Validierung: Nutzer authentifiziert? Topic aktiv? Abstimmungsfenster offen? Format-spezifische Regeln?
 3. Event erstellen: `event_id`, `stream_id`, `event_type='VoteCast'`, `payload`, `prev_hash`
@@ -1841,11 +1919,13 @@ Seit Juni 2025 gilt das BFSG auch fur private digitale Produkte und Dienstleistu
 6. Supabase Realtime broadcastet Update an alle Subscriber
 
 **Lesepfad:**
+
 1. Client subscribt auf `vote_results` via Supabase Realtime
 2. Ergebnis-Abfragen lesen nur aus `vote_results` (nie aus `vote_events`)
 3. Schnelle Antwortzeiten durch vorberechnete Aggregate
 
 **Hash Chain:**
+
 - Jedes Event enthalt `prev_hash = SHA256(vorheriges Event)`
 - Ein Verifikations-Endpoint kann die gesamte Kette validieren
 - Jede Manipulation in der Mitte der Kette bricht alle nachfolgenden Hashes
@@ -1859,17 +1939,20 @@ Seit Juni 2025 gilt das BFSG auch fur private digitale Produkte und Dienstleistu
 - **Rate Limiting:** abgeordnetenwatch Pagination max 1.000 pro Request; Backoff bei 429
 
 **Sitzungswochen-Erkennung:**
+
 - Der Bundestag veroffentlicht den Sitzungskalender als offene Daten auf bundestag.de
 - Sitzungswochen werden als Konfigurationstabelle (`sitzungswochen`) importiert: Start-/Enddatum pro Sitzungswoche
 - Ein Cron-Job pruft taglich, ob eine Sitzungswoche aktiv ist, und setzt ein globales Flag
 - Wahrend Sitzungswochen: 2x Punkte-Multiplikator, 15-Min-Sync-Intervall, Live-Banner im Feed
 
 **Streak-Timezone:**
+
 - Ein "Tag" fur Streak-Berechnung basiert auf **CET/CEST** (Europe/Berlin)
 - Reset um Mitternacht CET/CEST -- alle Nutzer in Deutschland haben denselben Tageswechsel
 - `daily_activity.activity_date` speichert das Datum in CET/CEST, nicht UTC
 
 **MdB-Kontaktdaten (fur ERG-04):**
+
 - abgeordnetenwatch API liefert Kontaktdaten der MdBs (Email uber Profil-Seiten)
 - Alternativ: Bundestag-Website listet offizielle Email-Adressen aller MdBs (Muster: vorname.nachname@bundestag.de)
 - Emails werden nur an die offentliche Bundestag-Email gesendet, nie an private Adressen
@@ -2565,51 +2648,51 @@ src/server/routers/
 
 #### `votes.ts`
 
-| Procedure | Typ | Auth | Input | Output | Rate Limit |
-|-----------|-----|------|-------|--------|------------|
-| `votes.cast` | Mutation | Required | `{topicId, choice, ranked?}` | `{eventId, receiptHash}` | 10/min |
-| `votes.change` | Mutation | Required | `{topicId, newChoice}` | `{eventId}` | 10/min |
-| `votes.revoke` | Mutation | Required | `{topicId}` | `{eventId}` | 10/min |
-| `votes.myVote` | Query | Required | `{topicId}` | `{choice, timestamp} \| null` | 60/min |
-| `votes.results` | Query | Public | `{topicId}` | `{total, breakdown, chartData}` | 120/min |
-| `votes.comparison` | Query | Public | `{topicId}` | `{citizenResults, bundestagResults, delta}` | 60/min |
-| `votes.delegate` | Mutation | Required | `{topicId, delegateUserId}` | `{eventId}` | 5/min |
+| Procedure          | Typ      | Auth     | Input                        | Output                                      | Rate Limit |
+| ------------------ | -------- | -------- | ---------------------------- | ------------------------------------------- | ---------- |
+| `votes.cast`       | Mutation | Required | `{topicId, choice, ranked?}` | `{eventId, receiptHash}`                    | 10/min     |
+| `votes.change`     | Mutation | Required | `{topicId, newChoice}`       | `{eventId}`                                 | 10/min     |
+| `votes.revoke`     | Mutation | Required | `{topicId}`                  | `{eventId}`                                 | 10/min     |
+| `votes.myVote`     | Query    | Required | `{topicId}`                  | `{choice, timestamp} \| null`               | 60/min     |
+| `votes.results`    | Query    | Public   | `{topicId}`                  | `{total, breakdown, chartData}`             | 120/min    |
+| `votes.comparison` | Query    | Public   | `{topicId}`                  | `{citizenResults, bundestagResults, delta}` | 60/min     |
+| `votes.delegate`   | Mutation | Required | `{topicId, delegateUserId}`  | `{eventId}`                                 | 5/min      |
 
 #### `topics.ts`
 
-| Procedure | Typ | Auth | Input | Output | Rate Limit |
-|-----------|-----|------|-------|--------|------------|
-| `topics.list` | Query | Public | `{cursor, limit, category?, source?, status?}` | `{items, nextCursor}` | 60/min |
-| `topics.getById` | Query | Public | `{id}` | `Topic` | 120/min |
-| `topics.create` | Mutation | Required | `{title, description, category, votingFormat, votingConfig}` | `{id}` | 5/min |
-| `topics.update` | Mutation | Required | `{id, title?, description?, summary?}` | `Topic` | 10/min |
-| `topics.support` | Mutation | Required | `{topicId}` | `{supporterCount}` | 30/min |
-| `topics.close` | Mutation | Moderator+ | `{id, reason}` | `Topic` | 10/min |
+| Procedure        | Typ      | Auth       | Input                                                        | Output                | Rate Limit |
+| ---------------- | -------- | ---------- | ------------------------------------------------------------ | --------------------- | ---------- |
+| `topics.list`    | Query    | Public     | `{cursor, limit, category?, source?, status?}`               | `{items, nextCursor}` | 60/min     |
+| `topics.getById` | Query    | Public     | `{id}`                                                       | `Topic`               | 120/min    |
+| `topics.create`  | Mutation | Required   | `{title, description, category, votingFormat, votingConfig}` | `{id}`                | 5/min      |
+| `topics.update`  | Mutation | Required   | `{id, title?, description?, summary?}`                       | `Topic`               | 10/min     |
+| `topics.support` | Mutation | Required   | `{topicId}`                                                  | `{supporterCount}`    | 30/min     |
+| `topics.close`   | Mutation | Moderator+ | `{id, reason}`                                               | `Topic`               | 10/min     |
 
 #### `comments.ts`
 
-| Procedure | Typ | Auth | Input | Output | Rate Limit |
-|-----------|-----|------|-------|--------|------------|
-| `comments.list` | Query | Required | `{topicId, sort, position?, cursor}` | `{items, nextCursor}` | 60/min |
-| `comments.create` | Mutation | Required | `{topicId, content, position, parentId?, sources?}` | `Comment` | 10/min |
-| `comments.update` | Mutation | Required | `{id, content}` | `Comment` | 10/min |
-| `comments.rate` | Mutation | Required | `{commentId, rating}` | `{bridgingScore}` | 60/min |
-| `comments.report` | Mutation | Required | `{commentId, reason}` | `{reportId}` | 5/min |
+| Procedure         | Typ      | Auth     | Input                                               | Output                | Rate Limit |
+| ----------------- | -------- | -------- | --------------------------------------------------- | --------------------- | ---------- |
+| `comments.list`   | Query    | Required | `{topicId, sort, position?, cursor}`                | `{items, nextCursor}` | 60/min     |
+| `comments.create` | Mutation | Required | `{topicId, content, position, parentId?, sources?}` | `Comment`             | 10/min     |
+| `comments.update` | Mutation | Required | `{id, content}`                                     | `Comment`             | 10/min     |
+| `comments.rate`   | Mutation | Required | `{commentId, rating}`                               | `{bridgingScore}`     | 60/min     |
+| `comments.report` | Mutation | Required | `{commentId, reason}`                               | `{reportId}`          | 5/min      |
 
 #### `feed.ts`
 
-| Procedure | Typ | Auth | Input | Output | Rate Limit |
-|-----------|-----|------|-------|--------|------------|
-| `feed.home` | Query | Optional | `{cursor, limit, category?}` | `{items, nextCursor}` | 30/min |
-| `feed.trending` | Query | Public | `{limit}` | `Topic[]` | 30/min |
+| Procedure       | Typ   | Auth     | Input                        | Output                | Rate Limit |
+| --------------- | ----- | -------- | ---------------------------- | --------------------- | ---------- |
+| `feed.home`     | Query | Optional | `{cursor, limit, category?}` | `{items, nextCursor}` | 30/min     |
+| `feed.trending` | Query | Public   | `{limit}`                    | `Topic[]`             | 30/min     |
 
 #### `bundestag.ts`
 
-| Procedure | Typ | Auth | Input | Output | Rate Limit |
-|-----------|-----|------|-------|--------|------------|
-| `bundestag.vorgaenge` | Query | Public | `{cursor, sachgebiet?, beratungsstand?}` | `{items, nextCursor}` | 60/min |
-| `bundestag.mdb` | Query | Public | `{id}` | `MdB` mit Abstimmungshistorie | 60/min |
-| `bundestag.mdbByWahlkreis` | Query | Public | `{wahlkreisId}` | `MdB[]` | 60/min |
+| Procedure                  | Typ   | Auth   | Input                                    | Output                        | Rate Limit |
+| -------------------------- | ----- | ------ | ---------------------------------------- | ----------------------------- | ---------- |
+| `bundestag.vorgaenge`      | Query | Public | `{cursor, sachgebiet?, beratungsstand?}` | `{items, nextCursor}`         | 60/min     |
+| `bundestag.mdb`            | Query | Public | `{id}`                                   | `MdB` mit Abstimmungshistorie | 60/min     |
+| `bundestag.mdbByWahlkreis` | Query | Public | `{wahlkreisId}`                          | `MdB[]`                       | 60/min     |
 
 ### 7.3 Externe API-Integration
 
@@ -2633,14 +2716,14 @@ src/server/integrations/
 
 ### 7.4 Cron / Webhook Endpoints
 
-| Endpoint | Intervall | Funktion |
-|----------|-----------|----------|
-| `/api/cron/sync-bundestag` | 15 Min. | Synchronisiert DIP + abgeordnetenwatch Daten |
-| `/api/cron/update-search` | 30 Min. | Reindexiert Meilisearch |
-| `/api/cron/compute-bridging` | 60 Min. | Berechnet Bridging-Scores neu |
-| `/api/cron/close-votes` | 1 Min. | Schliesst abgelaufene Abstimmungsfenster |
-| `/api/cron/update-reputation` | Taglich | Aktualisiert Privilege-Tiers |
-| `/api/webhooks/supabase-auth` | Event | Reagiert auf Auth-Events (Signup, Deletion) |
+| Endpoint                      | Intervall | Funktion                                     |
+| ----------------------------- | --------- | -------------------------------------------- |
+| `/api/cron/sync-bundestag`    | 15 Min.   | Synchronisiert DIP + abgeordnetenwatch Daten |
+| `/api/cron/update-search`     | 30 Min.   | Reindexiert Meilisearch                      |
+| `/api/cron/compute-bridging`  | 60 Min.   | Berechnet Bridging-Scores neu                |
+| `/api/cron/close-votes`       | 1 Min.    | Schliesst abgelaufene Abstimmungsfenster     |
+| `/api/cron/update-reputation` | Taglich   | Aktualisiert Privilege-Tiers                 |
+| `/api/webhooks/supabase-auth` | Event     | Reagiert auf Auth-Events (Signup, Deletion)  |
 
 ---
 
@@ -2648,34 +2731,34 @@ src/server/integrations/
 
 ### 8.1 Screen-Inventar
 
-| Screen | Route | Phase | Beschreibung |
-|--------|-------|-------|-------------|
-| Landing Page | `/` | 1 | Vorstellung der Plattform fur unangemeldete Besucher |
-| Registrierung | `/registrieren` | 1 | Email + Passwort Formular |
-| Login | `/anmelden` | 1 | Email/Passwort oder Magic Link |
-| Home Feed | `/feed` | 1 | Hauptansicht mit Themen-Feed |
-| Topic Detail | `/themen/[id]` | 1 | Einzelnes Thema mit Abstimmung und Diskussion |
-| Abstimm-Interface | Bottom Sheet | 1 | Stimmabgabe-UI |
-| Ergebnis-Ansicht | `/themen/[id]/ergebnis` | 1 | Detaillierte Ergebnis-Darstellung |
-| Thema erstellen | `/thema-erstellen` | 1 | Formular fur nutzergenerierte Themen |
-| Profil | `/profil` | 1 | Eigenes Profil mit Aktivitaten |
-| Einstellungen | `/einstellungen` | 1 | Account- und App-Einstellungen |
-| Suche | `/suche` | 1 | Volltextsuche mit Filtern |
-| Kategorie | `/kategorien/[slug]` | 1 | Themen einer Kategorie |
-| MdB-Profil | `/abgeordnete/[id]` | 1 | MdB mit Abstimmungshistorie |
-| Wahlkreis | `/wahlkreis/[id]` | 2 | Wahlkreis-spezifische Ubersicht |
-| Gruppe | `/gruppen/[id]` | 2 | Gruppenseite |
-| Benachrichtigungen | `/benachrichtigungen` | 1 | Notification-Center |
-| Transparenz | `/transparenz` | 1 | Algorithmus-Dokumentation |
-| Datenschutz | `/datenschutz` | 1 | Datenschutzerklarung |
-| Impressum | `/impressum` | 1 | Rechtlich erforderliches Impressum |
-| Demokratie-Karte | `/karte` | 1 | Deutschland-Karte mit 299 Wahlkreisen (Stadtsimulation) |
-| Tagliche Session | `/session` | 1 | 5-Minuten Demokratie-Session (Duolingo-Stil) |
-| Demokratie-Wrapped | `/wrapped/2026` | 2 | Personlicher Jahresreport |
-| Meine Wirkung | `/profil/wirkung` | 1 | Personliches Impact-Dashboard |
-| Themen-Team | `/teams/[slug]` | 2 | Team-Dashboard (z.B. Klima-Team) |
-| Admin Dashboard | `/admin` | 1 | Verwaltungs-Ubersicht |
-| Moderations-Queue | `/admin/moderation` | 1 | Gemeldete Inhalte bearbeiten |
+| Screen             | Route                   | Phase | Beschreibung                                            |
+| ------------------ | ----------------------- | ----- | ------------------------------------------------------- |
+| Landing Page       | `/`                     | 1     | Vorstellung der Plattform fur unangemeldete Besucher    |
+| Registrierung      | `/registrieren`         | 1     | Email + Passwort Formular                               |
+| Login              | `/anmelden`             | 1     | Email/Passwort oder Magic Link                          |
+| Home Feed          | `/feed`                 | 1     | Hauptansicht mit Themen-Feed                            |
+| Topic Detail       | `/themen/[id]`          | 1     | Einzelnes Thema mit Abstimmung und Diskussion           |
+| Abstimm-Interface  | Bottom Sheet            | 1     | Stimmabgabe-UI                                          |
+| Ergebnis-Ansicht   | `/themen/[id]/ergebnis` | 1     | Detaillierte Ergebnis-Darstellung                       |
+| Thema erstellen    | `/thema-erstellen`      | 1     | Formular fur nutzergenerierte Themen                    |
+| Profil             | `/profil`               | 1     | Eigenes Profil mit Aktivitaten                          |
+| Einstellungen      | `/einstellungen`        | 1     | Account- und App-Einstellungen                          |
+| Suche              | `/suche`                | 1     | Volltextsuche mit Filtern                               |
+| Kategorie          | `/kategorien/[slug]`    | 1     | Themen einer Kategorie                                  |
+| MdB-Profil         | `/abgeordnete/[id]`     | 1     | MdB mit Abstimmungshistorie                             |
+| Wahlkreis          | `/wahlkreis/[id]`       | 2     | Wahlkreis-spezifische Ubersicht                         |
+| Gruppe             | `/gruppen/[id]`         | 2     | Gruppenseite                                            |
+| Benachrichtigungen | `/benachrichtigungen`   | 1     | Notification-Center                                     |
+| Transparenz        | `/transparenz`          | 1     | Algorithmus-Dokumentation                               |
+| Datenschutz        | `/datenschutz`          | 1     | Datenschutzerklarung                                    |
+| Impressum          | `/impressum`            | 1     | Rechtlich erforderliches Impressum                      |
+| Demokratie-Karte   | `/karte`                | 1     | Deutschland-Karte mit 299 Wahlkreisen (Stadtsimulation) |
+| Tagliche Session   | `/session`              | 1     | 5-Minuten Demokratie-Session (Duolingo-Stil)            |
+| Demokratie-Wrapped | `/wrapped/2026`         | 2     | Personlicher Jahresreport                               |
+| Meine Wirkung      | `/profil/wirkung`       | 1     | Personliches Impact-Dashboard                           |
+| Themen-Team        | `/teams/[slug]`         | 2     | Team-Dashboard (z.B. Klima-Team)                        |
+| Admin Dashboard    | `/admin`                | 1     | Verwaltungs-Ubersicht                                   |
+| Moderations-Queue  | `/admin/moderation`     | 1     | Gemeldete Inhalte bearbeiten                            |
 
 ### 8.2 Detaillierte Screen-Beschreibungen
 
@@ -2781,6 +2864,7 @@ Die Landing Page ist der wichtigste Conversion-Screen. Sie muss in <10 Sekunden 
 8. **Footer:** Impressum, Datenschutz, Transparenz
 
 **Desktop Layout:**
+
 - Max-Breite: 1200px, zentriert
 - Hero: Headline links, animierte Mini-Karte rechts (60/40 Split)
 - "So funktioniert's": 3 Spalten nebeneinander
@@ -2789,6 +2873,7 @@ Die Landing Page ist der wichtigste Conversion-Screen. Sie muss in <10 Sekunden 
 - Rest: Identisch, aber breiteres Layout
 
 **Technische Notizen:**
+
 - SSR-gerendert fur SEO (Next.js `generateMetadata`)
 - OG-Meta-Tags fur Social Sharing
 - Performance: Karte lazy-loaded, Feed-Karten statisch vorgerendert (ISR, 5 Min.)
@@ -2799,6 +2884,7 @@ Die Landing Page ist der wichtigste Conversion-Screen. Sie muss in <10 Sekunden 
 #### Home Feed (`/feed`)
 
 **Mobile Layout:**
+
 - **Bottom Tab Bar** (fixiert): 5 Icons -- Home | Suche | + | Karte | Profil
 - **Header:** App-Logo links, Glocken-Icon mit Badge rechts (Benachrichtigungen als Dropdown)
 - **Streak-Leiste** (wenn Streak aktiv): Dezente Leiste unter Header: "Streak: 23 Tage | Tagesziel: 2/3"
@@ -2820,6 +2906,7 @@ Die Landing Page ist der wichtigste Conversion-Screen. Sie muss in <10 Sekunden 
 - **Pull-to-Refresh** am oberen Rand
 
 **Desktop Layout:**
+
 - **Linke Sidebar** (220px): Navigation, Streak-Anzeige, Wahlkreis-Kurzinfo, Kategorie-Links
 - **Center Column** (max 680px): Identisch zu Mobile Feed
 - **Rechte Sidebar** (280px): Mini-Wahlkreis-Karte (klickbar -> /karte), Trending-Themen (Top 5), Demokratie-Puls-Anzeige, "Tagliche Session starten" CTA
@@ -2827,6 +2914,7 @@ Die Landing Page ist der wichtigste Conversion-Screen. Sie muss in <10 Sekunden 
 #### Topic Detail (`/themen/[id]`)
 
 **Mobile Layout:**
+
 - **Zuruck-Button** + Titel im Header
 - **Quell-Badge + Kategorie + Datum**
 - **Zusammenfassung:** Burgerverstandlicher Text in einer hervorgehobenen Box
@@ -2850,6 +2938,7 @@ Die Landing Page ist der wichtigste Conversion-Screen. Sie muss in <10 Sekunden 
 #### Abstimm-Interface (Bottom Sheet)
 
 **Ja/Nein/Enthaltung:**
+
 - Bottom Sheet schiebt sich von unten ins Bild (50% Bildschirmhohe)
 - Themen-Titel oben
 - Drei grosse Buttons nebeneinander: Ja (Indigo, Daumen hoch Icon), Nein (Hellgrau mit dunklem Text, Daumen runter Icon), Enthaltung (Hellgrau, Minus Icon)
@@ -2857,12 +2946,14 @@ Die Landing Page ist der wichtigste Conversion-Screen. Sie muss in <10 Sekunden 
 - Nach Abstimmung: Sanfter Bounce + Haptic Feedback, Verifikations-Hash, "Ergebnis ansehen" + "Teilen" Buttons
 
 **Multiple Choice:**
+
 - Bottom Sheet (70% Bildschirmhohe)
 - Checkbox-Liste der Optionen
 - Info: "Wahle bis zu [X] Optionen"
 - Bestatigungsschritt
 
 **Ranked Choice:**
+
 - Full-Screen Sheet
 - Drag-and-Drop Liste mit Griffpunkten (Hamburger-Icon links)
 - Touch-optimierte Griff-Bereiche
@@ -2875,6 +2966,7 @@ Die Landing Page ist der wichtigste Conversion-Screen. Sie muss in <10 Sekunden 
 Das visuelle Herzstuck der kooperativen Stadtsimulation und einer der 5 Haupt-Tabs.
 
 **Mobile Layout (Fullscreen):**
+
 - **Karte:** Vollbild-Karte von Deutschland, geteilt in 299 Wahlkreise
 - **Farbkodierung:** Wahlkreise leuchten in Indigo-Abstufungen (heller/gesattigter = aktiver)
 - **Live-Pulse:** Wenn Nutzer abstimmen, pulst der entsprechende Wahlkreis kurz auf (dezent, Indigo-Glow)
@@ -2893,6 +2985,7 @@ Das visuelle Herzstuck der kooperativen Stadtsimulation und einer der 5 Haupt-Ta
 - **Dark Mode:** Schwarzer Hintergrund, Wahlkreise leuchten intensiver (Indigo auf Schwarz ist besonders markant)
 
 **Desktop Layout:**
+
 - **Karte links** (60%): Identisch zu Mobile, grosser dargestellt
 - **Detail-Panel rechts** (40%): Kompaktes Wahlkreis-Dashboard des ausgewahlten Wahlkreises
 - **Hover-Effekt:** Wahlkreis wird bei Mouse-Hover hervorgehoben mit Tooltip
@@ -2934,6 +3027,7 @@ Das visuelle Herzstuck der kooperativen Stadtsimulation und einer der 5 Haupt-Ta
 #### Tagliche Session (`/session`)
 
 **Mobile Layout (Full Screen, kein Header):**
+
 - **Schritt-Indikator:** 5 Punkte oben (wie bei Instagram Stories)
 - **Schritt 1 (Briefing):** Grosse H1-Uberschrift des Themas, 3 Satze Zusammenfassung, "Weiter"-Button (Indigo)
 - **Schritt 2 (Quiz):** Frage + 4 Antwort-Buttons, sofortiges Feedback (Grunes Hintergrund-Flash bei richtig)
@@ -2946,6 +3040,7 @@ Das visuelle Herzstuck der kooperativen Stadtsimulation und einer der 5 Haupt-Ta
 #### Meine Wirkung (`/profil/wirkung`)
 
 **Mobile Layout:**
+
 - **Civic Character Sheet:** Hexagon-Chart der 6 Attribute (Indigo auf weissem Hintergrund)
 - **Feedback-Loop:** "Vom Gedanken zum Gesetz"-Schritte (animierte Checkmarks)
 - **Statistiken-Karten:**
@@ -2959,6 +3054,7 @@ Das visuelle Herzstuck der kooperativen Stadtsimulation und einer der 5 Haupt-Ta
 #### Demokratie-Wrapped (`/wrapped/2026`)
 
 **Full-Screen Slide-Show (Stories-Format):**
+
 - 10 Slides, jeweils tippbar zum Weiterblatter
 - Jede Slide: Ein Fakt, grosse Zahl (Geist Mono, 48px+), kurzer Satz
 - Hintergrund: Schwarz, Text: Weiss, Akzent: Indigo
@@ -2974,6 +3070,7 @@ Das visuelle Herzstuck der kooperativen Stadtsimulation und einer der 5 Haupt-Ta
 **Ziel:** Kern-Abstimmungsspiegel + grundlegende Burgerbeteiligung
 
 **Features:**
+
 - AUTH-01 bis AUTH-04, AUTH-08 bis AUTH-10
 - BTS-01 bis BTS-08
 - VOTE-01, VOTE-02, VOTE-07 bis VOTE-10, VOTE-12
@@ -2987,6 +3084,7 @@ Das visuelle Herzstuck der kooperativen Stadtsimulation und einer der 5 Haupt-Ta
 - PWA-01 bis PWA-04, PWA-06 bis PWA-09
 
 **Technische Meilensteine:**
+
 - Datenbank-Schema + RLS Policies deployed
 - Event Sourcing fur Abstimmungen implementiert
 - DIP API Sync Worker lauft
@@ -3000,6 +3098,7 @@ Das visuelle Herzstuck der kooperativen Stadtsimulation und einer der 5 Haupt-Ta
 - Monitoring (Sentry + Health Checks)
 
 **Launch-Kriterien:**
+
 - 50+ Bundestag-Themen importiert
 - Ja/Nein + MC Abstimmung funktioniert fehlerfrei
 - <2s Page Load auf 3G
@@ -3020,6 +3119,7 @@ Das visuelle Herzstuck der kooperativen Stadtsimulation und einer der 5 Haupt-Ta
 **Ziel:** Tiefere Deliberation + reichere Daten + Community-Features
 
 **Features:**
+
 - AUTH-05, AUTH-07
 - BTS-09 bis BTS-13
 - VOTE-03, VOTE-04, VOTE-11
@@ -3036,6 +3136,7 @@ Das visuelle Herzstuck der kooperativen Stadtsimulation und einer der 5 Haupt-Ta
 **Ziel:** Fortgeschrittene demokratische Features + institutionelle Nutzung
 
 **Features:**
+
 - AUTH-06 (eID)
 - VOTE-05 (Liquid Democracy), VOTE-06 (Partizipatives Budget)
 - UGC-08 (Kollaboratives Editieren)
@@ -3053,34 +3154,34 @@ Das visuelle Herzstuck der kooperativen Stadtsimulation und einer der 5 Haupt-Ta
 
 ### 10.1 Produkt-Risiken
 
-| Risiko | Wahrscheinlichkeit | Impact | Mitigation |
-|--------|-------------------|--------|-----------|
-| **Niedrige Retention** (Henne-Ei-Problem) | Hoch | Kritisch | Launch mit 50+ vorgeladenen Bundestag-Themen; geschlossene Feedback-Schleife (Vote -> Ergebnis -> Bundestag-Vergleich); Gamification ab Tag 1; wochentlicher Email-Digest |
-| **Troll/Manipulation** | Mittel | Hoch | Bridging-Algorithmus; No-Reply-Modus; Reputation-Tiers; Rate Limiting; Community-Moderation |
-| **Rechtliche Herausforderung** (Art. 9 DSGVO) | Niedrig | Kritisch | DSFA vor Launch; explizite Einwilligung; rechtliche Beratung |
-| **Wettbewerb durch DEMOCRACY App** | Mittel | Mittel | Differenzierung durch Community, Deliberation und Ergebniskommunikation |
-| **Solo-Grunder Burnout** | Mittel | Hoch | Kein Zeitdruck; Qualitat vor Speed; Automatisierung maximieren; Community-Beitrage in Phase 3 |
-| **Bundestag API Anderungen/Ausfall** | Niedrig | Mittel | Abstraktionsschicht; Fallback auf Cache; Redundanz durch zwei Quellen (DIP + AW) |
-| **Sock-Puppet Manipulation** | Mittel | Hoch | Email-Verifizierung; Phone-Verifizierung (Phase 2); eID (Phase 3); Anomalie-Erkennung |
+| Risiko                                        | Wahrscheinlichkeit | Impact   | Mitigation                                                                                                                                                                |
+| --------------------------------------------- | ------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Niedrige Retention** (Henne-Ei-Problem)     | Hoch               | Kritisch | Launch mit 50+ vorgeladenen Bundestag-Themen; geschlossene Feedback-Schleife (Vote -> Ergebnis -> Bundestag-Vergleich); Gamification ab Tag 1; wochentlicher Email-Digest |
+| **Troll/Manipulation**                        | Mittel             | Hoch     | Bridging-Algorithmus; No-Reply-Modus; Reputation-Tiers; Rate Limiting; Community-Moderation                                                                               |
+| **Rechtliche Herausforderung** (Art. 9 DSGVO) | Niedrig            | Kritisch | DSFA vor Launch; explizite Einwilligung; rechtliche Beratung                                                                                                              |
+| **Wettbewerb durch DEMOCRACY App**            | Mittel             | Mittel   | Differenzierung durch Community, Deliberation und Ergebniskommunikation                                                                                                   |
+| **Solo-Grunder Burnout**                      | Mittel             | Hoch     | Kein Zeitdruck; Qualitat vor Speed; Automatisierung maximieren; Community-Beitrage in Phase 3                                                                             |
+| **Bundestag API Anderungen/Ausfall**          | Niedrig            | Mittel   | Abstraktionsschicht; Fallback auf Cache; Redundanz durch zwei Quellen (DIP + AW)                                                                                          |
+| **Sock-Puppet Manipulation**                  | Mittel             | Hoch     | Email-Verifizierung; Phone-Verifizierung (Phase 2); eID (Phase 3); Anomalie-Erkennung                                                                                     |
 
 ### 10.2 Technische Risiken
 
-| Risiko | Wahrscheinlichkeit | Impact | Mitigation |
-|--------|-------------------|--------|-----------|
-| **Event Sourcing Komplexitat** | Mittel | Mittel | Einfache append-only Tabelle zuerst; Hash Chain iterativ; extensive Tests |
-| **Supabase Vendor Lock-in** | Niedrig | Mittel | Open Source; Self-Hosting moglich; Standard PostgreSQL |
-| **PWA Limitierungen** | Mittel | Mittel | Fruhe Device-Tests; Capacitor als Fallback (Phase 3) |
-| **Skalierung uber Free Tiers** | Niedrig | Niedrig | Erst relevant bei signifikanter Traktion; vorhersehbare Preismodelle |
-| **BITV/BFSG Non-Compliance** | Mittel | Hoch | axe-core in CI; manuelle Screenreader-Tests; Audit vor Launch |
+| Risiko                         | Wahrscheinlichkeit | Impact  | Mitigation                                                                |
+| ------------------------------ | ------------------ | ------- | ------------------------------------------------------------------------- |
+| **Event Sourcing Komplexitat** | Mittel             | Mittel  | Einfache append-only Tabelle zuerst; Hash Chain iterativ; extensive Tests |
+| **Supabase Vendor Lock-in**    | Niedrig            | Mittel  | Open Source; Self-Hosting moglich; Standard PostgreSQL                    |
+| **PWA Limitierungen**          | Mittel             | Mittel  | Fruhe Device-Tests; Capacitor als Fallback (Phase 3)                      |
+| **Skalierung uber Free Tiers** | Niedrig            | Niedrig | Erst relevant bei signifikanter Traktion; vorhersehbare Preismodelle      |
+| **BITV/BFSG Non-Compliance**   | Mittel             | Hoch    | axe-core in CI; manuelle Screenreader-Tests; Audit vor Launch             |
 
 ### 10.3 Business-Risiken
 
-| Risiko | Wahrscheinlichkeit | Impact | Mitigation |
-|--------|-------------------|--------|-----------|
-| **Finanzierungslucke** | Mittel | Mittel | Start mit Free Tiers; Sovereign Tech Fund Bewerbung; Kosten unter 100 EUR/Monat in Phase 1 |
-| **Politische Instrumentalisierung** | Mittel | Hoch | Transparente Algorithmen; offentliche Dokumentation; kein politisches Advertising; Bridging gegen parteiische Ubernahme |
-| **Medien-Fehldarstellung** | Niedrig | Mittel | Klare Kommunikation: Demokrat ist keine bindende Volksabstimmung; Ergebnisse sind Meinungsumfragen, keine Gesetzgebung |
-| **Regulierungsanderungen** | Niedrig | Niedrig | Keine KI in der Plattform; eIDAS 2.0 Readiness eingebaut |
+| Risiko                              | Wahrscheinlichkeit | Impact  | Mitigation                                                                                                              |
+| ----------------------------------- | ------------------ | ------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **Finanzierungslucke**              | Mittel             | Mittel  | Start mit Free Tiers; Sovereign Tech Fund Bewerbung; Kosten unter 100 EUR/Monat in Phase 1                              |
+| **Politische Instrumentalisierung** | Mittel             | Hoch    | Transparente Algorithmen; offentliche Dokumentation; kein politisches Advertising; Bridging gegen parteiische Ubernahme |
+| **Medien-Fehldarstellung**          | Niedrig            | Mittel  | Klare Kommunikation: Demokrat ist keine bindende Volksabstimmung; Ergebnisse sind Meinungsumfragen, keine Gesetzgebung  |
+| **Regulierungsanderungen**          | Niedrig            | Niedrig | Keine KI in der Plattform; eIDAS 2.0 Readiness eingebaut                                                                |
 
 ---
 
@@ -3094,20 +3195,20 @@ Begrundung: WAV misst den Kern der Plattform -- demokratische Teilhabe. Im Gegen
 
 ### 11.2 Phase-1-Ziele (6 Monate nach Launch)
 
-| Metrik | Zielwert | Messung |
-|--------|----------|---------|
-| Registrierte Nutzer | 10.000 | Supabase Auth Count |
-| Monthly Active Users (MAU) | 3.000 | Nutzer mit >=1 Session/Monat |
-| Weekly Active Voters (WAV) | 1.000 | Nutzer mit >=1 Vote/Woche |
-| Abgegebene Stimmen (Gesamt) | 50.000 | Event Store Count |
-| Nutzergenerierte Themen | 200 | Topics mit source='user' |
-| Durchschn. Session-Dauer | >3 Min. | Analytics |
-| D7 Retention | >20% | Kohortenanalyse |
-| D30 Retention | >10% | Kohortenanalyse |
-| Lighthouse Performance | >90 | Automatisiert in CI |
-| WCAG AA Compliance | 100% | axe-core + manuelles Audit |
-| Uptime | >99,5% | Monitoring |
-| Vote Latenz (p95) | <1s | Application Metrics |
+| Metrik                      | Zielwert | Messung                      |
+| --------------------------- | -------- | ---------------------------- |
+| Registrierte Nutzer         | 10.000   | Supabase Auth Count          |
+| Monthly Active Users (MAU)  | 3.000    | Nutzer mit >=1 Session/Monat |
+| Weekly Active Voters (WAV)  | 1.000    | Nutzer mit >=1 Vote/Woche    |
+| Abgegebene Stimmen (Gesamt) | 50.000   | Event Store Count            |
+| Nutzergenerierte Themen     | 200      | Topics mit source='user'     |
+| Durchschn. Session-Dauer    | >3 Min.  | Analytics                    |
+| D7 Retention                | >20%     | Kohortenanalyse              |
+| D30 Retention               | >10%     | Kohortenanalyse              |
+| Lighthouse Performance      | >90      | Automatisiert in CI          |
+| WCAG AA Compliance          | 100%     | axe-core + manuelles Audit   |
+| Uptime                      | >99,5%   | Monitoring                   |
+| Vote Latenz (p95)           | <1s      | Application Metrics          |
 
 ### 11.3 Retention-Framework
 
@@ -3123,23 +3224,24 @@ Begrundung: WAV misst den Kern der Plattform -- demokratische Teilhabe. Im Gegen
 
 ### Feature-Vergleichsmatrix
 
-| Feature | Demokrat | DEMOCRACY App | Decidim | adhocracy+ | abgeordnetenwatch |
-|---------|----------|---------------|---------|------------|-------------------|
-| Bundestag-Abstimmungsspiegel | Ja | Ja | Nein | Nein | Nur Anzeige |
-| Nutzergenerierte Themen | Ja | Nein | Ja | Ja | Nein |
-| Strukturierte Deliberation | Ja (Bridging) | Nein | Basis-Kommentare | Ja | Nein |
-| Gamification/Reputation | Ja | Nein | Basis | Nein | Nein |
-| Ergebnisse an Politiker | Ja (Email) | Nein | Institutionell | Kommunal | Nur Q&A |
-| PWA | Ja | Nein (native) | Nein | Nein | Nein |
-| Open Data API | Ja (Phase 2) | Nein | Ja | Begrenzt | Ja |
-| DSGVO Art. 9 konform | Ja | Ja | Variiert | Ja | Ja |
-| Liquid Democracy | Phase 3 | Nein | Nein | Nein | Nein |
-| Anti-Polarisierung (Bridging) | Ja | Nein | Nein | Nein | Nein |
-| Kostenlos nutzbar | Freemium | Ja | Ja (inst.) | Ja (inst.) | Ja |
+| Feature                       | Demokrat      | DEMOCRACY App | Decidim          | adhocracy+ | abgeordnetenwatch |
+| ----------------------------- | ------------- | ------------- | ---------------- | ---------- | ----------------- |
+| Bundestag-Abstimmungsspiegel  | Ja            | Ja            | Nein             | Nein       | Nur Anzeige       |
+| Nutzergenerierte Themen       | Ja            | Nein          | Ja               | Ja         | Nein              |
+| Strukturierte Deliberation    | Ja (Bridging) | Nein          | Basis-Kommentare | Ja         | Nein              |
+| Gamification/Reputation       | Ja            | Nein          | Basis            | Nein       | Nein              |
+| Ergebnisse an Politiker       | Ja (Email)    | Nein          | Institutionell   | Kommunal   | Nur Q&A           |
+| PWA                           | Ja            | Nein (native) | Nein             | Nein       | Nein              |
+| Open Data API                 | Ja (Phase 2)  | Nein          | Ja               | Begrenzt   | Ja                |
+| DSGVO Art. 9 konform          | Ja            | Ja            | Variiert         | Ja         | Ja                |
+| Liquid Democracy              | Phase 3       | Nein          | Nein             | Nein       | Nein              |
+| Anti-Polarisierung (Bridging) | Ja            | Nein          | Nein             | Nein       | Nein              |
+| Kostenlos nutzbar             | Freemium      | Ja            | Ja (inst.)       | Ja (inst.) | Ja                |
 
 ### Differenzierung
 
 Demokrat ist die **einzige Plattform**, die alle drei Saulen vereint:
+
 1. **Bundestag-Spiegel** (wie DEMOCRACY App)
 2. **Strukturierte Burgerbeteiligung** (wie Decidim/adhocracy+)
 3. **Anti-Polarisierung durch Bridging-Algorithmus** (einzigartig)
@@ -3150,54 +3252,57 @@ Demokrat ist die **einzige Plattform**, die alle drei Saulen vereint:
 
 ### Anhang A: DIP API Feld-Mapping
 
-| DIP-Feld (Vorgang) | Internes Feld (Topic) | Transformation |
-|--------------------|-----------------------|----------------|
-| `id` | `source_id` | Direkt |
-| `titel` | `title` | Direkt |
-| `abstract` | `description` | Direkt |
-| `sachgebiet[0]` | `category` | Mapping-Tabelle |
-| `vorgangstyp` | -- | Filter: Nur "Gesetzgebung" |
-| `beratungsstand` | `status` | Mapping: "Verkundet" -> "voting_closed" |
-| `datum` | `created_at` | Datumskonversion |
-| `aktualisiert` | `updated_at` | Datumskonversion |
-| `initiative` | -- | Gespeichert in `bundestag_vorgaenge.initiative` |
-| `deskriptor` | -- | Gespeichert in `topic_tags` |
+| DIP-Feld (Vorgang) | Internes Feld (Topic) | Transformation                                  |
+| ------------------ | --------------------- | ----------------------------------------------- |
+| `id`               | `source_id`           | Direkt                                          |
+| `titel`            | `title`               | Direkt                                          |
+| `abstract`         | `description`         | Direkt                                          |
+| `sachgebiet[0]`    | `category`            | Mapping-Tabelle                                 |
+| `vorgangstyp`      | --                    | Filter: Nur "Gesetzgebung"                      |
+| `beratungsstand`   | `status`              | Mapping: "Verkundet" -> "voting_closed"         |
+| `datum`            | `created_at`          | Datumskonversion                                |
+| `aktualisiert`     | `updated_at`          | Datumskonversion                                |
+| `initiative`       | --                    | Gespeichert in `bundestag_vorgaenge.initiative` |
+| `deskriptor`       | --                    | Gespeichert in `topic_tags`                     |
 
 **Sync-Abfrage:**
+
 ```
 GET /vorgang?apikey={key}&f.wahlperiode=21&f.aktualisiert.start={last_sync}&cursor=*
 ```
 
 ### Anhang B: abgeordnetenwatch API Mapping
 
-| AW-Feld (Poll) | Internes Feld | Transformation |
-|----------------|---------------|----------------|
-| `id` | `abgeordnetenwatch_id` | Direkt |
-| `label` | `titel` | Direkt |
-| `field_intro` | `field_intro` / `summary` | HTML -> Markdown |
-| `field_poll_date` | `datum` | Datumskonversion |
-| `field_accepted` | `field_accepted` | Direkt |
-| `field_topics[].label` | Tags | Mapping |
+| AW-Feld (Poll)         | Internes Feld             | Transformation   |
+| ---------------------- | ------------------------- | ---------------- |
+| `id`                   | `abgeordnetenwatch_id`    | Direkt           |
+| `label`                | `titel`                   | Direkt           |
+| `field_intro`          | `field_intro` / `summary` | HTML -> Markdown |
+| `field_poll_date`      | `datum`                   | Datumskonversion |
+| `field_accepted`       | `field_accepted`          | Direkt           |
+| `field_topics[].label` | Tags                      | Mapping          |
 
 **Sync-Abfrage:**
+
 ```
 GET /polls?field_legislature[entity.id]=161&range_end=100
 ```
 
 **Einzelstimmen abrufen:**
+
 ```
 GET /votes?poll[entity.id]={poll_id}&range_end=1000
 ```
 
 ### Anhang C: DSGVO Verarbeitungsverzeichnis (Auszug)
 
-| Verarbeitungstatigkeit | Zweck | Rechtsgrundlage | Datenkategorien | Empfanger | Aufbewahrung |
-|----------------------|-------|-----------------|----------------|-----------|-------------|
-| Registrierung | Account-Erstellung | Art. 6(1)(a) Einwilligung | Email, Anzeigename, Wahlkreis | Supabase (EU) | Bis Loschung |
-| Stimmabgabe | Demokratische Teilhabe | Art. 9(2)(a) Explizite Einwilligung | Abstimmungswahl (politische Meinung) | PostgreSQL (EU) | Anonymisiert bei Loschung |
-| Kommentare | Deliberation | Art. 6(1)(a) Einwilligung | Kommentartext, Position | PostgreSQL (EU) | Pseudonymisiert bei Loschung |
-| Analytics | Plattformverbesserung | Art. 6(1)(f) Berechtigtes Interesse | Aggregierte Nutzungsdaten | Vercel Analytics (EU) | 90 Tage |
-| Bundestag-Sync | Informationsbereitstellung | Art. 6(1)(e) Offentliches Interesse | Offentliche Parlamentsdaten | PostgreSQL (EU) | Dauerhaft |
+| Verarbeitungstatigkeit | Zweck                      | Rechtsgrundlage                     | Datenkategorien                      | Empfanger             | Aufbewahrung                 |
+| ---------------------- | -------------------------- | ----------------------------------- | ------------------------------------ | --------------------- | ---------------------------- |
+| Registrierung          | Account-Erstellung         | Art. 6(1)(a) Einwilligung           | Email, Anzeigename, Wahlkreis        | Supabase (EU)         | Bis Loschung                 |
+| Stimmabgabe            | Demokratische Teilhabe     | Art. 9(2)(a) Explizite Einwilligung | Abstimmungswahl (politische Meinung) | PostgreSQL (EU)       | Anonymisiert bei Loschung    |
+| Kommentare             | Deliberation               | Art. 6(1)(a) Einwilligung           | Kommentartext, Position              | PostgreSQL (EU)       | Pseudonymisiert bei Loschung |
+| Analytics              | Plattformverbesserung      | Art. 6(1)(f) Berechtigtes Interesse | Aggregierte Nutzungsdaten            | Vercel Analytics (EU) | 90 Tage                      |
+| Bundestag-Sync         | Informationsbereitstellung | Art. 6(1)(e) Offentliches Interesse | Offentliche Parlamentsdaten          | PostgreSQL (EU)       | Dauerhaft                    |
 
 ### Anhang D: DSFA Outline (Datenschutz-Folgenabschatzung)
 
@@ -3219,37 +3324,37 @@ GET /votes?poll[entity.id]={poll_id}&range_end=1000
 
 ### Anhang E: Barrierefreiheit Checklist
 
-| Kategorie | Kriterium | WCAG | Status |
-|-----------|----------|------|--------|
-| Wahrnehmbar | Textalternativen fur Bilder | 1.1.1 | -- |
-| Wahrnehmbar | Untertitel fur Videos | 1.2.2 | -- |
-| Wahrnehmbar | Farbkontrast 4.5:1 | 1.4.3 | -- |
-| Wahrnehmbar | Text grosserbar auf 200% | 1.4.4 | -- |
-| Bedienbar | Tastaturzuganglich | 2.1.1 | -- |
-| Bedienbar | Keine Tastaturfalle | 2.1.2 | -- |
-| Bedienbar | Skip Navigation | 2.4.1 | -- |
-| Bedienbar | Fokus sichtbar | 2.4.7 | -- |
-| Verstandlich | Sprache der Seite angegeben | 3.1.1 | -- |
-| Verstandlich | Labels fur Eingabefelder | 3.3.2 | -- |
-| Verstandlich | Fehlererkennung | 3.3.1 | -- |
-| Robust | ARIA Landmarks | 4.1.2 | -- |
-| Robust | Name, Role, Value | 4.1.2 | -- |
+| Kategorie    | Kriterium                   | WCAG  | Status |
+| ------------ | --------------------------- | ----- | ------ |
+| Wahrnehmbar  | Textalternativen fur Bilder | 1.1.1 | --     |
+| Wahrnehmbar  | Untertitel fur Videos       | 1.2.2 | --     |
+| Wahrnehmbar  | Farbkontrast 4.5:1          | 1.4.3 | --     |
+| Wahrnehmbar  | Text grosserbar auf 200%    | 1.4.4 | --     |
+| Bedienbar    | Tastaturzuganglich          | 2.1.1 | --     |
+| Bedienbar    | Keine Tastaturfalle         | 2.1.2 | --     |
+| Bedienbar    | Skip Navigation             | 2.4.1 | --     |
+| Bedienbar    | Fokus sichtbar              | 2.4.7 | --     |
+| Verstandlich | Sprache der Seite angegeben | 3.1.1 | --     |
+| Verstandlich | Labels fur Eingabefelder    | 3.3.2 | --     |
+| Verstandlich | Fehlererkennung             | 3.3.1 | --     |
+| Robust       | ARIA Landmarks              | 4.1.2 | --     |
+| Robust       | Name, Role, Value           | 4.1.2 | --     |
 
 ### Anhang F: Kostenschatzung
 
-| Service | Phase 1 (monatlich) | Phase 2 (monatlich) | Anmerkungen |
-|---------|--------------------|--------------------|-------------|
-| Supabase Pro | 25 EUR | 75 EUR | Pro Plan, EU Region |
-| Vercel Pro | 20 EUR | 20 EUR | Next.js Hosting |
-| Upstash Redis | 0-10 EUR | 10-30 EUR | Pay-per-Request |
-| Meilisearch Cloud | 0-30 EUR | 30-60 EUR | Build Plan |
-| Mapbox | 0 EUR | 0-50 EUR | Free Tier: 50k Map Loads/Monat, reicht fur Phase 1 |
-| Stripe | 0 EUR | ~2-3% Umsatz | Keine Fixkosten, nur Transaktionsgebuhren |
-| OpenAI API | 10-30 EUR | 30-60 EUR | Content-Pipeline: Zusammenfassungen, Quiz, News-Links |
-| Resend | 0 EUR | 20 EUR | Free Tier reicht fur Phase 1 |
-| Sentry | 0 EUR | 0-26 EUR | Free Tier / Team Plan |
-| Domain + DNS | 2 EUR | 2 EUR | .de Domain |
-| **Gesamt** | **~60-120 EUR** | **~190-345 EUR** | Exkl. Stripe-Transaktionsgebuhren |
+| Service           | Phase 1 (monatlich) | Phase 2 (monatlich) | Anmerkungen                                           |
+| ----------------- | ------------------- | ------------------- | ----------------------------------------------------- |
+| Supabase Pro      | 25 EUR              | 75 EUR              | Pro Plan, EU Region                                   |
+| Vercel Pro        | 20 EUR              | 20 EUR              | Next.js Hosting                                       |
+| Upstash Redis     | 0-10 EUR            | 10-30 EUR           | Pay-per-Request                                       |
+| Meilisearch Cloud | 0-30 EUR            | 30-60 EUR           | Build Plan                                            |
+| Mapbox            | 0 EUR               | 0-50 EUR            | Free Tier: 50k Map Loads/Monat, reicht fur Phase 1    |
+| Stripe            | 0 EUR               | ~2-3% Umsatz        | Keine Fixkosten, nur Transaktionsgebuhren             |
+| OpenAI API        | 10-30 EUR           | 30-60 EUR           | Content-Pipeline: Zusammenfassungen, Quiz, News-Links |
+| Resend            | 0 EUR               | 20 EUR              | Free Tier reicht fur Phase 1                          |
+| Sentry            | 0 EUR               | 0-26 EUR            | Free Tier / Team Plan                                 |
+| Domain + DNS      | 2 EUR               | 2 EUR               | .de Domain                                            |
+| **Gesamt**        | **~60-120 EUR**     | **~190-345 EUR**    | Exkl. Stripe-Transaktionsgebuhren                     |
 
 ### Anhang G: Glossar
 
@@ -3261,25 +3366,25 @@ Siehe [Section 0](#0-glossar).
 
 Alle offenen Fragen wurden im Rahmen der PRD-Erstellung geklart:
 
-| ID | Frage | Entscheidung | Datum |
-|----|-------|-------------|-------|
-| OQ-001 | Zusammenfassungen Editorial oder Community? | Redaktionell in Phase 1 (abgeordnetenwatch `field_intro` als Basis), Community-Erweiterung in Phase 2 | 30.03.2026 |
-| OQ-002 | Unterstutzerschwelle fur nutzergenerierte Themen? | 10 Unterstutzer in der Startphase (konfigurierbar, kann mit Nutzerwachstum skaliert werden) | 30.03.2026 |
-| OQ-003 | Stimmabgabe anonym oder pseudonym? | Pseudonym: Nutzer sehen ihr eigenes Votum, andere sehen nur Aggregate. Admin sieht nichts. Event Store speichert user_id fur Integritatsprufung, aber RLS verhindert Einsicht durch Dritte | 30.03.2026 |
-| OQ-004 | Premium-Paywall-Features? | Free: Abstimmen, Kommentieren, Feed, Karte, Ergebnisse, Streak, Quests. Premium: Detaillierte Wahlkreis-Analysen, erweiterte Character-Sheet-Statistiken, historische Vergleiche, Datenexport, Embed-Widgets, unbegrenzte Themen-Erstellung, erweiterte Benachrichtigungen | 30.03.2026 |
-| OQ-005 | Finaler Markenname? | "Demokrat" bleibt Arbeitstitel. DPMA-Markenrecherche vor Launch durchfuhren | 30.03.2026 |
-| OQ-006 | Bridging-Algorithmus? | Vereinfacht in Phase 1 (min/max Ratio), volle Matrix-Faktorisierung in Phase 2 | 30.03.2026 |
-| OQ-007 | DPMA-Markeneintragung? | Ja, vor offentlichem Launch. Budget: ~300 EUR fur Wortmarke | 30.03.2026 |
-| OQ-008 | Rechtsform? | UG (haftungsbeschrankt) fur den Start -- niedrigste Hurde (1 EUR Stammkapital). Umwandlung in GmbH bei Wachstum | 30.03.2026 |
-| OQ-009 | Design-Stil? | Notion-inspiriert, minimalistisch: Schwarz/Weiss/Grau + Indigo (#4F46E5). Light Mode Standard, Dark Mode optional | 30.03.2026 |
-| OQ-010 | Gamification-Ansatz? | Kooperative Stadtsimulation. Wahlkreis-Teams + Themen-Teams. Kein kompetitives Ranking | 30.03.2026 |
-| OQ-011 | Karten-Platzierung? | Eigener Tab in Bottom Nav: Home \| Suche \| + \| Karte \| Profil | 30.03.2026 |
-| OQ-012 | Onboarding? | Kombiniert: Kurzer Flow (Wahlkreis + 3 Interessen + Tagesziel) + organisch wachsender Charakter | 30.03.2026 |
-| OQ-013 | News-Feed? | Hybrid: Plattform-Inhalte + 2-3 kuratierte Nachrichtenlinks pro Bundestag-Thema als "Hintergrund" | 30.03.2026 |
-| OQ-014 | Wahlkreis-Dashboard? | Kompakt (eine Seite): Fortschritts-Stufe, MdB, Top-Themen, Beteiligungsrate, Bridging-Score | 30.03.2026 |
+| ID     | Frage                                             | Entscheidung                                                                                                                                                                                                                                                               | Datum      |
+| ------ | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| OQ-001 | Zusammenfassungen Editorial oder Community?       | Redaktionell in Phase 1 (abgeordnetenwatch `field_intro` als Basis), Community-Erweiterung in Phase 2                                                                                                                                                                      | 30.03.2026 |
+| OQ-002 | Unterstutzerschwelle fur nutzergenerierte Themen? | 10 Unterstutzer in der Startphase (konfigurierbar, kann mit Nutzerwachstum skaliert werden)                                                                                                                                                                                | 30.03.2026 |
+| OQ-003 | Stimmabgabe anonym oder pseudonym?                | Pseudonym: Nutzer sehen ihr eigenes Votum, andere sehen nur Aggregate. Admin sieht nichts. Event Store speichert user_id fur Integritatsprufung, aber RLS verhindert Einsicht durch Dritte                                                                                 | 30.03.2026 |
+| OQ-004 | Premium-Paywall-Features?                         | Free: Abstimmen, Kommentieren, Feed, Karte, Ergebnisse, Streak, Quests. Premium: Detaillierte Wahlkreis-Analysen, erweiterte Character-Sheet-Statistiken, historische Vergleiche, Datenexport, Embed-Widgets, unbegrenzte Themen-Erstellung, erweiterte Benachrichtigungen | 30.03.2026 |
+| OQ-005 | Finaler Markenname?                               | "Demokrat" bleibt Arbeitstitel. DPMA-Markenrecherche vor Launch durchfuhren                                                                                                                                                                                                | 30.03.2026 |
+| OQ-006 | Bridging-Algorithmus?                             | Vereinfacht in Phase 1 (min/max Ratio), volle Matrix-Faktorisierung in Phase 2                                                                                                                                                                                             | 30.03.2026 |
+| OQ-007 | DPMA-Markeneintragung?                            | Ja, vor offentlichem Launch. Budget: ~300 EUR fur Wortmarke                                                                                                                                                                                                                | 30.03.2026 |
+| OQ-008 | Rechtsform?                                       | UG (haftungsbeschrankt) fur den Start -- niedrigste Hurde (1 EUR Stammkapital). Umwandlung in GmbH bei Wachstum                                                                                                                                                            | 30.03.2026 |
+| OQ-009 | Design-Stil?                                      | Notion-inspiriert, minimalistisch: Schwarz/Weiss/Grau + Indigo (#4F46E5). Light Mode Standard, Dark Mode optional                                                                                                                                                          | 30.03.2026 |
+| OQ-010 | Gamification-Ansatz?                              | Kooperative Stadtsimulation. Wahlkreis-Teams + Themen-Teams. Kein kompetitives Ranking                                                                                                                                                                                     | 30.03.2026 |
+| OQ-011 | Karten-Platzierung?                               | Eigener Tab in Bottom Nav: Home \| Suche \| + \| Karte \| Profil                                                                                                                                                                                                           | 30.03.2026 |
+| OQ-012 | Onboarding?                                       | Kombiniert: Kurzer Flow (Wahlkreis + 3 Interessen + Tagesziel) + organisch wachsender Charakter                                                                                                                                                                            | 30.03.2026 |
+| OQ-013 | News-Feed?                                        | Hybrid: Plattform-Inhalte + 2-3 kuratierte Nachrichtenlinks pro Bundestag-Thema als "Hintergrund"                                                                                                                                                                          | 30.03.2026 |
+| OQ-014 | Wahlkreis-Dashboard?                              | Kompakt (eine Seite): Fortschritts-Stufe, MdB, Top-Themen, Beteiligungsrate, Bridging-Score                                                                                                                                                                                | 30.03.2026 |
 
 ---
 
-*Dieses Dokument ist ein lebendes Dokument und wird laufend aktualisiert.*
+_Dieses Dokument ist ein lebendes Dokument und wird laufend aktualisiert._
 
-*Letzte Aktualisierung: 30. Marz 2026*
+_Letzte Aktualisierung: 30. Marz 2026_

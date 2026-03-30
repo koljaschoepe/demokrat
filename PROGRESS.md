@@ -1,10 +1,11 @@
 # Demokrat -- Implementierungs-Fortschritt
 
 > **Letzte Aktualisierung:** 2026-03-30
-> **Aktuelle Phase:** 007
-> **Abgeschlossene Phasen:** 6 / 200
+> **Aktuelle Phase:** 008
+> **Abgeschlossene Phasen:** 7 / 200
 
 ## Status-Legende
+
 - [ ] Offen
 - [x] Abgeschlossen
 - [~] In Bearbeitung
@@ -12,13 +13,14 @@
 ---
 
 ## A. Projekt-Foundation (001-016)
+
 - [x] 001 -- Git Repository & Projektstruktur
 - [x] 002 -- Next.js 15 + TypeScript Strict
 - [x] 003 -- Tailwind CSS + shadcn/ui + Design Tokens
 - [x] 004 -- Umgebungsvariablen & .env
 - [x] 005 -- Supabase Projekt-Setup (Lokal)
 - [x] 006 -- tRPC Setup mit App Router
-- [ ] 007 -- ESLint + Prettier
+- [x] 007 -- ESLint + Prettier
 - [ ] 008 -- Projektordner-Struktur
 - [ ] 009 -- Base Layouts, Metadata & Fonts
 - [ ] 010 -- Dark Mode (next-themes)
@@ -30,6 +32,7 @@
 - [ ] 016 -- Vercel Deployment
 
 ## B. Datenbank & Schema (017-041)
+
 - [ ] 017 -- Supabase Migration Workflow & Baseline
 - [ ] 018 -- Wahlkreise-Tabelle + Seed
 - [ ] 019 -- Profiles-Tabelle + RLS
@@ -57,6 +60,7 @@
 - [ ] 041 -- Volltextsuche, Trigger & DB-Funktionen
 
 ## C. Auth & User Management (042-049)
+
 - [ ] 042 -- Supabase Auth Foundation & Webhook
 - [ ] 043 -- Auth Middleware & Session Management
 - [ ] 044 -- Registrierung, Login & Magic Link UI
@@ -67,6 +71,7 @@
 - [ ] 049 -- Art. 9 Consent, Cookie Banner & Auth Polish
 
 ## D. Bundestag-Datenpipeline (050-067)
+
 - [ ] 050 -- DIP API TypeScript Client
 - [ ] 051 -- DIP API Mapper & Sync-Logik
 - [ ] 052 -- abgeordnetenwatch API Client
@@ -87,6 +92,7 @@
 - [ ] 067 -- Drucksache-PDF Link
 
 ## E. Voting Engine (068-077)
+
 - [ ] 068 -- Hash Chain Computation
 - [ ] 069 -- Vote Results Projektion Trigger
 - [ ] 070 -- tRPC Votes: Cast, Change, Revoke, MyVote
@@ -99,6 +105,7 @@
 - [ ] 077 -- Buerger vs. Bundestag Vergleich
 
 ## F. Frontend Core & Design (078-112)
+
 - [ ] 078 -- Reusable UI-Komponenten Basis
 - [ ] 079 -- Bottom Sheet Komponente
 - [ ] 080 -- Bottom Navigation Bar
@@ -120,6 +127,7 @@
 - [ ] 096-112 -- Weitere Seiten & Komponenten
 
 ## G. Gamification Engine (113-124)
+
 - [ ] 113 -- Punkte-Service
 - [ ] 114 -- Streak-Logik
 - [ ] 115 -- Privileg-Stufen
@@ -134,6 +142,7 @@
 - [ ] 124 -- Quests, Saisons & Wrapped (Phase 2)
 
 ## H. Deliberation & Diskussion (125-142)
+
 - [ ] 125 -- tRPC Topics CRUD
 - [ ] 126 -- Topics Support & Close
 - [ ] 127 -- tRPC Comments List
@@ -151,6 +160,7 @@
 - [ ] 139-142 -- Integration & End-to-End
 
 ## I. Feed, Suche & Benachrichtigungen (143-155)
+
 - [ ] 143 -- Feed Scoring Funktion
 - [ ] 144 -- Redis Caching Layer
 - [ ] 145 -- Feed tRPC Router
@@ -166,6 +176,7 @@
 - [ ] 155 -- Trending & Gespeicherte Themen
 
 ## J. Karte & Visualisierung (156-164)
+
 - [ ] 156 -- Mapbox Setup & GeoJSON Pipeline
 - [ ] 157 -- Wahlkreis Choropleth & Styling
 - [ ] 158 -- Bottom Sheet Wahlkreis-Dashboard
@@ -177,6 +188,7 @@
 - [ ] 164 -- Karte Tab Zusammenbau & Polish
 
 ## K. Admin, Legal & Compliance (165-180)
+
 - [ ] 165 -- Admin Layout & Auth Guard
 - [ ] 166 -- Admin Dashboard
 - [ ] 167 -- Admin Moderation Queue
@@ -195,6 +207,7 @@
 - [ ] 180 -- Transparenz-Seiten
 
 ## L. PWA, Testing & Launch (181-200)
+
 - [ ] 181 -- Service Worker: Caching Strategien
 - [ ] 182 -- Offline Fallback
 - [ ] 183 -- Install Prompt & Splash Screen
