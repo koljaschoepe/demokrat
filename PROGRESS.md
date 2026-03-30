@@ -1,8 +1,8 @@
 # Demokrat -- Implementierungs-Fortschritt
 
 > **Letzte Aktualisierung:** 2026-03-30
-> **Aktuelle Phase:** 005
-> **Abgeschlossene Phasen:** 4 / 200
+> **Aktuelle Phase:** 006
+> **Abgeschlossene Phasen:** 5 / 200
 
 ## Status-Legende
 - [ ] Offen
@@ -16,7 +16,7 @@
 - [x] 002 -- Next.js 15 + TypeScript Strict
 - [x] 003 -- Tailwind CSS + shadcn/ui + Design Tokens
 - [x] 004 -- Umgebungsvariablen & .env
-- [ ] 005 -- Supabase Projekt-Setup (Lokal)
+- [x] 005 -- Supabase Projekt-Setup (Lokal)
 - [ ] 006 -- tRPC Setup mit App Router
 - [ ] 007 -- ESLint + Prettier
 - [ ] 008 -- Projektordner-Struktur
