@@ -1,8 +1,8 @@
 # Demokrat -- Implementierungs-Fortschritt
 
 > **Letzte Aktualisierung:** 2026-03-30
-> **Aktuelle Phase:** Noch nicht gestartet
-> **Abgeschlossene Phasen:** 0 / 200
+> **Aktuelle Phase:** 003
+> **Abgeschlossene Phasen:** 2 / 200
 
 ## Status-Legende
 - [ ] Offen
@@ -12,8 +12,8 @@
 ---
 
 ## A. Projekt-Foundation (001-016)
-- [ ] 001 -- Git Repository & Projektstruktur
-- [ ] 002 -- Next.js 15 + TypeScript Strict
+- [x] 001 -- Git Repository & Projektstruktur
+- [x] 002 -- Next.js 15 + TypeScript Strict
 - [ ] 003 -- Tailwind CSS + shadcn/ui + Design Tokens
 - [ ] 004 -- Umgebungsvariablen & .env
 - [ ] 005 -- Supabase Projekt-Setup (Lokal)
