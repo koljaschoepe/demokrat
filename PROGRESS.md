@@ -1,8 +1,8 @@
 # Demokrat -- Implementierungs-Fortschritt
 
 > **Letzte Aktualisierung:** 2026-03-30
-> **Aktuelle Phase:** 008
-> **Abgeschlossene Phasen:** 7 / 200
+> **Aktuelle Phase:** 009
+> **Abgeschlossene Phasen:** 8 / 200
 
 ## Status-Legende
 
@@ -21,7 +21,7 @@
 - [x] 005 -- Supabase Projekt-Setup (Lokal)
 - [x] 006 -- tRPC Setup mit App Router
 - [x] 007 -- ESLint + Prettier
-- [ ] 008 -- Projektordner-Struktur
+- [x] 008 -- Projektordner-Struktur
 - [ ] 009 -- Base Layouts, Metadata & Fonts
 - [ ] 010 -- Dark Mode (next-themes)
 - [ ] 011 -- PWA Manifest & Service Worker (Basis)
