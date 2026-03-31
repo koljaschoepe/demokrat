@@ -1,3 +1,4 @@
+import { withSentryConfig } from '@sentry/nextjs';
 import withSerwistInit from '@serwist/next';
 import createNextIntlPlugin from 'next-intl/plugin';
 import type { NextConfig } from 'next';
@@ -16,4 +17,12 @@ const nextConfig: NextConfig = {
   turbopack: {},
 };
 
-export default withSerwist(withNextIntl(nextConfig));
+export default withSentryConfig(withSerwist(withNextIntl(nextConfig)), {
+  org: process.env.SENTRY_ORG,
+  project: process.env.SENTRY_PROJECT,
+  silent: !process.env.CI,
+  widenClientFileUpload: true,
+  tunnelRoute: '/monitoring',
+  disableLogger: true,
+  automaticVercelMonitors: true,
+});

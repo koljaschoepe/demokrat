@@ -1,8 +1,8 @@
 # Demokrat -- Implementierungs-Fortschritt
 
 > **Letzte Aktualisierung:** 2026-03-30
-> **Aktuelle Phase:** 014
-> **Abgeschlossene Phasen:** 13 / 200
+> **Aktuelle Phase:** 015
+> **Abgeschlossene Phasen:** 14 / 200
 
 ## Status-Legende
 
@@ -27,7 +27,7 @@
 - [x] 011 -- PWA Manifest & Service Worker (Basis)
 - [x] 012 -- i18n Setup (next-intl)
 - [x] 013 -- Upstash Redis Client & Rate Limiting
-- [ ] 014 -- Sentry Error Tracking
+- [x] 014 -- Sentry Error Tracking
 - [ ] 015 -- GitHub Actions CI/CD
 - [ ] 016 -- Vercel Deployment
 
