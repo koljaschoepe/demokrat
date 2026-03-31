@@ -13,6 +13,9 @@ export const env = createEnv({
     MEILISEARCH_API_KEY: z.string().min(1),
     SENTRY_DSN: z.string().min(1),
     SENTRY_AUTH_TOKEN: z.string().min(1),
+    DIP_API_KEY: z.string().min(1),
+    OPENAI_API_KEY: z.string().min(1),
+    CRON_SECRET: z.string().min(1),
   },
 
   /*
@@ -41,6 +44,9 @@ export const env = createEnv({
     MEILISEARCH_API_KEY: process.env.MEILISEARCH_API_KEY,
     SENTRY_DSN: process.env.SENTRY_DSN,
     SENTRY_AUTH_TOKEN: process.env.SENTRY_AUTH_TOKEN,
+    DIP_API_KEY: process.env.DIP_API_KEY,
+    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+    CRON_SECRET: process.env.CRON_SECRET,
     NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
     NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
     NEXT_PUBLIC_MEILISEARCH_HOST: process.env.NEXT_PUBLIC_MEILISEARCH_HOST,

@@ -6,11 +6,11 @@
     "retry": "Erneut versuchen",
     "save": "Speichern",
     "cancel": "Abbrechen",
-    "delete": "Loeschen",
+    "delete": "Löschen",
     "edit": "Bearbeiten",
-    "back": "Zurueck",
+    "back": "Zurück",
     "next": "Weiter",
-    "close": "Schliessen",
+    "close": "Schließen",
     "search": "Suche",
     "offline": "Du bist gerade nicht mit dem Internet verbunden."
   },
@@ -39,7 +39,7 @@
   },
   "topic": {
     "create": "Thema erstellen",
-    "supporters": "{count, plural, =0 {Keine Unterstuetzer} =1 {1 Unterstuetzer} other {# Unterstuetzer}}",
+    "supporters": "{count, plural, =0 {Keine Unterstützer} =1 {1 Unterstützer} other {# Unterstützer}}",
     "votes": "{count, plural, =0 {Keine Stimmen} =1 {1 Stimme} other {# Stimmen}}",
     "comments": "{count, plural, =0 {Keine Kommentare} =1 {1 Kommentar} other {# Kommentare}}"
   },
@@ -48,8 +48,8 @@
     "no": "Nein",
     "abstain": "Enthaltung",
     "cast": "Abstimmen",
-    "change": "Stimme aendern",
-    "revoke": "Stimme zurueckziehen",
+    "change": "Stimme ändern",
+    "revoke": "Stimme zurückziehen",
     "closed": "Abstimmung beendet",
     "remaining": "Noch {days, plural, =1 {1 Tag} other {# Tage}}"
   },
@@ -57,7 +57,7 @@
     "title": "Profil",
     "settings": "Einstellungen",
     "impact": "Meine Wirkung",
-    "session": "Taegliche Session",
+    "session": "Tägliche Session",
     "streak": "{count, plural, =1 {1 Tag Streak} other {# Tage Streak}}"
   },
   "theme": {

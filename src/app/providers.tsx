@@ -6,6 +6,8 @@ import { httpBatchLink } from '@trpc/client';
 import { useState } from 'react';
 import superjson from 'superjson';
 import { trpc } from '@/lib/trpc/client';
+import { AuthProvider } from '@/lib/auth/auth-context';
+import { CookieBanner } from '@/components/consent/cookie-banner';
 
 function getBaseUrl() {
   if (typeof window !== 'undefined') return '';
@@ -45,7 +47,10 @@ export function Providers({ children }: { children: React.ReactNode }) {
     >
       <trpc.Provider client={trpcClient} queryClient={queryClient}>
         <QueryClientProvider client={queryClient}>
-          {children}
+          <AuthProvider>
+            {children}
+            <CookieBanner />
+          </AuthProvider>
         </QueryClientProvider>
       </trpc.Provider>
     </ThemeProvider>

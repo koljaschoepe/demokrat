@@ -3,25 +3,41 @@ import { Inter, Geist_Mono } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { Providers } from './providers';
+import { SkipNavigation } from '@/components/a11y/skip-navigation';
+import { OrganizationJsonLd, WebAppJsonLd } from '@/components/seo/json-ld';
 import { siteConfig } from '@/config/site';
 import './globals.css';
 
 const inter = Inter({
   variable: '--font-inter',
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
+  display: 'swap',
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
+  display: 'swap',
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  alternates: {
+    canonical: '/',
+    languages: { 'de-DE': '/' },
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     type: 'website',
     locale: 'de_DE',
@@ -60,6 +76,9 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body className="flex min-h-full flex-col">
+        <OrganizationJsonLd />
+        <WebAppJsonLd />
+        <SkipNavigation />
         <NextIntlClientProvider messages={messages}>
           <Providers>{children}</Providers>
         </NextIntlClientProvider>
