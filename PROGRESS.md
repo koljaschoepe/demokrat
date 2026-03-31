@@ -1,8 +1,8 @@
 # Demokrat -- Implementierungs-Fortschritt
 
 > **Letzte Aktualisierung:** 2026-03-30
-> **Aktuelle Phase:** 013
-> **Abgeschlossene Phasen:** 12 / 200
+> **Aktuelle Phase:** 014
+> **Abgeschlossene Phasen:** 13 / 200
 
 ## Status-Legende
 
@@ -26,7 +26,7 @@
 - [x] 010 -- Dark Mode (next-themes)
 - [x] 011 -- PWA Manifest & Service Worker (Basis)
 - [x] 012 -- i18n Setup (next-intl)
-- [ ] 013 -- Upstash Redis Client & Rate Limiting
+- [x] 013 -- Upstash Redis Client & Rate Limiting
 - [ ] 014 -- Sentry Error Tracking
 - [ ] 015 -- GitHub Actions CI/CD
 - [ ] 016 -- Vercel Deployment
