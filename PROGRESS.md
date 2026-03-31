@@ -1,8 +1,8 @@
 # Demokrat -- Implementierungs-Fortschritt
 
 > **Letzte Aktualisierung:** 2026-03-30
-> **Aktuelle Phase:** 016
-> **Abgeschlossene Phasen:** 15 / 200
+> **Aktuelle Phase:** 017
+> **Abgeschlossene Phasen:** 16 / 200
 
 ## Status-Legende
 
@@ -29,7 +29,7 @@
 - [x] 013 -- Upstash Redis Client & Rate Limiting
 - [x] 014 -- Sentry Error Tracking
 - [x] 015 -- GitHub Actions CI/CD
-- [ ] 016 -- Vercel Deployment
+- [x] 016 -- Vercel Deployment
 
 ## B. Datenbank & Schema (017-041)
 

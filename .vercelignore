@@ -1,0 +1,9 @@
+.github
+.editorconfig
+.prettierrc
+.prettierignore
+lighthouserc.js
+MASTERPLAN.md
+PRD.md
+PROGRESS.md
+supabase/.temp
