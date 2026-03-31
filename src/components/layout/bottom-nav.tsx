@@ -2,26 +2,27 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { Home, Search, PlusCircle, Map, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { mainNavItems } from '@/config/navigation';
 
-const iconMap = {
-  home: Home,
-  search: Search,
-  plus: PlusCircle,
-  map: Map,
-  user: User,
-} as const;
+const navItems = [
+  { key: 'home' as const, href: '/feed', icon: Home },
+  { key: 'search' as const, href: '/search', icon: Search },
+  { key: 'create' as const, href: '/create', icon: PlusCircle },
+  { key: 'map' as const, href: '/map', icon: Map },
+  { key: 'profile' as const, href: '/profile', icon: User },
+];
 
 export function BottomNav() {
   const pathname = usePathname();
+  const t = useTranslations('nav');
 
   return (
     <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 md:hidden">
       <div className="flex h-16 items-center justify-around px-2">
-        {mainNavItems.map((item) => {
-          const Icon = iconMap[item.icon];
+        {navItems.map((item) => {
+          const Icon = item.icon;
           const isActive =
             pathname === item.href || pathname.startsWith(`${item.href}/`);
 
@@ -37,7 +38,7 @@ export function BottomNav() {
               )}
             >
               <Icon className="h-5 w-5" />
-              <span>{item.label}</span>
+              <span>{t(item.key)}</span>
             </Link>
           );
         })}

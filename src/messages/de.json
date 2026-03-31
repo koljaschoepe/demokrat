@@ -1,0 +1,81 @@
+{
+  "common": {
+    "appName": "Demokrat",
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten",
+    "retry": "Erneut versuchen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Loeschen",
+    "edit": "Bearbeiten",
+    "back": "Zurueck",
+    "next": "Weiter",
+    "close": "Schliessen",
+    "search": "Suche",
+    "offline": "Du bist gerade nicht mit dem Internet verbunden."
+  },
+  "nav": {
+    "home": "Home",
+    "search": "Suche",
+    "create": "Erstellen",
+    "map": "Karte",
+    "profile": "Profil"
+  },
+  "auth": {
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "logout": "Abmelden",
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "magicLink": "Magic Link senden",
+    "orContinueWith": "Oder weiter mit",
+    "noAccount": "Noch kein Konto?",
+    "hasAccount": "Bereits ein Konto?"
+  },
+  "feed": {
+    "title": "Feed",
+    "empty": "Noch keine Themen vorhanden.",
+    "trending": "Trending"
+  },
+  "topic": {
+    "create": "Thema erstellen",
+    "supporters": "{count, plural, =0 {Keine Unterstuetzer} =1 {1 Unterstuetzer} other {# Unterstuetzer}}",
+    "votes": "{count, plural, =0 {Keine Stimmen} =1 {1 Stimme} other {# Stimmen}}",
+    "comments": "{count, plural, =0 {Keine Kommentare} =1 {1 Kommentar} other {# Kommentare}}"
+  },
+  "vote": {
+    "yes": "Ja",
+    "no": "Nein",
+    "abstain": "Enthaltung",
+    "cast": "Abstimmen",
+    "change": "Stimme aendern",
+    "revoke": "Stimme zurueckziehen",
+    "closed": "Abstimmung beendet",
+    "remaining": "Noch {days, plural, =1 {1 Tag} other {# Tage}}"
+  },
+  "profile": {
+    "title": "Profil",
+    "settings": "Einstellungen",
+    "impact": "Meine Wirkung",
+    "session": "Taegliche Session",
+    "streak": "{count, plural, =1 {1 Tag Streak} other {# Tage Streak}}"
+  },
+  "theme": {
+    "toggle": "Theme wechseln",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  },
+  "legal": {
+    "privacy": "Datenschutz",
+    "imprint": "Impressum",
+    "terms": "Nutzungsbedingungen",
+    "transparency": "Transparenz"
+  },
+  "time": {
+    "justNow": "Gerade eben",
+    "minutesAgo": "Vor {count, plural, =1 {1 Minute} other {# Minuten}}",
+    "hoursAgo": "Vor {count, plural, =1 {1 Stunde} other {# Stunden}}",
+    "daysAgo": "Vor {count, plural, =1 {1 Tag} other {# Tagen}}"
+  }
+}
